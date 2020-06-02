@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var tom = { name : "Hong",
+                    sayHello : function () {
+                                document.write("Hello " + this.name);
+                                // document.write("Hello " + tom.name);
+                                document.write("<br>");
+                                }
+                    };
+        tom.sayHello();
+
+        function sayHello () {
+            if(window === this) {
+                document.write("winodw === this")
+            } else if(tom === this) {
+                document.write("tom === this");
+            }
+            sayHello();
+        function func () {
+            if(window === this) {
+                document.write("winodw === this")
+            }
+        }
+        }
+        func();
+    </script>
+</body>
+</html>

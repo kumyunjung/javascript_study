@@ -1,0 +1,62 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var text = '';
+        var i;
+        var j;
+        for (j = 2; j < 10; j++) {
+        {
+        for (i = 1; i < 10; i++)
+        text += j + "x" + i + "=" + j*i + " "
+        }
+        text+="<br>"}
+        document.write(text);
+    </script>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+            var btn = document.getElementById('calc');
+            var result = document.getElementById('result');
+
+
+            btn.onclick = function () {
+                result.innerHTML = '';
+
+                for (let i = 1; i < 10; i++) {
+                    for (let j = 2; j < 10; j++) {
+                        result.innerHTML +=   j + ' X ' + i + ' = ' + i * j ;
+                    }
+                    result.innerHTML += '</br>';
+                }
+
+
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!— <input type="text" placeholder="단수를 입력하세요" id="dan"> —>
+    <button id="calc">클릭!!</button>
+    <h3 id="result"></h1>
+</body>
+
+</html>
