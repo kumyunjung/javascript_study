@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    window.onload = function(){ 
+      
+        var btn = document.getElementById("btn")
+        var random = Math.floor(Math.random()*101)+1
+        var hint = document.getElementById("hint")
+
+        btn.onclick = function () {
+             var input = document.getElementById("result")
+             var input_value = input.value;
+            
+      if(random>input_value) {
+            hint.value="입력한 값이 작습니다."
+        }
+        else if(random<input_value) {
+            hint.value="입력한 값이 큽니다."
+        }
+        else {
+            alert("정답입니다.")
+        }   
+        }
+
+  
+    }
+
+</script>
+<body>
+    
+    <h1>숫자 맞추기 게임</h1>
+    <p><h2>이 게임은 컴퓨터가 생성한 숫자를 맞추는 게임입니다. 숫자는 1부터 100사이에 있습니다.</h2></p><br>
+    <h3>숫자 : <input type="form" id="result" ><input type="button" value="확인" id="btn"></h3>
+    <h3>추측횟수 : <input type="form"></h3>
+    <h3>힌트 : <input type="form" id="hint"></h3>
+    <p id="result"></p>
+    
+</body>
+</html>
