@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var x = "outer x ";
+        {
+            let x = "intter x";
+            let y = "intter y";
+            document.write(x + "<br>");
+            document.write(y + "<br>");
+            
+        }
+        document.write(x + "<br>");
+        //document.write(y + "<br>");
+
+        const c = 2;
+        document.write(c + "<br>");
+        c = 5;
+        document.write(c + "<br>");
+    </script>
+</body>
+</html>

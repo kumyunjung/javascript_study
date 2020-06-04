@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            var canvas = document.getElementById("mycanvas");
+            var ctx = canvas.getContext("2d");
+            ctx.lineWidth = 10;
+            ctx.linejoin = "bevel";
+            ctx.beginPath();
+            ctx.moveTo(60,20);
+            ctx.lineTo(100,80);
+            ctx.lineTo(20,80);
+            ctx.closePath();
+            ctx.stroke();
+            ctx.linejoin = "round";
+            ctx.beginPath();
+            ctx.moveTo(160,20);
+            ctx.lineTo(200,80);
+            ctx.lineTo(120,80);
+            ctx.closePath();
+            ctx.stroke();
+            ctx.linejoin = "meter";
+            ctx.beginPath();
+            ctx.moveTo(260,20);
+            ctx.lineTo(300,80);
+            ctx.lineTo(220,80);
+            ctx.closePath();
+            ctx.stroke();
+        }
+    </script>
+</head>
+<body>
+    <canvas id="mycanvas" width="640" height="400"></canvas>
+</body>
+</html>

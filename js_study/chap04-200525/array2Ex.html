@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrayEx2.html</title>
+</head>
+<body>
+    <script> //new 연산자
+        var arrs = new Array (2,4,6,8);
+        for(var i=0; i<arrs.length; i++) {
+            document.write("arrs[" + i + "] = " + arrs[i] + "<br>")
+        }
+        var empty = new Array ();
+        for(var i=0; i<empty.length; i++) {
+            document.write("empty[" + i + "] = " + empty[i] + "<br>")
+        }
+        var vars = new Array (3.14, "pi", true, {x:1, y:2}, [2,4,6,8]);
+        for(var i=0; i<vars.length; i++) {
+            document.write("vars[" + i + "] = " + vars[i] + "<br>") 
+        }
+
+        var arr3 = new Array(3);
+        document.write(arr3.length + "<br>");
+        var arr3 = new Array(0);
+        document.write(arr3.length + "<br>");
+        // var arr3 = new Array(-3);
+        // document.write(arr3.length + "<br>");
+        
+        var member = ['jcom', 'grace', 'kelly'];
+        for(var i=0; i<member.length; i++) {
+            document.write("member[" + i + "] = " + member[i] + "<br>")
+        }
+        document.write(member[2] + "<br>");
+        document.write(member["2"] + "<br>");
+        document.write(member["4"] + "<br>"); 
+     </script>
+</body>
+</html>

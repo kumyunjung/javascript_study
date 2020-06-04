@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function displayTime() {
+        var d = new Date();
+        document.write("현재 시각은 " + d.toLocaleString() + "입니다.") 
+        
+        }
+        window.onload = function() {
+            var button = document.getElementById("button");
+            button.onclick = displayTime;
+           }
+
+</script>
+<body>
+    <input type="button" value="click" id="button"> 
+</body>
+</html>

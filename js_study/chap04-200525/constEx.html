@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Card(suit, rank) {
+            this.suit = suit;
+            this.rank = rank;
+        }
+        var card = new Card("하트", "A");
+        document.write("card1 : " + card.suit + ", " + card.rank + "<br>");
+        
+        var card = [];
+        var suit1 = ["하트", "다이아몬드", "클로버", "스페이드"]
+        for(var i=0; i<4; i++){
+            for(var j=1; j<14; j++)
+            card[i] = new Card("하트", "A");
+            document.write("card[" + i + "] : " + card[i].suit
+            + ", " + card[i].rank + "<br>");
+        }
+    </script>
+</body>
+</html>

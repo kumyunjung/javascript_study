@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SymnolEx.html</title>
+</head>
+<body>
+    <script> 
+        var sym1 = Symbol();
+        var sym2 = Symbol();
+        var sym3 = Symbol("하트"); //for를 쓰면 연결
+        var sym4 = Symbol("하트");
+        document.write((sym1 == sym2) + "<br>");
+        document.write((sym1 === sym2) + "<br>");
+        document.write(sym1.toString() + "<br>");
+        document.write((sym3 == sym4) + "<br>");
+        document.write((sym3 === sym4) + "<br>");
+        document.write(sym3.toString());
+        // console.log(sym3.toString());        
+    </script>
+</body>
+</html>

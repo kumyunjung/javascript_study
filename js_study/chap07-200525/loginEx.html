@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var bool = false; bool2 = false;
+        var id = "";
+        var password = "";
+        do {
+            id = prompt("아이디를 입력하세요");
+            if(id === 'jcom') {
+                do {
+                    password = prompt("비밀번호를 입력하세요.")
+                    if(password === '123456') {
+                        document.write("로그인 되었습니다.")
+                        bool2 = false;
+                    } else {
+                        bool2 = true;
+                    }
+                } while(bool2);
+                bool = false;
+            } else {
+                bool = true;
+            }
+        } while(bool);
+    </script>
+    <!-- while(조건식) {
+        조건식이 참이면 반복적으로 실행
+    } 
+        do {
+            } while (조건식); -->
+    <!-- for (초기값; 조건식; 증감식)
+    조건식이 참이면 실행문을 실행
+ -->
+</body>
+</html>

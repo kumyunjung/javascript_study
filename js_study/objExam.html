@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+
+<body>
+    <script>
+       
+        var book = {
+        name : "Nature of Code",
+        price : "30000원",
+        author : "다니엘 쉬프만",
+        isbn : 9788968481901,
+        page :  "620p"
+    }
+
+   function Newbook(name, price, author, isbn, page) {
+    this.name = name
+    this.price = price
+    this.author = author
+    this.isbn = isbn
+    this.page = page
+   }      
+   
+   var book1 = new Newbook("고사전","13500원","임동석","978897741","592p")
+   var book2 = new Newbook("기억1","13320원","베르나르베르베르","978897741","400p")
+   var book3 = new Newbook("아몬드","10800","손원평","978897741","263p")
+   var book4 = new Newbook("시선으로부터","12600원","정세랑","978897741","340p")
+   var book5 = new Newbook("페스트","11700원","알베르 카뮈","978897741","508")
+
+   //문자가 5개 들어간 배열
+  var arr = ['1', '2', '3', '4', '5']
+  //객체가 5개 들어간 배열
+  var text ="";
+ 
+  var book = [book1, book2, book3, book4, book5]
+  var x
+  for(x in book) { 
+    text += Object.values(book[x])+"<br>"
+  }
+   document.write(text)
+</script>
+
+
+     
+</body>
+</html>

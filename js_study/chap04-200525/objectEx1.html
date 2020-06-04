@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var card = { "suit" : "하트", "rank": "A" };
+        for(var key in card) {
+            document.write("key : " + key + ", value : " + card[key] + "<br>");
+        }
+        
+        document.write(card.suit + ", " + card.rank + "<br>");
+        document.write(card["suit"] +", " + card["rank"] + "<br>");
+        document.write(card.color + "<br>");
+
+        var obj = {};
+        document.write(card.color + "<br>");
+        card.value = 14; //프로퍼티 추가
+        document.write(card.suit + ", " + card.rank + ", " + card.value + "<br>");
+
+        delete card.rank; //프로퍼티 제거
+        document.write(card.suit + ", " + card.rank + ", " + card.value + "<br>");
+
+        document.write("suit" in card  ); //프로퍼티 존재 확인 (true, false)
+        document.write("<br>")
+        document.write("rank" in card);
+        document.write("<br>")
+        document.write("value" in card );
+        document.write("<br>")
+        document.write("toString" in card);
+
+
+    </script>
+</body>
+</html>

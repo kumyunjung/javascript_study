@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function add(x) {
+            return x = x + 1;
+        }
+
+        var num1 = 3;
+        var num2 = add(num1);
+        document.write("num1 = " + num1 + ", " + "num2 = " + num2 + "<br>")
+
+        function add2(p) {
+            p.x = p.x + 1;
+            p.y = p.y + 1;
+            return p;
+        }
+
+        var a = {x:3, y:4};
+        var b = add2(a);
+
+        document.write("a.x = " + a.x + ", " + "a.y = " + a.y + "<br>")
+        document.write("b.x = " + b.x + ", " + "b.y = " + b.y + "<br>")
+
+     
+       
+    </script>
+</body>
+</html>

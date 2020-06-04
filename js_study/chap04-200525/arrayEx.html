@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrayEx.html</title>
+</head>
+<body>
+    <script>
+        var str = "Hello World!";
+        document.write("문자열의 길이 : " + str.length + "<br>")
+        // 변수명.length는 문자열의 길이
+        // 수가 많을 때 배열 사용 // i<array.length
+        var array = [10, 20, 30, 40, 50, 60];
+        //배열명.length는 배열의 길이
+        document.write("배열의 길이 : " + array.length + "<br>")
+        for(var i=0; i<array.length; i++) {
+            document.write("array[" + i + "] = " + array[i] + "<br>");
+        }
+        //aray[인덱스번호]
+        array[2] = 80;
+        document.write("배열의 길이 : " + array.length + "<br>")
+        for(var i=0; i<array.length; i++) {
+            document.write("array[" + i + "] = " + array[i] + "<br>");
+        }
+
+        var arr2 = [3.14, "pi", true, {x:1, y:2}, [2,4,6,8]];
+        for(var i=0; i<arr2.length; i++) {
+            document.write("arr2[" + i + "] = " + arr2[i] + "<br>");
+        }
+        // i++ 증가 / 반복문
+
+        document.write("x : " + arr2[3].x + ", y :" + arr[3].y);
+    </script>
+</body>
+</html>

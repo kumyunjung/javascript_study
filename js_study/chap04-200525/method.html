@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>methodEx.html</title>
+</head>
+<body>
+    <script>
+        var circle = {
+            center: { x: 1.0, y: 2.0},
+            radius: 2.5,
+            area: function() {
+                return Math.PI * circle.radius * this.radius;
+            }
+        };
+        document.write(circle.area());
+    
+    
+    </script>
+</body>
+</html>

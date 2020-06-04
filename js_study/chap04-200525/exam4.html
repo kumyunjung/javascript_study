@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var p = { x: 1.0, y: 2.5 };
+
+        document.write("좌표 : (" + p.x + ", " + p.y + ")" + "<br>")
+
+        var circle = {
+            center: { x: 1.0, y: 2.0},
+            radius: 2.5
+        };
+
+        document.write("원점의 좌표는 (" + circle.center.x + ", " + circle.center.y + ")이고 반지름은 " + circle.radius +"인 원입니다." + "<br>")
+
+
+        var person = {
+            name: "이정규", 
+            age: 18,
+            sex: "남",
+            married: false
+        }
+
+        document.write("이름 : " + person.name +"<br>" )
+        document.write("나이 : " + person.age +"<br>" )
+        document.write("성별 : " + person.sex +"<br>" )
+        document.write("결혼여부 : " + (person.married ? "기혼" : "미혼") +"<br>" )
+        
+        
+    </script>
+</body>
+</html>

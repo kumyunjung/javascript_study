@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            var canvas = document.getElementById("mycanvas");
+            var ctx = canvas.getContext("2d");
+            ctx.lineWidth = "10";
+            ctx.strokeStyle = "#999999"
+            ctx.strokeRect(10, 10, 100, 80);
+            ctx.fillStyle = "blue";
+            ctx.fillRect(150, 10, 100, 80);
+        }
+    </script>
+</head>
+<body>
+    <canvas id="mycanvas" width="640" width="400"></canvas>
+</body>
+</html>

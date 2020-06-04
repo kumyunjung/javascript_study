@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            var canvas = document.getElementById("mycanvas");
+            var ctx = canvas.getContext("2d");
+            ctx.arc(100, 100, 80, 30 * Math.PI / 180, 120 * Math.PI / 180, false );
+            ctx.fill();
+            ctx.arc(100, 100, 80, 30 * Math.PI / 180, 120 * Math.PI / 180, true );
+            ctx.stroke();
+        }
+    </script>
+</head>
+
+<body>
+    <canvas id="mycanvas" width="640" height="400"></canvas>
+</body>
+</html>
+

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function isLeapyear(year) {
+            if((year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0))){
+                return true;
+        }
+        return false;
+    }
+    var year = prompt("년도를 입력하세요.");
+    bool = isLeapyear(year)
+    if(bool == true) {
+        document.write(year + "년도는 윤년입니다.<br>")
+    } else {
+        document.write(year + "년도는 평년입니다.<br>")
+    }
+    </script>
+</body>
+</html>

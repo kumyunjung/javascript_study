@@ -1,0 +1,7 @@
+#logo { background-color: rgb(89, 114, 114); height: 50px;  }
+nav { background-color: green; height: 100px; }
+ul {list-style:none; margin: 0 auto; }
+li {float: left; padding: 10px; margin: 0 auto;  }
+a {text-decoration: none; color: darkseagreen;}
+#article { background-color: darkolivegreen; height: 200px;}
+footer { background-color: darksalmon; height: 50px;}
