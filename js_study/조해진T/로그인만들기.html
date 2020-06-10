@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="껍데기.css">
+    <link rel="stylesheet" href="loginex.css">
 </head>
 <body>
 <header id="header">
@@ -91,71 +91,67 @@
           
 
         <main id="main">
-            <section>
-                <h1>공지사항목록</h1>            
-            
-                <table border="1" width="90%">
-                    <tr>
-                        <td>번호</td>
-                        <td>제목</td>
-                        <td>작성자</td>
-                        <td>작성일</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>[공지]OK캐쉬백 0.1% 적립 프로그램 종료 안내</td>
-                        <td>관리자</td>
-                        <td>2020-06-04</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>[공지]OK캐쉬백 0.1% 적립 프로그램 종료 안내</td>
-                        <td>관리자</td>
-                        <td>2020-06-04</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>[공지]OK캐쉬백 0.1% 적립 프로그램 종료 안내</td>
-                        <td>관리자</td>
-                        <td>2020-06-04</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>[공지]OK캐쉬백 0.1% 적립 프로그램 종료 안내</td>
-                        <td>관리자</td>
-                        <td>2020-06-04</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>[공지]OK캐쉬백 0.1% 적립 프로그램 종료 안내</td>
-                        <td>관리자</td>
-                        <td>2020-06-04</td>
-                    </tr>
-    
-                </table>
+            <section id="login-form">
+               <form name="loginForm" method="post" action="http://yuunjuun.dothome.co.kr/study/login_result.php">
+                   <p>로그인</p>
+                   ID   : <input type="text" name="id" id="login-id"><br>                              
+                   PW : <input type="password" name="psw">
+                    <input type="button" value="로그인" id="login-btn" onclick="login_chk();">
+                    <input type="checkbox" name="saveid" id="">아이디저장   
+               </form>
             </section>
             
-            <section>
-                <h1 class="hidden">페이지정보</h1>
-                <div>
-                1 / 1 pages
-                </div>
-            </section>
+            <script>
+                function login_chk() {
+                    var id = document.loginForm.id.value;
+                    var pw = document.loginForm.psw.value;
 
-            <nav>
-                <h1 class="hidden">페이저</h1>
-                <div>
-                    <div>이전</div>
-                    <ul>
-                        <li>1</li> 
-                        <li>2</li>
-                        <li>3</li>
-                        <li>4</li>
-                        <li>5</li>
-                    </ul>
-                    <div>다음</div>
-                </div>
-            </nav>
+                    if (id == "") { 
+                        alert("아이디를 입력하세요.")
+                    }
+
+                    else if (pw == "") {
+                        alert("비밀번호를 입력하세요.")
+                    }
+
+                    else if (document.loginForm.saveid.checked == true) {
+
+                    } else {
+                        alert("체크하세요.")
+                        return false;
+                    }
+
+                    loginForm.submit(); //다 입력하고 값 넘길때 
+
+                    
+
+                    /* 조건문 (분기문) : 3가지
+                        if (조건) {
+                            실행문(조건이 참일때 실행되는 실행문)
+                        } 
+                        else {
+                            실행문 (조건이 거짓일때 실행는 실행문)
+                        } 
+
+                        if (조건) 
+                        else if
+                        else    
+                        
+                    */
+
+                   
+
+                    // var msg = "입력한 아이디는 " + id + "입니다.\n";
+                    //     msg = msg + "입력한 비밀번호는 " + pw + "입니다.";
+                    
+                    // alert(msg);
+                    
+
+                    // // var msg = "";
+                    //     msg = "입력한 아이디는 " + id + "입니다.\n";
+                    //     msg = msg + "입력한 비밀번호는 " + pw + "입니다.";
+                }
+            </script>
     
         </main>
     </div> 

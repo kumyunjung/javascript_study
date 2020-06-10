@@ -1,0 +1,147 @@
+#header {
+    height: 150px;
+    background-color: green;
+}
+
+#top-menu {
+    height: 30px;
+    background-color: wheat;
+    line-height: 30px;
+}
+
+#top-left {
+    float: left;
+}
+#top-menu > ul { 
+    display: flex;
+    float: right;
+    
+    
+}
+
+#top-menu > ul > li {
+    margin: 0px 20px;
+   
+}
+
+#top-right {
+    float: right;
+    margin: 10px 0 0 0;
+}
+
+
+
+#top-right > #main-menu > ul {
+    display: flex;
+}
+#top-right > #main-menu > ul > li {
+    margin: 50px 20px;
+}
+
+form {
+    display: flex;
+    float: right;
+    margin: 10px 20px;
+}
+
+#banner {
+    /* margin: 0px 50px; */
+    height: 100px;
+    background-color: blue;
+    font-size: 3em;
+    padding-top: 20px;
+   
+}
+
+#logo {
+    width: 200px;
+    
+    margin: 10px 0 0 0;
+    float: left;
+}
+#body {
+    display: flex;
+}
+#aside {
+    width: 20%;
+    height: 1000px;
+    background-color: gray;
+    
+    padding-left: 50px;
+    
+    
+}
+
+.aside-box {
+    background-color: khaki;
+    width: 150px;
+    
+    
+}
+
+
+
+.aside-menu {
+    padding-top: 30px;
+    margin-top: 30px;
+
+}
+
+
+
+#main {
+    width: 80%;
+    height: 1000px;
+    background-color: hotpink;
+    
+}
+
+.box-box {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+    height: 400px;
+
+    /* margin: 30px 0px 0px 0px; */
+    
+}
+
+
+
+.box1 {
+    width: 250px;
+    height: 250px;
+    margin: 50px 30px 0px 30px;
+    background-color: white;
+}
+#box2 {
+    width: 250px;
+    height: 250px;
+    margin: 30px 30px;
+    background-color: white;
+}
+#box3 {
+    width: 250px;
+    height: 250px;
+    margin: 30px 30px;
+    background-color: white;
+}
+
+#box-price { 
+    
+ 
+    
+    background-color: lawngreen;
+    
+   
+}
+
+
+
+
+#footer {
+    height: 200px;
+    background-color: indigo;
+}

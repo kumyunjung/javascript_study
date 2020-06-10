@@ -1,0 +1,82 @@
+#header {
+    height: 100px;
+    background-color: khaki;
+}
+#menu {
+    height: 30px;
+    background-color: lawngreen;
+}
+
+#menu > ul {
+   width: 100px;
+   height: 30px;
+   float: left;
+   text-align: center;
+   line-height: 30px;
+   border-right: 1px solid black;
+   background-color: mediumorchid;
+}
+
+#menu > ul > li:nth-child(2) {
+    display: none;
+}
+
+#menu > ul:nth-child(1):hover > li:nth-child(1) {
+    height: 30px;
+    color: blanchedalmond;
+    background-color: blue;
+}
+
+/* hover에 마우스가 올라갔을때 li의 색깔을 background-color로 */
+
+#menu > ul:nth-child(1):hover > li:nth-child(2) {
+    position: relative;
+    display: block;
+    background-color: blueviolet;
+    
+}
+
+#menu > ul:nth-child(2):hover > li:nth-child(1) {
+    height: 30px;
+    color: blanchedalmond;
+    background-color: blue;
+}
+
+#menu > ul:nth-child(2):hover > li:nth-child(2) {
+    position: relative;
+    display: block;
+    background-color: blueviolet;
+}
+#menu > ul:nth-child(3):hover > li:nth-child(1) {
+    height: 30px;
+    color: blanchedalmond;
+    background-color: blue;
+}
+
+#menu > ul:nth-child(3):hover > li:nth-child(2) {
+    position: relative;
+    display: block;
+    background-color: blueviolet;
+}
+
+#content > aside {
+    width: 20%;
+    height: 300px;
+    background-color: lightcoral;
+    float: left;
+    
+}
+
+#content > main {
+    width: 80%;
+    height: 300px;
+    background-color: lightseagreen;
+    float: left;
+}
+
+
+#footer {
+    height: 100px;
+    background-color: lightslategrey;
+    clear: both; /*인라인 깨는법*/
+}

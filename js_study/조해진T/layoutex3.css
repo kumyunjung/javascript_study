@@ -1,0 +1,42 @@
+
+
+#header { 
+    height: 200px;
+    background-color: blue;
+}
+
+#header > #menu {
+ position: relative;
+ top: 160px;
+  
+}
+
+#menu > nav > ul  {
+    display: flex;
+    background-color: gray;
+}
+
+#menu > nav > ul > li {
+    padding: 10px 20px;
+    
+    border-right: 1px solid black;
+}
+
+#body > .content-box {
+    display: flex;
+}
+
+#aside {
+    width: 20%;
+    height: 400px;
+    background-color: blueviolet;
+}
+#main {
+    width: 80%;
+    height: 400px;
+    background-color: burlywood;
+}
+#footer {
+    height: 100px;
+    background-color: cadetblue;
+}
