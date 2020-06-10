@@ -96,30 +96,34 @@
             <main id="main">
 
 
-                <form name="searchForm" method="post" action="http://yuunjuun.dothome.co.kr/study/login_result.php">
-                    <h1>아이디 / 비밀번호 찾기</h1>
-                    <input type="radio" name="searchidpw" id="radio-id" onclick="chkRadio('1');">아이디 찾기
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="radio" name="searchidpw" id="radio-pw" onclick="chkRadio('2');">비밀번호 찾기 <br><br>
 
+                <h1>아이디 / 비밀번호 찾기</h1>
+                <input type="radio" name="searchidpw" id="radio-id" onclick="chkRadio('1');">아이디 찾기
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="searchidpw" id="radio-pw" onclick="chkRadio('2');">비밀번호 찾기 
+                
+                <br><br>
 
-                    <div id="search-id">
-                        <h1><b>아이디찾기</b></h1><br>
+                <div id="search-id">
+                    <form name="searchIDForm" method="post" action="./result01.php">
+                        <h3>아이디찾기</h3><br>
                         <label for="membername"> 이름 </label> : <input type="text" name="iName" id="membername"><br>
                         <label for="memberphone"> 전화번호 </label> : <input type="text" name="iPhone" id="memberphone">
                         <input type="button" value="확인" id="search-btn" onclick="searchid();">
-                    </div>
+                    </form>
+                </div>
 
-
-                    <div id="search-pw">
+                <div id="search-pw">
+                    <form name="searchPWForm" method="post" action="./result02.php">
                         <h2><b>비밀번호찾기</b></h2><br>
+
                         <label for="mName"> 이름 </label> : <input type="text" name="pName" id="membername"><br>
                         <label for="phone"> 전화번호 </label> : <input type="text" name="pPhone"><br>
                         <label for="email"> 이메일 주소</label> : <input type="text" name="pEmail">
                         <input type="button" value="확인" id="search-btn" onclick="search();">
-                    </div>
+                    </form>
+                </div>
 
-                </form>
 
                 <script>
                     function chkRadio(value1) {
@@ -148,8 +152,8 @@
                 <script>
                     function searchid() {
 
-                        var IdName = document.searchForm.iName.value;
-                        var phone1 = document.searchForm.iPhone.value;
+                        var IdName = document.searchIDForm.iName.value;
+                        var phone1 = document.searchIDForm.iPhone.value;
 
                         if (IdName == "") {
                             alert("이름을 입력하세요.")
@@ -158,14 +162,15 @@
                             alert("전화번호를 입력하세요.")
                             return false;
                         }
+                        document.searchIDForm.submit();
 
                     }
 
 
                     function search() {
-                        var mName = document.searchForm.pName.value;
-                        var phone = document.searchForm.pPhone.value;
-                        var email = document.searchForm.pEmail.value;
+                        var mName = document.searchPWForm.pName.value;
+                        var phone = document.searchPWForm.pPhone.value;
+                        var email = document.searchPWForm.pEmail.value;
 
                         if (mName == "") {
                             alert("이름을 입력하세요.")
@@ -177,16 +182,13 @@
                             alert("이메일을 입력하세요.")
                             return false;
                         }
+                        document.searchPWForm.submit();
 
-                        loginForm.submit(); //다 입력하고 값 넘길때 
-
-                        var mName = document.searchForm.pName.value;
-                        var phone1 = document.searchForm.phone.value;
+                        
 
 
 
-
-                        loginForm.submit(); //다 입력하고 값 넘길때 
+                        
 
 
 

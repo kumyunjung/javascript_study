@@ -95,6 +95,9 @@
                
                <form name="loginForm" method="post" action="http://yuunjuun.dothome.co.kr/study/login_result.php">
                    <h1>로그인</h1>
+                   nickname : <input type="text" name="nickname" id="aaa" value=""><br>
+                   test : <input type="text" name="tmp_1" id="tmp_2"><br>
+
                   <label for="login-id"> ID  :</label> <input type="text" name="id" id="login-id"><br>                              
                    <label for="login-psw"> PW  :</label> <input type="password" name="psw" id="login-psw">
                     <input type="button" value="로그인" id="login-btn" onclick="login_chk();">
@@ -107,6 +110,15 @@
             
             <script>
                 function login_chk() {
+
+                    var name = document.loginForm.nickname.value;
+                    var name2 = document.getElementById("aaa").value;
+                  
+
+                    document.loginForm.tmp_1.value = name
+                    
+
+
                     var id = document.loginForm.id.value;
                     var pw = document.loginForm.psw.value;
                     var check_value = document.loginForm.saveid.checked

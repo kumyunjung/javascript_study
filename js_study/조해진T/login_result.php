@@ -1,7 +1,7 @@
 <?
 $id = $_POST["id"];
-$passwd = $_POST["passwd"];
+$psw = $_POST["psw"];
 
 echo "id:".$id."<br>";
-echo "passwd:".$passwd."<br>";
+echo "psw:".$psw."<br>";
 ?>
