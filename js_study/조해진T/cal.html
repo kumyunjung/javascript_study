@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="cal">
+        <input type="text" name="num1" style="width:80px">
+        +
+        <input type="text" name="num2" style="width:80px">
+        =
+        <input type="text" name="num3" style="width:100px">
+        <br><br>
+        <input type="button" value="계산하기" name="result1" onclick="result();">
+    </form>
+
+    <script>
+        
+        function result() {
+
+        
+        var plus1 = document.cal.num1.value;
+        var plus2 = document.cal.num2.value;
+
+
+        if (plus1 == "") {
+                            alert("숫자를 입력하세요.")
+                            return false;
+                        } else if (plus2 == "") {
+                            alert("숫자를 입력하세요.")
+                            return false;
+                        }
+
+        document.cal.num3.value = parseInt(plus1) + parseInt(plus2);
+
+       }
+
+
+
+       
+    </script>
+</body>
+</html>
