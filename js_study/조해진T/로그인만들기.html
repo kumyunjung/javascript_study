@@ -105,6 +105,7 @@
                 function login_chk() {
                     var id = document.loginForm.id.value;
                     var pw = document.loginForm.psw.value;
+                    var check_value = document.loginForm.saveid.checked
 
                     if (id == "") { 
                         alert("아이디를 입력하세요.")
@@ -114,9 +115,7 @@
                         alert("비밀번호를 입력하세요.")
                     }
 
-                    else if (document.loginForm.saveid.checked == true) {
-
-                    } else {
+                    else if (check_value != true) { //if (!check_value)
                         alert("체크하세요.")
                         return false;
                     }
