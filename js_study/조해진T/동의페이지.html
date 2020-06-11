@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="loginex.css">
+</head>
+<body>
+<header id="header">
+    <div class="content-box">
+        <section id="logo">
+            <h1>
+                <a href="#"><img src="https://i.pinimg.com/originals/86/38/96/8638962c5fa167720b5d154ecb02e85c.png" class="logo_img"></a>
+            </h1>
+        </section>
+        <section id="main-menu">
+            <h1 class="hidden">머릿말</h1>
+            <nav>
+                <h1 class="hidden">메인메뉴</h1>
+                <ul>
+                    <li>주인장소개</li>
+                    <li>주인장연혁</li>
+                    <li>주인장동향</li>
+                </ul>
+            </nav>
+
+            <section id="search-form">
+                <h1 class="hidden">검색폼</h1>
+                <form>
+                <fieldset>
+                <legend class="hidden">검색폼</legend>
+                <label class="hidden">검색</label> 
+                <input type="text" name="">
+                <input type="submit" value="검색">
+                </fieldset>
+                </form>
+            </section>    
+
+            <div id="member-menu">
+                <nav>
+                    <h1 class="hidden">회원메뉴</h1>
+                    <ul>
+                        <li>Home</li>
+                        <li>로그인</li>
+                        <li>회원가입</li> 
+                    </ul>
+                </nav>
+           
+                <nav>
+                    <h1 class="hidden">바로가기메뉴</h1>
+                    <ul>
+                        <li>마이페이지</li> 
+                        <li>게시판</li>
+                    </ul>
+                </nav>
+            </div> 
+        </section>
+    </div>
+
+</header>
+    
+
+<div id="body">
+    <div class="content-box">
+        <aside id="aside">         
+            <section id="body-nav">
+                <h1 class="hidden">고객센터</h1>
+
+                <nav>
+                    <h1>고객센터</h1>
+                    <ul>
+                        <li>공지사항</li>
+                        <li>자주하는질문</li>
+                        <li>1:1문의</li>
+                        <li>이벤트</li>
+                    </ul>
+                </nav>
+                
+                <nav>
+                    <h1>연관업체</h1>
+                    <ul>
+                        <li>연관업체1</li>
+                        <li>연관업체2</li>
+                        <li>연관업체3</li>
+                    </ul>
+                </nav>
+            </section>
+        </aside>
+          
+
+        <main id="main">
+
+            <form name="chkForm" method="" action=""></form>
+           <input type="checkbox" name="cbox" id="">이용약관1 <br><br>
+           <input type="checkbox" name="cbox" id="">이용약관2 <br><br>
+           <input type="checkbox" name="cbox" id="">이용약관3 <br><br>
+           <input type="checkbox" name="cbox" id="">이용약관4 <br><br>
+           <input type="checkbox" name="cbox" id="">이용약관5 <br><br>
+           <input type="checkbox" name="cbox" id="">이용약관6 <br><br>
+           <input type="button" value="확인" onclick="checkAgree();">
+            <p id="msg"></p>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#" onclick="checkAgree2();">test</a>
+
+            <script>
+                function checkAgree2() {
+                    var cbox = document.getElementsByName("cbox");
+
+                    for (var i=0; i <= 5; i++) {
+                        // alert("i :" + i)
+
+                        if (cbox[i].checked != true) {
+                            alert('약관' + (i+1) + '선택하세요')
+                            return false;
+                        }
+                    }
+                    // if (cbox[0].checked == true) {
+                      
+                    // } else {
+                    //     alert("약관1 선택하세요.")
+                    //     return false;
+                    // }
+
+                    // if (cbox[1].checked != true) {
+                    //     alert("약관2 선택하세요.")
+                    //     return false;
+                    // }
+
+                    // if (cbox[2].checked != true) {
+                    //     alert("약관3 선택하세요.")
+                    //     return false;
+                    // }
+
+                    // if (cbox[3].checked != true) {
+                    //     alert("약관4 선택하세요.")
+                    //     return false;
+                    // }
+
+                    // if (cbox[4].checked != true) {
+                    //     alert("약관5 선택하세요.")
+                    //     return false;
+                    // }
+
+                    // if (cbox[5].checked != true) {
+                    //     alert("약관6 선택하세요.")
+                    //     return false;
+                    // }
+                   
+                }
+
+
+                function checkAgree() {
+                    var c_counter = 0;
+                    var cbox = document.getElementsByName("cbox");
+                   
+                    // document.getElementById("msg").innerHTML = typeof(cbox);
+
+                 
+
+                    for (var i=0; i < cbox.length; i++) {
+                        if (cbox[i].checked == true) {
+                            c_counter = c_counter + 1;
+                        }
+                    }
+
+                    // document.getElementById("msg").innerHTML = c_counter;
+
+                    if (cbox.length - c_counter == 0) {
+                        document.getElementById("msg").innerHTML = "전부 선택됨";
+                    } else {
+                        document.getElementById("msg").innerHTML = c_counter + "개 선택됨"
+                    }
+
+                
+
+                } 
+
+
+                    
+
+                    /* 조건문 (분기문) : 3가지
+                        if (조건) {
+                            실행문(조건이 참일때 실행되는 실행문)
+                        } 
+                        else {
+                            실행문 (조건이 거짓일때 실행는 실행문)
+                        } 
+
+                        if (조건) 
+                        else if
+                        else    
+                        
+                    */
+
+                   
+
+                    // var msg = "입력한 아이디는 " + id + "입니다.\n";
+                    //     msg = msg + "입력한 비밀번호는 " + pw + "입니다.";
+                    
+                    // alert(msg);
+                    
+
+                    // // var msg = "";
+                    //     msg = "입력한 아이디는 " + id + "입니다.\n";
+                    //     msg = msg + "입력한 비밀번호는 " + pw + "입니다.";
+                
+            </script>
+    
+        </main>
+    </div> 
+</div>
+
+<footer id="footer">
+    <div class="content-box">
+        <section id="footer-logo">
+            <h1>
+                <a href="#"><img src="https://i.pinimg.com/originals/86/38/96/8638962c5fa167720b5d154ecb02e85c.png" class="logo_img" ></a>
+            </h1>
+       </section>
+
+        <div>
+            <section id="owner-info">       
+                    <h1 class="hidden">소유권정보</h1>
+                    <dl>
+                        <dt>주소:</dt>
+                        <dd>경기도 성남시 대왕판교로 111</dd>
+                        <dt>관리자메일:</dt>
+                        <dd>hong@hong.com</dd>
+                    </dl>
+                    <dl>    
+                        <dt>사업자등록번호:</dt>
+                        <dd>111-22-33333</dd>
+                        <dt>통신판매신고:</dt>
+                        <dd>신고제 1111-경기성남-1111호</dd>
+                    </dl>    
+                    <dl>
+                        <dt>상호 :</dt>
+                        <dd>홍길동사</dd>
+                        <dt>대표 :</dt>
+                        <dd>홍길동</dd>
+                        <dt>전화번호 :</dt>
+                        <dd>010-1111-1111</dd>
+                    </dl>
+
+            </section>
+        
+            <section id="copyright-info">
+                    <h1 class="hidden">저작권정보</h1>
+                    <div>
+                    Copyright c newlecture 2012-2014 All Reserved. Contact hong@hong.com
+                    </div>         
+            </section>
+
+       </div> 
+    </div>
+</footer>
+
+</body>
+</html>
+
+<!-- section은 넘버링을 1번부터 하기위해 사용 -->
