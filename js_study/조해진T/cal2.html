@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="calForm" method="POST" action="">
+        <input type="text" name="num1" style="width: 80px;">
+        
+        <select name="calGubun">
+            <option value=""> =선택=</option>
+            <option value="add"> + </option>
+            <option value="sub"> - </option>
+            <option value="mul"> * </option>
+            <option value="div"> / </option>
+            <option value="rem"> 나머지 </option>
+        </select>
+
+        <input type="text" name="num2" style="width: 80px;">
+        <sapn id="result" style="height: 30px; background-color: yellow;"></sapn> <!-- span은 인라인 -->
+        <!-- <input type="text" name="num3" style="width: 100px;" readonly> -->
+        <br></br>
+        <input type="button" value="계산하기" onclick="cal();">
+        &nbsp;
+        <a href="#" onclick="test();">테스트</a>
+    </form>
+    <script>
+        function cal(){
+            var num1 = document.calForm.num1.value;
+            var num2 = document.calForm.num2.value;
+            var result;
+            var calGubun = document.calForm.calGubun.value;
+            
+
+            if(num1==""){
+                alert("첫번째 숫자 입력하시오.");
+                document.calForm.num1.focus();
+                return false;
+            }else if(num2==""){
+                alert("두번째 숫자 입력하시오.");
+                document.calForm.num2.focus();
+                return false;
+            }
+
+            num1 = parseInt(num1);
+            num2 = parseInt(num2);
+            if(calGubun == ""){
+                alert("부호를 선택해주세요.");
+                document.calForm.calGubun.focus();
+                return false;
+            }else if(calGubun == "add"){
+                result = num1 + num2;
+            }else if(calGubun == "sub"){
+                result = num1 - num2;
+            }else if(calGubun == "mul"){
+                result = num1 * num2;
+            }else if(calGubun == "div"){
+                result = num1 / num2;
+            }else if(calGubun == "rem"){
+                result = num1 % num2;
+            }            
+
+            // document.calForm.num3.value = result;
+            document.getElementById("result").innerText = " = " + result;
+            document.getElementById("result").style.color = "red";
+        
+        }
+    </script>
+</body>
+</html>

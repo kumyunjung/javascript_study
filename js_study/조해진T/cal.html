@@ -8,35 +8,112 @@
 <body>
     <form name="cal">
         <input type="text" name="num1" style="width:80px">
-        +
+        
+        <select name="calGubun" id="">
+            <option value="">= 선택 =</option>
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">나머지</option>
+        </select>
+
         <input type="text" name="num2" style="width:80px">
-        =
-        <input type="text" name="num3" style="width:100px">
+        
+        <span id="result" style="height: 30px; background-color: yellow;"></span>  
+        
+        <!-- span은 inline div는 block  -->
+
+        <!-- <input type="text" name="num3" style="width:100px"> -->
         <br><br>
         <input type="button" value="계산하기" name="result1" onclick="result();">
+        <!-- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <a href="#" onclick="test();">[테스트]</a> -->
     </form>
 
     <script>
-        
+
         function result() {
+            
+            var calGubun = document.cal.calGubun.value;
+            var num1 = document.cal.num1.value;
+            var num2 = document.cal.num2.value;
+            num1 = parseInt(num1);
+            num2 = parseInt(num2);
+            var plus = num1 + num2
+            var min = num1 - num2
+            var gop = num1 * num2
+            var na = num1 / num2 
+            var nam = num1 % num2
+
+
+            if (calGubun == "") { 
+                alert("선택하세요")
+            } else if (calGubun == "+") { 
+                document.getElementById("result").innerText = plus;
+
+            }else if (calGubun == "-") {
+                document.getElementById("result").innerText = min;
+            }else if (calGubun == "*") {
+                document.getElementById("result").innerText = gop;
+            }
+            else if (calGubun == "/") {
+                document.getElementById("result").innerText = na;
+            }
+            else if (calGubun == "%") {
+                document.getElementById("result").innerText = nam;
+            }
+
+        }
+        
+        // function result() {
 
         
-        var plus1 = document.cal.num1.value;
-        var plus2 = document.cal.num2.value;
+        // var plus1 = document.cal.num1.value;
+        // var plus2 = document.cal.num2.value;
+        // var result = parseInt(plus1) + parseInt(plus2)
 
 
-        if (plus1 == "") {
-                            alert("숫자를 입력하세요.")
-                            return false;
-                        } else if (plus2 == "") {
-                            alert("숫자를 입력하세요.")
-                            return false;
-                        }
+        // if (plus1 == "") {
+        //                     alert("첫번째값을 입력하세요.")
+        //                     document.cal.num1.focus();
+        //                     return false;
+        //                 } else if (plus2 == "") {
+        //                     alert("두번째값을 입력하세요.")
+        //                     document.cal.num2.focus();
+        //                     return false;
+        //                 }
 
-        document.cal.num3.value = parseInt(plus1) + parseInt(plus2);
+        // document.getElementById("result").innerText = result;
+        // document.getElementById("result").style.color = "red";
 
-       }
+       
 
+        // function test() {
+        //     var a = 3;
+        //     var b = "3";
+        //     var c = "3.0";
+        //     var d = 3.7;
+        //     var r1 = a + a;
+        //     var r2 = b + b;
+        //     var r3 = parseInt(b) + parseInt(b); //자료형 변환 1. 자동형 변환 2. 강제형 변환
+                                                //parseInt : 문자열 타입을 숫자타입으로 강제변환
+                                                //input박스 안에 들어있는 값은 무조건 문자열로 가져옴
+
+        //     alert("typeof(a) : " + r1);
+        //     alert("typeof(b) : " + r2);
+        //     alert("typeof(c) : " + r3);
+            
+        // }
+
+        // function result() {
+        //     var plus1 = document.cal.num1.value;
+        //     var plus2 = document.cal.num2.value;
+
+        //     alert("num1의 자료형 타입은 " + typeof(plus1) + "입니다.")
+        //     alert("num2의 자료형 타입은 " + typeof(plus2) + "입니다.")
+
+        // }
 
 
        
