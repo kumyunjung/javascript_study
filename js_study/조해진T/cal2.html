@@ -8,7 +8,7 @@
 <body>
     <form name="calForm" method="POST" action="">
         <input type="text" name="num1" style="width: 80px;">
-        
+        <span id="msgnum1" style="display: none;">숫자를 입력하세요</span>
         <select name="calGubun">
             <option value=""> =선택=</option>
             <option value="add"> + </option>
@@ -35,7 +35,10 @@
             
 
             if(num1==""){
-                alert("첫번째 숫자 입력하시오.");
+                // alert("첫번째 숫자 입력하시오.");
+                document.getElementById("msgnum1").style.display = "block";
+                document.getElementById("msgnum1").style.color = "red";
+
                 document.calForm.num1.focus();
                 return false;
             }else if(num2==""){

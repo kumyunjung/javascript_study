@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="join.css">
+    <link rel="stylesheet" href="loginex.css">
+</head>
+<body>
+<header id="header">
+    <div class="content-box">
+        <section id="logo">
+            <h1>
+                <a href="#"><img src="https://i.pinimg.com/originals/86/38/96/8638962c5fa167720b5d154ecb02e85c.png" class="logo_img"></a>
+            </h1>
+        </section>
+        <section id="main-menu">
+            <h1 class="hidden">머릿말</h1>
+            <nav>
+                <h1 class="hidden">메인메뉴</h1>
+                <ul>
+                    <li>주인장소개</li>
+                    <li>주인장연혁</li>
+                    <li>주인장동향</li>
+                </ul>
+            </nav>
+
+            <section id="search-form">
+                <h1 class="hidden">검색폼</h1>
+                <form>
+                <fieldset>
+                <legend class="hidden">검색폼</legend>
+                <label class="hidden">검색</label> 
+                <input type="text" name="">
+                <input type="submit" value="검색">
+                </fieldset>
+                </form>
+            </section>    
+
+            <div id="member-menu">
+                <nav>
+                    <h1 class="hidden">회원메뉴</h1>
+                    <ul>
+                        <li>Home</li>
+                        <li>로그인</li>
+                        <li>회원가입</li> 
+                    </ul>
+                </nav>
+           
+                <nav>
+                    <h1 class="hidden">바로가기메뉴</h1>
+                    <ul>
+                        <li>마이페이지</li> 
+                        <li>게시판</li>
+                    </ul>
+                </nav>
+            </div> 
+        </section>
+    </div>
+
+</header>
+    
+
+<div id="body">
+    <div class="content-box">
+        <aside id="aside">         
+            <section id="body-nav">
+                <h1 class="hidden">고객센터</h1>
+
+                <nav>
+                    <h1>고객센터</h1>
+                    <ul>
+                        <li>공지사항</li>
+                        <li>자주하는질문</li>
+                        <li>1:1문의</li>
+                        <li>이벤트</li>
+                    </ul>
+                </nav>
+                
+                <nav>
+                    <h1>연관업체</h1>
+                    <ul>
+                        <li>연관업체1</li>
+                        <li>연관업체2</li>
+                        <li>연관업체3</li>
+                    </ul>
+                </nav>
+            </section>
+        </aside>
+          
+
+        <main id="main">
+            <section id="join-form">
+               
+               <form name="joinForm" method="post" action="" id="joinForm">
+                   
+                   <h1 id="join"><b>회원가입</b></h1>
+                   <br><br>
+            <div id="form">
+                  <label for="join-id">아이디</label><br>
+                  <input type="text" name="id" id="join-id" class="blank"><br>
+                  <span id="hide">필수 정보입니다.</span>
+                  <br>                            
+                    <label for="join-psw">비밀번호</label><br>
+                   <input type="password" name="psw" id="join-psw" class="blank"><br>
+                   <span class="hide">필수 정보입니다.</span><br>
+                   <label for="join-psw2">비밀번호 재확인</label><br>
+                   <input type="password" name="psw2" id="join-psw2" class="blank"><br>
+                   <span class="hide">필수 정보입니다.</span><br>
+                   <label for="join-irum">이름</label><br>
+                   <input type="text" name="irum" id="join-irum" class="blank"><br>
+                   <span class="hide">필수 정보입니다.</span><br>
+                   <label for="join-bd">생년월일</label><br>
+                    <input type="text" placeholder="년(4자)" id="join-bd" class="bdblank" name="birthday">
+                   <select name="selectbd" id="" class="bdblank">
+                       <option value="/">월</option>
+                       <option value="">1월</option>
+                       <option value="">2월</option>
+                       <option value="">3월</option>
+                       <option value="">4월</option>
+                       <option value="">5월</option>
+                       <option value="">6월</option>
+                       <option value="">7월</option>
+                       <option value="">8월</option>
+                       <option value="">9월</option>
+                       <option value="">10월</option>
+                       <option value="">11월</option>
+                       <option value="">12월</option>
+                       <input type="text" placeholder="일" class="bdblank" name="day">
+                   </select><br><br>
+                   <label for="join-sex">성별</label><br>
+                   <select name="sex" id="join-sex" class="blank">
+                       <option value="/">성별</option>
+                       <option value="">남자</option>
+                       <option value="">여자</option>
+                  </select><br><br>
+                  <label for="join-email">본인 확인 이메일</label><br>
+                  <input type="email" name="email" id="join-email" class="blank" ><br><br>
+                  <label for="phblank1">휴대전화</label><br>
+                  <select name="num" id="" class="blank">
+                      <option value="">대한민국 +82</option>
+                      <option value="">그리스 +30</option>
+                      <option value="">기니 +224</option>
+                  </select><br>
+                  <input type="text" name="phone"  id="phblank1" placeholder="전화번호를 입력하세요">
+                  <input type="button" value="인증번호받기" id="phblank2"><br>
+                  <input type="text" name="confirm" placeholder="인증번호입력" class="blank" >
+                  <br><br>
+                <input type="button" value="가입하기" id="join-btn" onclick="joinchk();">
+                
+                   </div>
+               </form>
+            
+             </section>
+
+            <script>
+                function joinchk() {
+
+                    var id = document.joinForm.id.value;
+                    var pw = document.joinForm.psw.value;
+                    var pw2 = document.joinForm.psw2.value;
+                    var name = document.joinForm.irum.value;
+                    var bd = document.joinForm.birthday.value;
+                    var bd2 = document.joinForm.selectbd.value;
+                    var day = document.joinForm.day.value;
+                    var sex = document.joinForm.sex.value;
+                    var email = document.joinForm.email.value;
+                    var phone = document.joinForm.phone.value;
+                    var num = document.joinForm.confirm.value;
+                
+                    if (id == "") { 
+                        document. getElementById("hide").style.display = "block";
+                        document.joinForm.id.focus();
+                        return false;
+                    }
+
+                    else if (pw == "") {
+                        alert("비밀번호를 입력하세요.")
+                        document.joinForm.psw.focus();
+                        return false;
+                    }
+                    else if (pw2 == "") {
+                        alert("비밀번호를 다시 입력하세요.")
+                        document.joinForm.psw2.focus();
+                        return false;
+                    }
+
+                    else if (pw != pw2) {
+                        alert("비밀번호가 다릅니다.")
+                        document.joinForm.psw2.focus();
+                        return false;
+                    }
+
+                    
+                    else if (name == "") {
+                        alert("이름을 입력하세요.")
+                        document.joinForm.irum.focus();
+                        return false;
+                    }
+
+                    else if (bd == ""){
+                alert("태어난 년도를 입력해주세요.");
+                document.joinForm.birthday.focus();
+                return false;
+                
+                    }
+                    else if (bd2 == "/"){
+                alert("태어난 달을 선택해주세요.");
+                document.joinForm.selectbd.focus();
+                return false;
+                
+                    }
+                    else if (day == ""){
+                alert("태어난 일을 입력해주세요.");
+                document.joinForm.day.focus();
+                return false;
+                
+                    }
+                    else if (sex == "/"){
+                alert("성별을 선택해주세요.");
+                document.joinForm.sex.focus();
+                return false;
+                
+                    }
+                    else if (email == ""){
+                alert("이메일을 입력해주세요.");
+                document.joinForm.email.focus();
+                return false;
+                
+                    }
+                    else if (phone == ""){
+                alert("전화번호를 입력해주세요.");
+                document.joinForm.phone.focus();
+                return false;
+                
+                    }
+                    else if (num == ""){
+                alert("인증번호를 입력해주세요.");
+                document.joinForm.confirm.focus();
+                return false;
+                
+                    }
+
+                   
+
+                    joinForm.submit(); //다 입력하고 값 넘길때 
+
+                    
+
+                    /* 조건문 (분기문) : 3가지
+                        if (조건) {
+                            실행문(조건이 참일때 실행되는 실행문)
+                        } 
+                        else {
+                            실행문 (조건이 거짓일때 실행는 실행문)
+                        } 
+
+                        if (조건) 
+                        else if
+                        else    
+                        
+                    */
+
+                   
+
+                    // var msg = "입력한 아이디는 " + id + "입니다.\n";
+                    //     msg = msg + "입력한 비밀번호는 " + pw + "입니다.";
+                    
+                    // alert(msg);
+                    
+
+                    // // var msg = "";
+                    //     msg = "입력한 아이디는 " + id + "입니다.\n";
+                    //     msg = msg + "입력한 비밀번호는 " + pw + "입니다.";
+                }
+            </script>
+    
+        </main>
+    </div> 
+</div>
+
+<footer id="footer">
+    <div class="content-box">
+        <section id="footer-logo">
+            <h1>
+                <a href="#"><img src="https://i.pinimg.com/originals/86/38/96/8638962c5fa167720b5d154ecb02e85c.png" class="logo_img" ></a>
+            </h1>
+       </section>
+
+        <div>
+            <section id="owner-info">       
+                    <h1 class="hidden">소유권정보</h1>
+                    <dl>
+                        <dt>주소:</dt>
+                        <dd>경기도 성남시 대왕판교로 111</dd>
+                        <dt>관리자메일:</dt>
+                        <dd>hong@hong.com</dd>
+                    </dl>
+                    <dl>    
+                        <dt>사업자등록번호:</dt>
+                        <dd>111-22-33333</dd>
+                        <dt>통신판매신고:</dt>
+                        <dd>신고제 1111-경기성남-1111호</dd>
+                    </dl>    
+                    <dl>
+                        <dt>상호 :</dt>
+                        <dd>홍길동사</dd>
+                        <dt>대표 :</dt>
+                        <dd>홍길동</dd>
+                        <dt>전화번호 :</dt>
+                        <dd>010-1111-1111</dd>
+                    </dl>
+
+            </section>
+        
+            <section id="copyright-info">
+                    <h1 class="hidden">저작권정보</h1>
+                    <div>
+                    Copyright c newlecture 2012-2014 All Reserved. Contact hong@hong.com
+                    </div>         
+            </section>
+
+       </div> 
+    </div>
+</footer>
+
+</body>
+</html>
+
+<!-- section은 넘버링을 1번부터 하기위해 사용 -->

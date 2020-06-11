@@ -1,0 +1,33 @@
+.blank { width: 300px; height: 30px;}
+.bdblank { width: 100px; height: 30px;}
+#phblank1 { width: 200px; height: 30px;}
+#phblank2 {width: 100px; height: 30px;}
+#join-btn {width: 300px; height: 50px; background-color: yellow;}
+
+#form {
+   
+    position: relative;
+    left: 250px;
+   
+ 
+   
+  
+   
+}
+
+#joinForm {
+    background-color: white;
+    padding-bottom: 10px;
+    margin-top: 20px;
+}
+
+#join {
+    text-align: center;
+    font-size: 2em;
+}
+
+
+#hide {
+    display: none;
+    color: tomato;
+}
