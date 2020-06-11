@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="result" id="result"> <br><br>
+    <input type="text" id="hide"><br>
+    <input type="text" id="hide2"><br>
+    <input type="text" id="hide3">
+
+    <table border="1" width="200" >
+        <style>
+            .hand {cursor: pointer;}
+            #result {text-align: right;}
+        </style>
+        <tr>
+            <td onclick="num('7')" class="hand">7</td>
+            <td onclick="num('8')" class="hand">8</td>
+            <td onclick="num('9')" class="hand">9</td>
+            <td onclick="num('+')" class="hand">+</td>
+        </tr>
+        <tr>
+            <td onclick="num('4')" class="hand">4</td>
+            <td onclick="num('5')" class="hand">5</td>
+            <td onclick="num('6')" class="hand">6</td>
+            <td onclick="num('-')" class="hand">-</td>
+        </tr>
+        <tr>
+            <td onclick="num('1')" class="hand">1</td>
+            <td onclick="num('2')" class="hand">2</td>
+            <td onclick="num('3')" class="hand">3</td>
+            <td onclick="num('*')" class="hand">*</td>
+        </tr>
+        <tr>
+            <td onclick="num('AC')" class="hand">AC</td>
+            <td onclick="num('0')"  class="hand">0</td>
+            <td onclick="num('=')" class="hand">=</td>
+            <td onclick="num('/')" class="hand">/</td>
+        </tr>
+    </table>
+
+    <script>
+        
+
+
+        function num(value1) {  
+            
+            var oldvalue = document.getElementById("result").value
+            var newvalue = oldvalue + value1
+            document.getElementById("result").value = newvalue
+
+            
+
+        
+
+            if (value1 == 'AC') {
+                document.getElementById("result").value = "";
+                return false;
+            } else if (value1 == '+') {
+                document.getElementById("result").value = "";
+                document.getElementById("hide").value = newvalue ;
+                
+                document.getElementById("hide2").value = "+";
+                return false;
+            
+            } else if (value1 == '-') {
+                document.getElementById("hide").value = newvalue;
+                document.getElementById("result").value = "";
+                document.getElementById("hide2").value = "-";
+                return false;
+            
+            } else if (value1 == '*') {
+                document.getElementById("hide").value = newvalue;
+                document.getElementById("result").value = "";
+                document.getElementById("hide2").value = "*";
+                return false;
+            
+            } else if (value1 == '/') {
+                document.getElementById("hide").value = newvalue;
+                document.getElementById("result").value = "";
+                document.getElementById("hide2").value = "/";
+                return false;
+
+            } 
+           
+            
+            else if (value1 == '=') { 
+                document.getElementById("hide3").value = newvalue;
+                document.getElementById("result").value = "";
+                
+            } 
+            
+            // else {
+            //     document.getElementById("result").value = document.getElementById("result").value + value1
+            // }
+            
+           
+
+          
+            
+           
+
+            
+
+            
+        }
+    </script>
+</body>
+</html>
