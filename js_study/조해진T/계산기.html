@@ -48,25 +48,20 @@
 
         function num(value1) {  
             
-            var oldvalue = document.getElementById("result").value
-            var newvalue = oldvalue + value1
-            document.getElementById("result").value = newvalue
-
-            
-
-        
 
             if (value1 == 'AC') {
                 document.getElementById("result").value = "";
                 return false;
-            } else if (value1 == '+') {
-                document.getElementById("result").value = "";
-                document.getElementById("hide").value = newvalue ;
+            } 
+            else if (value1 == '+') {
+                document.getElementById("hide").value = document.getElementById("result").value ;
                 
-                document.getElementById("hide2").value = "+";
-                return false;
+                document.getElementById("hide2").value = value1;
+                document.getElementById("result").value = "";
+                return false; } 
             
-            } else if (value1 == '-') {
+           
+            else if (value1 == '-') {
                 document.getElementById("hide").value = newvalue;
                 document.getElementById("result").value = "";
                 document.getElementById("hide2").value = "-";
@@ -100,7 +95,9 @@
            
 
           
-            
+            var oldvalue = document.getElementById("result").value
+            var newvalue = oldvalue + value1
+            document.getElementById("result").value = newvalue
            
 
             
