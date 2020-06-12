@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+</head>
+<body>
+    <form method="POST" name="fname" action="http://yuunjuun.dothome.co.kr/study/banpum.php">
+    (*)는 필수입력사항입니다. <br><br>
+    이름(*) : <input type="text" name="name" id="name">
+    <span id="msgName" style="display: none;"></span><br>
+    연락처(선택) : 
+    <input type="radio" name="agree" id="agree01" value="Y" > 동의 &nbsp;
+    <input type="radio" name="agree" id="agree02" value="N" checked > 비동의 <br>
+    답변 Email(*) :
+    <input type="text" name="email01" id="email01"> @
+    <input type="text" name="email02" id="email02">
+    <select name="" id="">
+        <option value="">직접입력</option>
+    </select>
+    <span id="msgMail" style="display: none;"></span>
+    <br>
+    제목(*) : <input type="text" name="subject" id="subject">
+    <span id="msgTitle" style="display: none;"></span><br>
+    내용(*) : <textarea name="content" id="content" style="width: 300px; height: 100px;">
+        반품/교환시
+        사유
+        운송장
+    </textarea>
+    <span id="msgContent" style="display: none;"></span><br><br>
+
+   
+     <input type="checkbox" name="hobby" id="hobby" value="영화">영화 <br><br> 
+    <input type="button" value="확인" id="btn1">
+</form>
+    <script> 
+        $(document).ready(function() {
+            $("#btn1").click(function(){
+                var name = $("#name").val();
+                if (name == "") {
+                    // alert("이름을 입력하세요.")
+                    $("#msgName").show();
+                    $("#msgName").text("이름을 입력하세요.")
+                    // $("#msgName").css("color", "red")
+                    // $("#msgName").css("font-size", "12px")
+
+                    $("#msgName").css({"color":"red", "font-size":"12px"})
+
+                    $("#name").focus();
+                    return false;
+                } else {
+                    $("#msgName").hide();
+                }
+                var email01 = $("#email01").val();
+                if (email01 == "") {
+                    // alert("이메일을 입력하세요.")
+                    $("#msgMail").show();
+                    $("#msgMail").text("이메일을 입력하세요.")
+                    $("#msgMail").css({"color":"red", "font-size":"12px"})
+                    $("#email01").focus();
+                    return false;
+                } else {
+                    $("#msgMail").hide();
+                }
+                var email02 = $("#email02").val();
+                if (email02 == "") {
+                    // alert("이메일을 입력하세요.")
+                    $("#msgMail").show();
+                    $("#msgMail").text("이메일을 입력하세요.")
+                    $("#msgMail").css({"color":"red", "font-size":"12px"})
+                    $("#email02").focus();
+                    return false;
+                } else {
+                    $("#msgMail").hide();
+                }
+                var subject = $("#subject").val();
+                if (subject == "") {
+                    // alert("제목을 입력하세요.")
+                    $("#msgTitle").show();
+                    $("#msgTitle").text("제목을 입력하세요.")
+                    $("#msgTitle").css({"color":"red", "font-size":"12px"})
+                
+                    $("#subject").focus();
+                    return false;
+                } else {
+                    $("#msgTitle").hide();
+                }
+                var content = $("#content").val();
+                if (content == "") {
+                    // alert("내용을 입력하세요.")
+                    $("#msgContent").show();
+                    $("#msgContent").text("내용을 입력하세요.")
+                    $("#msgContent").css({"color":"red", "font-size":"12px"})
+                    
+                    $("#content").focus();
+                    return false;
+                }else {
+                    $("#msgContent").hide();
+                }
+
+                $("#hobby").prop("checked",true);
+
+                if (confirm("진행할까요?")) {
+                    alert("넘기기");
+                    fname.submit();
+                }
+                
+            });
+        });
+        // $function() {
+
+        // }
+    </script>
+    
+</body>
+</html>
