@@ -7,7 +7,7 @@
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 </head>
 <body>
-    <form method="POST" name="fname" action="http://yuunjuun.dothome.co.kr/study/banpum.php">
+    <form method="POST" name="fname" id="fname" action="http://yuunjuun.dothome.co.kr/study/banpum.php">
     (*)는 필수입력사항입니다. <br><br>
     이름(*) : <input type="text" name="name" id="name">
     <span id="msgName" style="display: none;"></span><br>
@@ -32,9 +32,18 @@
     <span id="msgContent" style="display: none;"></span><br><br>
 
    
-     <input type="checkbox" name="hobby" id="hobby" value="영화">영화 <br><br> 
+     <!-- <input type="checkbox" name="hobby" id="hobby" value="영화">영화 <br><br>  -->
     <input type="button" value="확인" id="btn1">
 </form>
+<div id="ccc"></div>
+<br><br>
+<hr>
+<br><br>
+<input type="checkbox" name="hobby" id="hobby" value="영화">영화
+<h1>제목입니다.</h1>
+<input type="button" id="btn2" value="확인하기">
+
+
     <script> 
         $(document).ready(function() {
             $("#btn1").click(function(){
@@ -103,12 +112,48 @@
                 $("#hobby").prop("checked",true);
 
                 if (confirm("진행할까요?")) {
-                    alert("넘기기");
-                    fname.submit();
+                    // alert("넘기기");
+                    // fname.submit();
+
+                    // $.ajax({
+                    //     type : "post",
+                    //     url : "http://yuunjuun.dothome.co.kr/study/banpum.php",
+                    //     data : $("#fname").serialize(),
+                    //     error : function(xhr, status, errorThrown) {
+                
+                    //     },
+                    //     success : function(data){
+                    //         $("#ccc").html(data);
+                    //     }
+                    // });
+                    $.ajax({
+                        type : "post",
+                        url : "http://yuunjuun.dothome.co.kr/study/banpum.php",
+                        data : $("#fname").serialize(),
+                        error : function(xhr, status, errorThrown) {
+                            $("#ccc").html("오류가 발생했습니다.<br>")
+                            .append("오류명 : " + errorThrown + "<br>")
+                            .append("상태 : " + status)
+                        },
+                        success : function(data){
+                            $("#ccc").html(data);
+                            
+                        }
+                    });
+
+
                 }
                 
             });
+
+            $("#btn2").click(function() {
+                $("#hobby").prop("checked", true);
+                $("h1").text("안녕하세요?")
+                $("h1").attr("title", "인사말")
+            })
         });
+
+
         // $function() {
 
         // }

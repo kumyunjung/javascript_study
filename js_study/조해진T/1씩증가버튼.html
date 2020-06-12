@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="result" value="0">
+    <input type="button" value="클릭" id="btn" onclick="clicks();">
+
+    <script>
+
+        function clicks() {
+
+            var num = document.getElementById("result").value
+            var num2 = parseInt(num) + 1
+            document.getElementById("result").value = num2
+         
+        }
+    </script>
+
+
+<!-- <input type="text" name="a" id="a">
+<script>
+    var a =$("#a").val();
+    var newValue = parseInt(a) + 1
+    $("#a").val(newValue)
+</script> -->
+    
+</body>
+</html>
