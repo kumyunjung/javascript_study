@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="http://yuunjuun.dothome.co.kr/study/banpum.php" method="post" name="bForm">
+        (*)는 필수입력사항입니다. <br><br>
+        이름(*) : <input type="text" name="name" id="name">
+        <span id="msgName" class="" style="display: none;">이름을 입력하세요.</span>
+        <br>
+        연락처(선택) : 
+        <input type="radio" name="agree" id="agree01" value="Y" > 동의 &nbsp;
+        <input type="radio" name="agree" id="agree02" value="N" checked > 비동의 <br>
+        답변 Email(*) :
+        <input type="text" name="email01" id="email01"> @
+        <input type="text" name="email02" id="email02">
+        <select name="" id="">
+            <option value="">직접입력</option>
+        </select> <br>
+        <span id="msgemail" style="display: none;">email</span>
+        제목(*) : <input type="text" name="subject"><br>
+        내용(*) : <textarea name="content" style="width: 300px; height: 100px;">
+            반품/교환시
+            사유
+            운송장
+        </textarea><br><br>
+        <input type="checkbox" name="hobby" id="hobby" value="영화">영화
+        <br><br>
+
+    </form>
+    <button onclick="formCheck();">전송</button>
+
+    <script>
+        function formCheck() {
+            // var name = document.getElementById("name").value
+            var frm = document.bForm;
+
+
+            
+            if (frm.name.value == "") {
+                // alert("이름을 입력하세요.");
+                document.getElementById("msgName").style.display ="block";
+                document.getElementById("msgName").style.color ="red";
+                document.getElementById("msgName").style.fontSize ="12px";
+                document.getElementById("masName").innerHTML = "이름을 입력하세요.";
+                frm.name.focus();
+                
+                return false;
+
+            } else {
+                document.getElementById("msgName").style.display="none";
+            } 
+            // || or, && and
+            if (frm.email01.value == "" || frm.email02.value == "") {
+                // alert("이메일을 입력하세요.")
+                document.getElementById("msgemail").style.display="block";
+                document.getElementById("msgemail").style.color="red";
+                document.getElementById("msgemail").style.fontSize="12px";
+                document.getElementById("msgemail").innerHTML="이메일을 입력하세요.";
+
+                if (frm.email01.value == "" ) {
+                    frm.email01.focus();
+                } else {
+                    frm.email02.focus();
+                   
+                }
+                return false;
+               
+            }
+            if (frm.subject.value == "") {
+                alert("제목을 입력하세요.")
+                frm.subject.focus();
+                return false;
+            }
+
+            if (frm.content.value == "") {
+                alert("내용을 입력하세요.")
+                frm.content.focus();
+                return false
+            }
+
+            
+             document.getElementById("hobby").checked = true;
+
+            if (confirm("정말 신청하시겠습니까?")) {
+                 frm.submit();
+            }
+
+         
+        }
+    </script>
+    
+</body>
+</html>
