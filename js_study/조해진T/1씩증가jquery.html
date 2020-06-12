@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+</head>
+<body>
+    <form action="">
+        <input type="text" name="num1" id="num1" value="0"><br><br>
+        <input type="button" value="더하기" id="btn1" >
+        <input type="button" value="플러스" id="btn2" onclick="add();">
+    </form>
+
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function() {
+                var oldValue = $("#num1").val();
+                var newValue = parseInt(oldValue) + 1;
+                $("#num1").val(newValue)
+            })
+        })
+
+        function add() {
+            var oldValue = document.getElementById("num1").value;
+            var newValue = parseInt(oldValue) + 1
+            document.getElementById("num1").value = newValue;
+        }
+    </script>
+</body>
+</html>
