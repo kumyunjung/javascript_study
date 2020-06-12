@@ -1,0 +1,88 @@
+<!-- html5 기본형식 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <title>Document</title>
+</head>
+<body>
+    본문내용
+</body>
+</html>
+
+
+<!-- 시맨틱태그 -->
+<header></header>
+<aside></aside>
+<main></main>
+<footer></footer>
+
+
+<header></header> -- 문서의 헤드를 나타낼때 사용 ex 로고, 회원가입, 언어셋 등의 링크 등을 추가
+<section></section> -- 같은 성격의 내용을 section으로 묶어서 사용
+                    -- section 내부에서는 제목의 번호를 1번부터 사용할 수 있음
+<footer></footer> -- 문서의 footer를 나타낼 때 사용 ex 주소, 연락처, 저작권 등을 추가
+
+<!-- section 태그는 의미에 따라 세가지로 나뉜다
+- main
+- aside
+- article -->
+
+<!-- 링크 걸기 -->
+<a href="#">삼성</a>
+
+<!-- css -->
+
+<style>
+    body {background-color: red;} /* -- 의미학인*/
+    h1 {color: pink} 
+    p {color: yellow}
+</style>
+
+<!-- 폼 -->
+
+<form action="" name="aaa">
+    <input type="text" name="id">
+    <input type="button" value="로그인" onclick="login();">
+</form>
+
+<!-- 로그인 버튼을 클릭했을때 자바스크립트 호출 -->
+
+<script>
+    function login(); {
+        var id = document.aaa.id.value;
+        if(id == "") {
+            alert("아이디입력");
+
+        } 
+        
+    }
+</script>
+
+<!-- 계산하기 값 출력 -->
+<form name="f1">
+    <input type="text" name="n1">
+    <input type="text" name="n2">
+    <input type="button" value="계산하기" onclick="nnn();">
+    Result : <span id="result"></span>
+</form>
+
+<script>
+    function nnn() {
+        var n1 = document.f1.n1.value
+       
+        var n2 = document.f1.n2.value
+        n1 = parseInt(n1);
+        n2 = parseInt(n2);
+
+        var add = n1 + n2
+
+        document.getElementById("result").innerHTML = add
+    }
+</script>
+
+
+<!-- 제시하는 폼을 메인 부분에 넣기 ex 라디오 박스 셀렉트 박스
+자바스크립트까지 넣기 11번가 고객센터-->
