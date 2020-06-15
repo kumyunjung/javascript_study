@@ -9,6 +9,37 @@
 </head>
 <body>
     본문내용
+    <h1>으아아ㅏ아</h1>
+    <p>dmrir</p>
+    <!-- 폼 -->
+
+<form action="" name="aaa">
+    <input type="text" name="id">
+    <input type="button" value="로그인" onclick="login();">
+</form>
+
+<!-- 로그인 버튼을 클릭했을때 자바스크립트 호출 -->
+
+<script>
+    function login() {
+        var id = document.aaa.id.value
+        if (id == "") {
+            alert("아이디입력");
+        }
+    }
+</script>
+
+<!-- <script>
+    function login() {
+        var id = document.aaa.id.value
+        
+        if(id == "") {
+            alert("아이디입력");
+
+        } 
+        
+    }
+</script> -->
 </body>
 </html>
 
@@ -43,14 +74,14 @@
 
 <!-- 폼 -->
 
-<form action="" name="aaa">
+<!-- <form action="" name="aaa">
     <input type="text" name="id">
     <input type="button" value="로그인" onclick="login();">
-</form>
+</form> -->
 
 <!-- 로그인 버튼을 클릭했을때 자바스크립트 호출 -->
 
-<script>
+<!-- <script>
     function login(); {
         var id = document.aaa.id.value;
         if(id == "") {
@@ -59,7 +90,7 @@
         } 
         
     }
-</script>
+</script> -->
 
 <!-- 계산하기 값 출력 -->
 <form name="f1">
@@ -88,6 +119,9 @@
 자바스크립트까지 넣기 11번가 고객센터-->
 
 <!-- 체크박스 추가 -->
+
+$("#hobby").prop("checked", true); -- 제이쿼리
+
 
 
       <!-- $("#btn2").click(function() {

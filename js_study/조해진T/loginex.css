@@ -1,5 +1,15 @@
 /* @import url("reset.css") */
 
+* {
+    list-style: none;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    
+}
+    fieldset, img, abbr, acronym { border: 0 none;}
+
+
 /* -----------공통------------------- */
 .content-box {
     width: 80%;
