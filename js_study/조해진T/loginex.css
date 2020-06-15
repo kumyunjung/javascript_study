@@ -16,14 +16,15 @@
     height: inherit;
     margin: auto; 
     /* margin-right: auto; */
-    background-color: #ff000040;
+    /* background-color: #ff000040; */
+    background-color: lightsteelblue
 }
 .hidden {display: none;}
 /* -----------공통------------------- */
 
 #header {
     height: 100px;
-    background-color: aqua;
+    background-color: lightpink;
 }
 
     #header > .content-box {
@@ -100,7 +101,7 @@
 
 #body {
     height: 900px;
-    background-color: chartreuse;
+    background-color:rgb(216, 173, 252);
 }
 
     #body > .content-box {
@@ -129,13 +130,17 @@
     #main {
         width: 80%;
         height: inherit;
-        background-color: lightblue;
+        background-color: rgb(241, 241, 241);
     }
 
         #main > section, #main > nav {
             width: 90%;
             margin: auto;
            
+        }
+
+        #main > section {
+            margin-top: 30px;
         }
 
         #main > section:nth-child(1) > h1 {
@@ -188,18 +193,55 @@
           margin-left: 9px;
       }
 
-      
+     #txt {
+         font-size: smaller;
+         color: grey;
+     }
 
+    #main > section > form > div {
+         margin-left: 95px;
+     }
+  
+     #main > section:nth-child(2)> p {
+         display: inline;
+     }
+     #main > section:nth-child(2)> span {
+         margin-left: 225px;
+         font-size: smaller;
+         font-weight: bold;
+         color: red;
+         
+     }
+
+     #label1 {
+         width: 698px;
+         position: relative;
+         left: 58px;
+        }
+
+  #main > div {
+    position: relative; left: 40px; top: 10px; display: inline;
+    margin-left: 400px;
+  }
+
+  #content {
+    position: relative; left: 58px; margin-top: 5px; width: 700px;
+  }
+
+  #fname {
+      position: relative;
+      left: 60px;
+  }
 #footer {
     height: 100px;
-    background-color: rebeccapurple;
+    background-color: lightpink;
 }
 
     #footer > .content-box {
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: mediumspringgreen;
+        background-color: lightsteelblue;
     }
 
     #footer-logo {
