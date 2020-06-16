@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+</head>
+
+<body>
+    <form action="" name="form1">
+        이름 : </label><input type="text" name="name" id="name">
+        <span id="msgName" style="display: none;">이름</span> <br><br>
+        연락처(선택) : <input type="radio">동의 <input type="radio" checked> 미동의 <br><br>
+        답변 Email : <input type="text" name="email1" id="email1"> @ <input type="text" name="email2" id="email2">
+        <span id="msgEmail" style="display: none;">이름</span> <br><br>
+        제목 : <input type="text" name="title" id="title">
+        <span id="msgTitle" style="display: none;">이름</span> <br><br>
+        내용 : <textarea name="content" id="content" cols="35" rows="5" placeholder="    반품/교환시
+    사유
+    운송장번호"></textarea>
+    <span id="msgContent" style="display: none;">이름</span> <br><br>
+    <input type="button" value="확인" id="btn" >
+    </form>
+
+    <script>
+        $("#btn").click(function(){
+            var name = $("#name").val()
+            var email1 = $("#email1").val()
+            var email2 = $("#email2").val()
+            var title = $("#title").val()
+            var content = $("#content").val()
+            if (name == "") { 
+                $("#msgName").show();
+                $("#msgName").text("이름을 입력해주세요.");
+                $("#msgName").css({"color":"red", "font-size":"12px"})
+                $("#name").focus();
+                return false;                
+            } else {
+                    $("#msgName").hide();
+                }
+            if (email1 == "") { 
+                $("#msgEmail").show();
+                $("#msgEmail").text("첫번째 이메일칸을 입력해주세요.");
+                $("#msgEmail").css({"color":"red", "font-size":"12px"})
+                $("#email1").focus();
+                return false;                
+            } else {
+                    $("#msgEmail").hide();
+                }
+            if (email2 == "") { 
+                $("#msgEmail").show();
+                $("#msgEmail").text("두번째 이메일칸을 입력해주세요.");
+                $("#msgEmail").css({"color":"red", "font-size":"12px"})
+                $("#email2").focus();
+                return false;                
+            } else {
+                    $("#msgEmail").hide();
+                }
+            if (title == "") { 
+                $("#msgTitle").show();
+                $("#msgTitle").text("제목을 입력해주세요.");
+                $("#msgTitle").css({"color":"red", "font-size":"12px"})
+                $("#title").focus();
+                return false;                
+            } else {
+                    $("#msgTitle").hide();
+                }
+            if (content == "") { 
+                $("#msgContent").show();
+                $("#msgContent").text("내용을 입력해주세요.");
+                $("#msgContent").css({"color":"red", "font-size":"12px"})
+                $("#content").focus();
+                return false;                
+            } else {
+                    $("#msgContent").hide();
+                }
+            
+        })
+    </script>
+</body>
+</html>

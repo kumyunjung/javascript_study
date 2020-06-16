@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="form1">
+    이름 : </label><input type="text" name="name"> <br><br>
+    연락처(선택) : <input type="radio">동의 <input type="radio" checked> 미동의 <br><br>
+    답변 Email : <input type="text" name="email1"> @ <input type="text" name="email2"> <br><br>
+    제목 : <input type="text" name="title"> <br><br>
+    내용 : <textarea name="content" id="" cols="35" rows="5" placeholder="    반품/교환시
+    사유
+    운송장번호"></textarea> <br><br>
+    <input type="button" value="확인" onclick="click1();">
+</form>
+
+<script>
+    function click1 () {
+
+        var name = document.form1.name.value
+        var email1 = document.form1.email1.value
+        var email2 = document.form1.email2.value
+        var title = document.form1.title.value
+        var content = document.form1.content.value
+
+        if (name == "") {
+            alert("이름을 입력해주세요.")
+            document.form1.name.focus();
+            return false
+        }
+        if(email1 == "") {
+               alert("첫번째 이메일칸을 입력해주세요.")
+               document.form1.email1.focus();
+               return false}
+
+       if(email2 == "") {
+                alert("두번째 이메일칸을 입력해주세요.") 
+                document.form1.email2.focus();
+               return false
+               
+            } 
+        
+        if (title == "") {
+            alert("제목을 입력해주세요.")
+            document.form1.title.focus();
+            return false
+        }
+        if (content == "") {
+            alert("내용을 입력해주세요.")
+            document.form1.content.focus();
+            return false
+        }
+    }
+</script>
+
+</body>
+</html>

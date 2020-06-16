@@ -1,0 +1,288 @@
+/* @import url("reset.css") */
+
+* {
+    list-style: none;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    
+}
+    fieldset, img, abbr, acronym { border: 0 none;}
+
+
+/* -----------공통------------------- */
+.content-box {
+    width: 80%;
+    height: inherit;
+    margin: auto; 
+    /* margin-right: auto; */
+    /* background-color: #ff000040; */
+    background-color: lightsteelblue
+}
+.hidden {display: none;}
+/* -----------공통------------------- */
+
+#header {
+    height: 100px;
+    background-color: lightpink;
+}
+
+    #header > .content-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       
+        
+    }
+    #logo {
+        position: relative;
+        left: 0px;
+        top: 0px;
+        margin: 0px 20px 0px 0px;
+    }
+    .logo_img {
+        width: 100px;
+        height: 100px;
+    }
+
+    #main-menu {
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        
+        
+    }
+
+    #main-menu > nav > ul {
+        display: flex;
+      
+       
+    }
+  
+    #main-menu > nav > ul li {
+        margin: 0px 20px;
+    }
+
+    #search-form {
+        padding: 0px 20px;
+       
+    }
+
+    #member-menu {
+        height: inherit;
+        padding: 0px 0px;
+       
+        
+    }
+
+    #member-menu > nav:nth-child(1) > ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+       
+    }
+
+    #member-menu > nav:nth-child(1) > ul li {
+        margin: 0px 20px;
+    }
+    
+    #member-menu > nav:nth-child(2) > ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       
+    }
+
+    #member-menu > nav:nth-child(2) > ul li {
+        margin: 0px 20px;
+    }
+    
+
+#body {
+    height: 900px;
+    background-color:rgb(216, 173, 252);
+}
+
+    #body > .content-box {
+        display: flex;
+    }
+    #aside {
+        width: 20%;
+        height: inherit;
+        background-color: blanchedalmond;
+    }
+        #body-nav {
+            width: 70%;
+            margin: auto;
+        }
+
+        #body-nav h1 {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 30px 0px 10px 0px
+        }
+
+        #body-nav > nav > ul li {
+            margin: 0px 20px;
+        }
+    
+    #main {
+        width: 80%;
+        height: inherit;
+        background-color: rgb(241, 241, 241);
+    }
+
+        #main > section, #main > nav {
+            width: 90%;
+            margin: auto;
+           
+        }
+
+        #main > section {
+            margin-top: 30px;
+        }
+
+        #main > section:nth-child(1) > h1 {
+            padding: 30px 0px 20px 0px;
+        }
+
+        #main > section:nth-child(2) > div {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            width: 90%;
+            height: 50px;
+           
+        }
+
+        #main > nav > div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 90%;
+           
+        }
+
+        #main > nav > div > ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0px 20px;
+           
+        }
+
+        #main > nav > div > ul li {
+            margin: 0px 10px;
+        }
+
+        #login-form > form {
+            margin-top: 50px;
+
+        }
+
+      #login-btn {
+          
+           margin-right: 550px;
+          
+         
+          
+      }
+
+      #login-id {
+          margin-left: 9px;
+      }
+
+     #txt {
+         font-size: smaller;
+         color: grey;
+     }
+
+    #main > section > form > div {
+         margin-left: 95px;
+     }
+  
+     #main > section:nth-child(2)> p {
+         display: inline;
+     }
+     #main > section:nth-child(2)> span {
+         margin-left: 225px;
+         font-size: smaller;
+         font-weight: bold;
+         color: red;
+         
+     }
+
+     #label1 {
+         width: 698px;
+         position: relative;
+         left: 58px;
+        }
+
+  #main > div {
+    position: relative; left: 40px; top: 10px; display: inline;
+    margin-left: 400px;
+  }
+
+  #content {
+    position: relative; left: 58px; margin-top: 5px; width: 700px;
+  }
+
+  #fname {
+      position: relative;
+      left: 60px;
+  }
+#footer {
+    height: 100px;
+    background-color: lightpink;
+}
+
+    #footer > .content-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: lightsteelblue;
+    }
+
+    #footer-logo {
+        margin-right: 50px;
+    }
+
+    #owner-info > dl {
+        display: flex;
+    }
+
+    #owner-info > dl > dt {
+        padding: 0px 10px 0px 0px;
+    }
+
+    #owner-info > dl > dd {
+        padding: 0px 50px 0px 0px;
+    }
+
+    #copyright-info {
+        margin: 5px 0px 0px 0px;
+    }
+
+
+
+
+
+
+
+
+
+/* 선택자
+태그
+아이디
+클래스
+*
+
+A B {} : 자손
+A > B : 자식
+A + B : 바로 옆에 있는 형제
+A ~ B : 옆에 있는 것들
+
+태그와 문서 사이에 기본적으로 적용되는
+스타일때문에 여백 생김
+*/
