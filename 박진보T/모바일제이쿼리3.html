@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+    <!--페이지1시작-->
+<div data-role="page" id="home">
+    <div data-role="header">
+       
+        <h1>홈</h1>
+        <a href="#page2" class="ui-btn-right">페이지2</a>
+       <div data-role="navbar">
+           <ul>
+               <li><a href="#page2" class="ui-btn-active">메뉴1</a></li>
+               <li><a href="#page3" >메뉴2</a></li>
+               <li><a href="#page4">메뉴3</a></li>
+           </ul>   
+
+       </div>
+    </div>
+    <div data-role="content">
+        <p>본문</p>
+        <h1>메인페이지</h1>
+    </div>
+    <div data-role="footer" class="ui-bar" data-position="fixed" data-fullscreen="true">  <!--ui-bar 여백주고싶을때/fixed 맨아래 고정-->
+       <div data-role="controlgroup"
+       data-type="horizontal"> <!--여백말고 붙이고싶을때-->
+            <a href="#">바버튼1</a>
+            <a href="#">바버튼2</a>
+            <a href="#">바버튼3</a>
+            <a href="#">바버튼4</a>
+        </div>
+   
+    </div>
+
+</div>
+<!--페이지1끝-->
+
+
+<!--페이지 2 시작-->
+  
+<div data-role="page" id="page2">
+        <div data-role="header">
+            <a href="#home">페이지1</a>
+        
+            <h1>홈</h1>
+            <a href="#page3">페이지3</a>
+      
+    </div>
+    <div data-role="content">
+         <p>본문</p>
+         <h1>페이지2번입니다.</h1>
+    </div>
+    <div data-role="footer">
+         <h4>푸터</h4>
+    </div>
+</div>    
+
+<!--페이지 2 끝-->
+
+<!--페이지3시작-->
+
+<div data-role="page" id="page3">
+    <div data-role="header" data-add-back-btn="true" data-back-btn-text="이전">
+    
+        <h1>홈</h1>
+      
+  
+</div>
+<div data-role="content">
+     <p>본문</p>
+     <h1>페이지3번입니다.</h1>
+</div>
+<div data-role="footer">
+     <h4>푸터</h4>
+</div>
+</div>  
+
+</body>
+</html>
+
+
+

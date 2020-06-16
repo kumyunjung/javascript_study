@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+    <div data-role="page" id="page1">
+        <div data-role="header">
+            <h1>헤더영역</h1>
+        </div>
+        <div data-role="content">
+            <p>페이지1입니다.</p>
+            <p><a href="#page2">페이지2로 이동</a></p>
+        </div>
+        <div data-role="footer">
+            <h4>푸터영역</h4>
+        </div>
+    </div>
+
+    <div data-role="page" id="page2">
+        <div data-role="header">
+            <h1>헤더영역</h1>
+        </div>
+        <div data-role="content">
+            <p>여기는 페이지2입니다.</p>
+            <p><a href="#page1">페이지1로 가세요</a></p>
+
+            <p><a href="#page3"
+                data-transition="slide">슬라이드</a></p>
+            
+            <p><a href="#page3"
+                data-transition="slideup">슬라이드업</a></p>
+            
+            <p><a href="#page3"
+                data-transition="slidedown">슬라이드다운</a></p>
+
+            <p><a href="#page3"
+                data-transition="flip">플립</a></p>       
+                    
+            <p><a href="#page3"
+                 data-transition="fade">페이드</a></p>       
+                        
+            <p><a href="#page3"
+                data-transition="pop">팝</a></p>
+            
+            <p><a href="#page3"
+                data-transition="turn">턴</a></p>        
+                                
+            <p><a href="#page3"
+                data-transition="flow">플로우</a></p>  
+                                    
+            <p><a href="#page3"
+                data-transition="none">none</a></p>                  
+        </div>
+
+
+
+        
+        <div data-role="footer">
+            <h4>푸터영역</h4>
+        </div> 
+    </div> 
+    
+    <div data-role="page" id="page3">
+        <div data-role="header">
+            <h1>헤더영역</h1>
+        </div>
+        <div data-role="content">
+            <p>여기는 페이지3입니다.</p>
+            <p><a href="#page1">페이지1로 가세요</a></p>
+        </div>
+        <div data-role="footer">
+            <h4>푸터영역</h4>
+        </div> 
+    </div> 
+    
+    <!--ajax-->
+
+    <!--page : 페이지 컨테이너-->
+    
+
+</body>
+
+</html>

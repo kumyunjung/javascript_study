@@ -1,0 +1,148 @@
+<html>
+
+<head>
+<title>html5</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!--charset=edu-kr-->
+<!--자바스크립트,css 쓰는 공간-->
+<!--스타일시트-->
+<style>
+body {width:960px;margin:0 auto;background:#e6e6e6; }
+#wapper {background:white; margin:40px 0;padding:10px 20px;}
+* {font-family: '맑은 고딕', '돋움체', '궁서체' }
+li {list-style:none;}
+.nav-left{float:left;}
+.nav-right{float:right;}
+.title{font-size:30px;}
+.title1{font-size:15px;color:#383838;}
+#nav {border-top:1px solid #c8c8c8; 
+border-bottom:1px solid #c8c8c8;height:50px;
+margin-bottom: 20px;}
+.menu{float:left;}
+.m-t{height:30px;line-height:20px;padding:5px 20px;}
+a:link{text-decoration:none; color:#333333;}
+a:visited{text-decoration:none; color:green;}
+a:hover{color:red;text-decoration:underline;}
+a:active{color:blue;text-decoration:none;}
+
+#header {padding:40px 50px;}
+
+.search-bar {height:25px;padding:12px;}
+.input-search{width:120px;height:24px;border:2px solid #cc723d;
+font-size: 12px;color: #555555;padding: 0 0 0 10px;}
+.input-s-s{width: 50px;height: 24px;border: 1px solid #9e0707;}
+
+#section {width: 700px;float: left;}
+#aside {float:right;width: 200px;}
+
+article{padding: 0 10px 20px 10px; border-bottom: 1px solid #c8c8c8;}
+.a-header {padding: 20px 0;}
+.a-title {font-size: 25px;}
+.a-date {font-size: 13px;}
+.a-body {font-size: 14px;}
+
+.a-list {padding: 10px 0 30px 0;}
+
+.a-list li a {margin-left: 8px;font-size: 13px;color: #6c6c6c;}
+<!--link-visited-hover-active-->
+</style>
+</head>
+<body>
+<!-- 전체를 감싸는 태그-->
+<div id="wapper">
+	<!--헤더 시작-->
+	<header id="header">
+		<h1 class="title">프런트앤드, 반응형웹앱개발</h1>
+		<h2 class="title1">한국IT교육원</h2>	
+	</header>
+	<!--메뉴 시작-->
+	<nav id="nav">
+		<div class="nav-left">
+			<ul>
+			<li class="menu"><span class="m-t"><a href="#">HTML5</a></span></li>
+			<li class="menu"><span class="m-t"><a href="#">CSS3</a></span></li>
+			<li class="menu"><span class="m-t"><a href="#">Javascript</a></span></li>
+			</ul>
+		</div>
+		<div class="nav-right">
+			<div class="search-bar">
+			<form>
+			<input type="text" class="input-search">
+			<input type="submit" value="검색" class="input-s-s">
+			</form>
+			</div>
+		</div>	
+	</nav>
+	<!--본문시작-->	
+	<div id="content">
+		<!--본문좌측-->
+		<section id="section">
+        <article>
+        <div class="a-header">
+        <h1 class="a-title">HTML5 & CSS & Javascript</h1> 
+            <p class="a-date">2020년 5월 13일</p>
+        </div>
+        <div class="a-body">
+            <img src="https://t1.daumcdn.net/b2/creative/133093/7d05d55fd94ba30d0497fb34b3e24e7c.png" width="600">
+            <br><br>
+            <p>동해물과 백두산이 마르고 닳도록
+            하느님이 보우하사 우리나라 만세</p>
+            <p>무궁화 삼천리 화려강산
+            대한사람 대한으로 길이 보전하세</p>
+        
+        </div>
+        </article>
+        
+        <article>
+        <div class="a-header">
+        <h1 class="a-title">HTML5 & CSS & Javascript</h1> 
+            <p class="a-date">2020년 5월 13일</p>
+        </div>
+        <div class="a-body">
+            <img src="https://t1.daumcdn.net/b2/creative/133093/7d05d55fd94ba30d0497fb34b3e24e7c.png" width="600">
+            <br><br>
+            <p>동해물과 백두산이 마르고 닳도록
+            하느님이 보우하사 우리나라 만세</p>
+            <p>무궁화 삼천리 화려강산
+            대한사람 대한으로 길이 보전하세</p>
+        
+        </div>
+        </article>
+        
+        </section>
+		<!--본문우측-->
+		<aside id="aside">
+        <div class="a-list">
+        카테고리
+        <ul>
+                    <li><a href="#">카테고리1</a></li>
+                    <li><a href="#">카테고리2</a></li>
+                    <li><a href="#">카테고리3</a></li>
+                    <li><a href="#">카테고리4</a></li>
+
+        </ul>
+        </div>
+        <div class="a-list">
+        최근글
+        <ul>
+                    <li><a href="#">카테고리1</a></li>
+                    <li><a href="#">카테고리2</a></li>
+                    <li><a href="#">카테고리3</a></li>
+                    <li><a href="#">카테고리4</a></li>
+        
+        </ul>
+        </div>
+        </aside>
+	</div>
+	
+    <footer id="footer">
+    
+    
+    </footer>
+
+</div>
+	
+</body>
+</html>
+
+

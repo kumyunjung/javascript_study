@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+
+<!--페이지1 시작-->
+<div data-role="page" id="page1">
+    <!--헤더영역-->
+    <div data-role="header" data-position="fixed">
+        <h1>개봉영화소개</h1>
+        <!--메뉴 시작-->
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#page1" class="ui-btn-active ui-state-persist">홈</a></li>
+                <li><a href="#page2" >현재상영작</a></li>
+                <li><a href="#page3" >개봉예정작</a></li>
+            </ul>
+       
+        </div>
+        <!--메뉴 끝-->   
+    </div>
+    <!--헤더영역 끝-->
+
+    <!--본문 시작-->
+   
+    <div data-role="content">
+        
+    <ul data-role="listview" data-inset="true">
+        <li data-role="listdivider">현재상영작</li>
+        <li><a href="#">1917</a></li>
+        <li><a href="#">고양이 집사</a></li>
+        <li><a href="#">마이 스파이</a></li>
+
+    <ul data-role="listview" data-inset="true">
+        <li data-role="listdivider">개봉예정작</li>
+        <li><a href="#">007 노 타임 투 다이</a></li>
+        <li><a href="#">나는보리</a></li>
+        <li><a href="#">들리나요?</a></li>
+
+    </ul>
+    </div>
+
+    <!--본문 끝-->
+
+  
+
+ <!--푸터 시작-->
+ <div data-role="footer" data-position="fixed">
+    <!--푸터 메뉴 시작-->
+    <div data-role="navbar">
+        <ul>
+            <li><a href="#page1" data-icon="home" class="ui-btn-active">홈</a></li>
+            <li><a href="#" data-icon="camera">카메라</a></li>
+            <li><a href="#" data-icon="calendar">달력</a></li>
+        </ul>                
+    </div>
+    <!--푸터 메뉴 끝-->
+</div>
+<!--푸터 끝-->
+</div>
+<!--페이지1 끝-->
+
+<!--페이지2 시작-->
+<div data-role="page" id="page2">
+    <!--헤더영역-->
+    <div data-role="header" data-position="fixed">
+        <h1>개봉영화소개</h1>
+        <!--메뉴 시작-->
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#page1" >홈</a></li>
+                <li><a href="#page2 " class="ui-btn-active ui-state-persist">현재상영작</a></li>
+                <li><a href="#page3" >개봉예정작</a></li>
+            </ul>
+       
+        </div>
+        <!--메뉴 끝-->   
+    </div>
+    <!--헤더영역 끝-->
+
+    <!--본문 시작-->
+   <div data-role="content">
+    <ul data-role="listview" data-inset="true">
+        <li data-role="listdivider">현재상영작</li>
+        <li>
+            <a href="#">
+            <img src="img/1917.jpg">
+            <h3>1917</h3>
+            <p>감독 : 샘 멘데스</p>
+            <p>출연 : 조지 맥케이, 딘 찰스 채플먼, 콜린 퍼스, 베네딕트 컴버배치</p>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="img\cat.jpg">
+                <h3>고양이 집사</h3>
+                <p>감독 : 이희섭</p>
+                <p>출연 : 임수정</p>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="img\spy.jpg">
+                <h3>마이 스파이</h3>
+                <p>감독 : 피터 시걸</p>
+                <p>출연 : 데이브 바티스타, 클로에 콜맨</p>    
+            </a>
+        </li>
+
+    </ul>
+
+   </div>
+  
+    <!--본문 끝-->
+
+    <!--푸터 시작-->
+    <div data-role="footer" data-position="fixed">
+        <!--푸터 메뉴 시작-->
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#page1" data-icon="home" class="ui-btn-active">홈</a></li>
+                <li><a href="#" data-icon="camera">카메라</a></li>
+                <li><a href="#" data-icon="calendar">달력</a></li>
+            </ul>                
+        </div>
+        <!--푸터 메뉴 끝-->
+    </div>
+    <!--푸터 끝-->
+</div>
+<!--페이지2 끝-->
+
+<!--페이지3 시작-->
+<div data-role="page" id="page3">
+    <!--헤더영역-->
+    <div data-role="header" data-position="fixed">
+        <h1>개봉영화소개</h1>
+        <!--메뉴 시작-->
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#page1" >홈</a></li>
+                <li><a href="#page2">현재상영작</a></li>
+                <li><a href="#page3" class="ui-btn-active ui-state-persist">개봉예정작</a></li>
+            </ul>
+       
+        </div>
+        <!--메뉴 끝-->   
+    </div>
+    <!--헤더영역 끝-->
+
+    <!--본문 시작-->
+    <div data-role="content">
+        <ul data-role="listview">
+            <li data-role="listdivider">개봉예정작</li>
+            <li>
+                <a href="#">
+                <img src="img/notime.jpg">
+                <h3>007 노 타임 투 다이</h3>
+                <p>감독 : 캐리 조지 후쿠나가</p>
+                <p>출연 : 다니엘 크레이그, 라미 말렉, 라샤나 린치, 레아 세두</p>
+                <p class="ui-li-aside">2020.11.25</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="img\bori.jpg">
+                    <h3>나는보리</h3>
+                    <p>감독 : 김진유</p>
+                    <p>출연 : 김아송, 이린하, 황유림, 곽진석</p>
+                    <p class="ui-li-aside">2020.05.21</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="img\hear.jpg">
+                    <h3>들리나요?</h3>
+                    <p>감독 : 김봉환, 신승환</p>
+                    <p>출연 : 김창옥</p>
+                    <p class="ui-li-aside">2020.06.10</p>    
+                </a>
+            </li>
+    
+        </ul>
+    
+       </div>
+
+    <!--본문 끝-->
+
+    <!--푸터 시작-->
+    <div data-role="footer" data-position="fixed">
+        <!--푸터 메뉴 시작-->
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#page1" data-icon="home" class="ui-btn-active">홈</a></li>
+                <li><a href="#" data-icon="camera">카메라</a></li>
+                <li><a href="#" data-icon="calendar">달력</a></li>
+            </ul>                
+        </div>
+        <!--푸터 메뉴 끝-->
+    </div>
+    <!--푸터 끝-->
+</div>
+<!--페이지3 끝-->
+
+
+</body>
+</html>

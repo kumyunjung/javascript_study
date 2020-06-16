@@ -1,0 +1,102 @@
+<html> 
+<head> 
+
+<meta charset="utf-8"> 
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"> 
+
+<script src="https://code.jquery.com/jquery-1.11.3.js"></script> 
+
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script> 
+
+<script> 
+
+
+
+
+$(document).ready(function(){ 
+
+    var main = $('.bxslider').bxSlider({ 
+
+    mode: 'fade', 
+
+    auto: true,	//자동으로 슬라이드 
+
+    controls : false,	//좌우 화살표	
+
+    autoControls: false,	//stop,play 
+
+    pager: true,	//페이징 
+
+    pause: 3000, 
+
+    autoDelay: 0,	
+
+    slideWidth: 665, //이미지 박스 크기설정
+
+    speed: 1000, 
+
+    stopAutoOnclick:true 
+
+}); 
+
+   
+
+$(".bx-stop").click(function(){	// 중지버튼 눌렀을때 
+
+    main.stopAuto(); 
+
+    $(".bx-stop").hide(); 
+
+    $(".bx-start").show(); 
+
+    return false; 
+
+}); 
+
+
+
+$(".bx-start").click(function(){	//시작버튼 눌렀을때 
+
+    main.startAuto(); 
+
+    $(".bx-start").hide(); 
+
+    $(".bx-stop").show(); 
+
+    return false; 
+
+}); 
+
+
+
+  $(".bx-start").hide();	//onload시 시작버튼 숨김. 
+
+}); 
+
+</script> 
+
+
+
+
+
+</head> 
+<style type="text/css"> .ui-page { background:url('./img/img1.jpg'); background-size:100% 100%; } </style>
+
+<body> 
+
+<div class="home__slider"> 
+
+    <div class="bxslider"> 
+
+        <div><img src="./img/img1.jpg" alt="그림1"></div>
+
+        <div><img src="./img/img2.jpg" alt="그림2"></div> 
+
+    </div> 
+
+</div> 
+
+</body> 
+
+</html>

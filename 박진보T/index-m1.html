@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>엑시트</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+</head>
+
+<style>
+    li {list-style: none;}
+    .pic li{ float: left; width: 50%;  }
+    .pic li img { display: block; width: 95%; height: 100px;  }
+
+    /* .pic li img:hover {display: block; width: 100%; height: auto; (높이값 굳이)} */
+
+
+</style>
+
+
+
+<body>
+
+<!--페이지1 시작-->
+<div data-role="page" id="page1" data-theme="b" >
+    <!--헤더영역-->
+    <div data-role="header" data-position="fixed" data-theme="b" > <!--data-theme=b는 검정색-->
+        <h1>엑시트</h1>
+    </div>
+    <!--헤더영역 끝-->
+
+    <!--본문 시작-->
+   
+    <div data-role="content" style="text-align: center;" >
+
+        <img src="img/main.jpg" style="max-width: 100%;">
+        <ul data-role="listview" data-inset="true">
+            <li><a href="#intro">엑시트 소개</a></li>
+            <li><a href="#movie">엑시트 영상</a></li>
+            <li><a href="#ost">엑시트 OST</a></li>
+            <li><a href="#gallery">엑시트 갤러리</a></li>
+
+        </ul>
+        
+  
+    </div>
+
+    <!--본문 끝-->
+
+  
+
+ <!--푸터 시작-->
+ <div data-role="footer" data-position="fixed" data-theme="b">
+   <h1>엑시트</h1>
+</div>
+<!--푸터 끝-->
+</div>
+<!--페이지1 끝-->
+
+<!--인트로 시작-->
+<div data-role="page" id="intro">
+    <!--헤더영역-->
+    <div data-role="header" data-position="fixed" data-theme="b"> <!--data-theme=b는 검정색-->
+        <a href="#page1" data-icon="home" data-direction="reverse">홈</a>
+        <h1>엑시트 소개</h1>
+        <a href="#movie" data-icon="forward" data-direction="reverse">다음</a>
+    </div>
+    <!--헤더영역 끝-->
+
+    <!--본문 시작-->
+   
+    <div data-role="content" style="text-align: center;">
+    <img src="img/sub.jpg" style="max-width: 100%;">
+
+    <div data-role="collapsible-set">
+        <div data-role="collapsible">
+            <h3>줄거리</h3>
+            <p style="text-align: justify;"> 짠내 폭발 청년백수, 전대미문의 진짜 재난을 만나다!
+                대학교 산악 동아리 에이스 출신이지만
+                 졸업 후 몇 년째 취업 실패로 눈칫밥만 먹는 용남은
+                 온 가족이 참석한 어머니의 칠순 잔치에서
+                 연회장 직원으로 취업한 동아리 후배 의주를 만난다
+                 어색한 재회도 잠시, 칠순 잔치가 무르익던 중
+                 의문의 연기가 빌딩에서 피어 오르며
+                 피할 새도 없이 순식간에 도심 전체는 유독가스로 뒤덮여 일대혼란에 휩싸이게 된다.
+                 용남과 의주는 산악 동아리 시절 쌓아 뒀던 모든 체력과 스킬을 동원해
+                 탈출을 향한 기지를 발휘하기 시작하는데…</p>
+
+        </div>
+
+        <div data-role="collapsible">
+            <h3>배우/제작진</h3>
+            <p>감독 : 이상근</p>
+            <p>주연 : 조정석</p>
+            <p>주연 : 윤아</p>
+        </div>
+
+    </div>
+        
+  
+    </div>
+
+    <!--본문 끝-->
+
+  
+
+ <!--푸터 시작-->
+ <div data-role="footer" data-position="fixed" data-theme="b">
+   <h1>엑시트</h1>
+</div>
+<!--푸터 끝-->
+</div>
+<!--인트로 끝-->
+
+<!--영상 시작-->
+<div data-role="page" id="movie">
+    <!--헤더영역-->
+    <div data-role="header" data-position="fixed" data-theme="b"> <!--data-theme=b는 검정색-->
+        <a href="#intro" data-icon="back" data-direction="reverse">이전</a>
+        <h1>엑시트 영상</h1>
+        <a href="#ost" data-icon="forward" data-direction="reverse">다음</a>
+        
+    </div>
+    <!--헤더영역 끝-->
+
+    <!--본문 시작-->
+    <div data-role="content" style="text-align: center;" data-theme="b" >
+    <div data-role="collapsible-set" >
+        <div data-role="collapsible">
+            <h3>줄거리</h3>
+            
+            <div class="ui-bar" >영화 엑시트 영상</div>
+            <li><iframe width="100%" height="310" src="https://www.youtube.com/embed/li4jOV5j7SI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
+    
+
+        </div>
+    </div> 
+    </div>   
+       
+
+    
+   
+    <div data-role="content" style="text-align: center;" data-theme="b" >
+        <div class="ui-bar" >영화 엑시트 영상</div>
+        <li><iframe width="100%" height="310" src="https://www.youtube.com/embed/li4jOV5j7SI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
+
+        <div class="ui-bar">영화 엑시트 영상</div>
+        <li><iframe width="100%" height="310" src="https://www.youtube.com/embed/M2_7wzCXun8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
+        <div class="ui-bar">영화 엑시트 영상</div>
+        <li><iframe width="100%" height="310" src="https://www.youtube.com/embed/M2_7wzCXun8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
+    </div>
+
+    <!--본문 끝-->
+
+  
+
+ <!--푸터 시작-->
+ <div data-role="footer" data-position="fixed" data-theme="b">
+   <h1>엑시트</h1>
+</div>
+<!--푸터 끝-->
+</div>
+<!--영상 끝-->
+
+<!--OST 시작-->
+<div data-role="page" id="ost">
+    <!--헤더영역-->
+    <div data-role="header" data-position="fixed" data-theme="b"> <!--data-theme=b는 검정색-->
+        <a href="#movie" data-icon="back" data-direction="reverse">이전</a>
+        <h1>엑시트 OST</h1>
+        <a href="#gallery" data-icon="forward" data-direction="reverse">다음</a>
+        
+    </div>
+    <!--헤더영역 끝-->
+
+    <!--본문 시작-->
+   
+    <div data-role="content" style="text-align: center;" data-theme="b" >
+        <div class="ui-bar">슈퍼히어로</div>
+        <audio controls width="100%">
+            <source src="" type="audio.mp3">
+        </audio>
+
+        
+    </div>
+      
+
+    <!--본문 끝-->
+
+  
+
+ <!--푸터 시작-->
+ <div data-role="footer" data-position="fixed" data-theme="b">
+   <h1>엑시트</h1>
+</div>
+<!--푸터 끝-->
+</div>
+<!--ost 끝-->
+
+<!--갤러리 시작-->
+<div data-role="page" id="gallery">
+    <!--헤더영역-->
+    <div data-role="header" data-position="fixed" data-theme="b"> <!--data-theme=b는 검정색-->
+       
+        <a href="#ost" data-icon="back" data-direction="reverse">이전</a>
+         <h1>엑시트 갤러리</h1>
+       
+        
+    </div>
+    <!--헤더영역 끝-->
+
+    <!--본문 시작-->
+   
+    <div data-role="content" style="text-align: center;" data-theme="b" >
+        <ul class="pic">
+            <li><a href="./img/img1.jpg" rel="external"><img src="./img/img1.jpg"></a></li>
+            <li><a href="./img/img2.jpg" rel="external"><img src="./img/img2.jpg"></a></li>
+            <li><a href="./img/img3.jpg" rel="external"><img src="./img/img3.jpg"></a></li>
+            <li><a href="./img/img4.jpg" rel="external"><img src="./img/img4.jpg"></a></li>
+            <li><a href="./img/img5.jpg" rel="external"><img src="./img/img5.jpg"></a></li>
+        </ul>
+    </div>
+    
+
+
+
+  
+
+
+
+
+    <!--본문 끝-->
+
+  
+
+ <!--푸터 시작-->
+ <div data-role="footer" data-position="fixed" data-theme="b">
+   <h1>엑시트</h1>
+</div>
+<!--푸터 끝-->
+</div>
+<!--갤러리 끝-->
+
+
+</body>
+</html>

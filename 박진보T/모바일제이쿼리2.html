@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+
+<!--페이지1 시작-->
+<div data-role="page" id="page1">
+
+    <div data-role="panel" id="panel1" data-display="overlay">
+    <form>
+        <h3>회원로그인</h3>
+        <label>아이디:</label>
+        <input name="name" type="text" value="" data-mini="true">
+        <label>비밀번호:</label>
+        <input name="password" type="password" value="" data-mini="true">
+        <input type="submit" value="로그인">
+        </form>
+    </div>
+
+    <div data-role="panel" id="panel2" data-display="overlay" data-position="right">
+        <form>
+            <h3>메모패널</h3>
+            <p>오른쪽 패널영역</p>
+            <a href="#page1" data-role="button" data-inline="true">종료</a>
+        </form>
+    </div>
+
+
+
+
+
+
+    <!--헤더영역-->
+    <div data-role="header" data-position="fixed">
+        <h1>개봉영화소개</h1>
+        <!--메뉴 시작-->
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#page1" class="ui-btn-active ui-state-persist">홈</a></li>
+                <li><a href="#page2" >현재상영작</a></li>
+                <li><a href="#page3" >개봉예정작</a></li>
+            </ul>
+       
+        </div>
+        <!--메뉴 끝-->   
+    </div>
+    <!--헤더영역 끝-->
+
+    <!--본문 시작-->
+   
+    <div data-role="content">
+        
+    <!--form문-->
+    <label>도시이름
+        <input type="text" name="city" value="서울">
+    </label>
+
+    <label>정보입력</label>
+        <input type="password" name="pass" placeholder="비밀번호를 입력하세요">
+        <input type="number" name="num" placeholder="숫자를 입력하세요">
+        <input type="email" name="email" placeholder="이메일을 입력하세요">
+        <input type="tel" name="tel" placeholder="전화번호를 입력하세요">
+        <input type="url" name="url" placeholder="url을 입력하세요">
+        <input type="search" name="search" placeholder="키워드를 입력하세요">
+
+        <textarea cols="25" rows="5"></textarea>
+
+        <input type="range" name="ran" value="50" min="0" max="100">
+
+        <select name="switch" data-role="slider">
+            <option value="on">ON</option>
+            <option value="off">OFF</option>
+        </select>
+        
+        <select name="age" data-inline="true">
+            <option value="">--선택--</option>
+        
+            <optgroup label="그룹1">
+                <option value="">10대</option>
+                <option value="">20대</option>
+                <option value="">30대</option>
+               
+            </optgroup>
+            <optgroup label="그룹2">
+                <option value="">40대</option>
+                <option value="">50대</option>
+                <option value="">60대</option>
+                
+            </optgroup>
+        </select>
+
+        <input type="radio" value="1" name="red"><label>1학년</label>
+        <input type="radio" value="2" name="red"><label>2학년</label>
+        <input type="radio" value="3" name="red"><label>3학년</label>
+
+        <input type="checkbox" name="check" value="이메일">이메일
+        <input type="checkbox" name="check" value="전화">전화
+        <input type="checkbox" name="check" value="SNS">SNS
+
+        <div data-role="tabs">
+            <div data-role="navbar">
+            <ul>
+                <li><a href="#tab1">탭1</a></li>
+                <li><a href="#tab2">탭2</a></li>
+                <li><a href="#tab3">탭3</a></li>
+            </ul>
+
+        </div>
+
+        <div id="tab1">
+            <h5>첫번째 내용</h5>
+
+        </div>
+        <div id="tab2">
+            <h5>두번째 내용</h5>
+
+        </div>
+        <div id="tab3">
+            <h5>세번째 내용</h5>
+
+        </div>
+        <!--ui-responsive : 테이블컬럼을 조절
+        table-stripe : 행들을 쉽게 구별할 수 있도록 줄무늬형태로 표시-->
+        <table class="ui-responsive table-stripe" data-role="table" data-mode="columntoggle">
+            <thead>
+                <tr> <!--줄-->
+                    <th data-priority="1">학년</th> <!--제목칸-->
+                    <th>이름</th>
+                    <th data-priority="3">성별</th>
+                    <th data-priority="4">성적</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    
+                        <th>1</th>
+                        <td>홍길동</td> <!--칸-->
+                        <td>남</td>
+                        <td>94</td>
+                    
+                </tr>
+                <tr>
+                    
+                        <th>3</th>
+                        <td>최민수</td>
+                        <td>남</td>
+                        <td>78</td>
+                    
+                </tr>
+                <tr>
+                    
+                        <th>4</th>
+                        <td>최순희</td>
+                        <td>여</td>
+                        <td>81</td>
+                   
+                </tr>
+            </tbody>
+        </table>
+
+        <a href="#panel1" data-role="button" data-inline="true">로그인패널</a>
+        <a href="#panel2" data-role="button" data-inline="true">메모패널</a>
+
+        <!--접이식 패널-->
+        <div data-role="collapsible">
+            <h3>접이식 패널</h3>
+            <p>패널내용</p>
+
+        </div>
+        <!--중첩접이식 패널-->
+        <div data-role="collapsible">
+            <h3>상위접이식패널</h3>
+            <p>내용</p>
+            <div data-role="collapsible">
+                <h3>하위접이식패널</h3>
+                <p>내용</p>
+            </div>
+        </div>    
+
+        <div data-role="collapsible-set">
+            <div data-role="collapsible">
+                <h3>패널1</h3>
+                <p>내용1</p>
+            </div>
+            <div data-role="collapsible">
+                <h3>패널2</h3>
+                <p>내용2</p>
+            </div>
+            <div data-role="collapsible">
+                <h3>패널3</h3>
+                <p>내용3</p>
+            </div>
+
+
+        </div>
+
+        </div>
+    </div>
+
+    <!--본문 끝-->
+
+  
+
+ <!--푸터 시작-->
+ <div data-role="footer" data-position="fixed">
+    <!--푸터 메뉴 시작-->
+    <div data-role="navbar">
+        <ul>
+            <li><a href="#page1" data-icon="home" class="ui-btn-active">홈</a></li>
+            <li><a href="#" data-icon="camera">카메라</a></li>
+            <li><a href="#" data-icon="calendar">달력</a></li>
+        </ul>                
+    </div>
+    <!--푸터 메뉴 끝-->
+</div>
+<!--푸터 끝-->
+</div>
+<!--페이지1 끝-->
+
+
+
+
+</body>
+</html>
