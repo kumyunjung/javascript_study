@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="themes/graymint.min.css" />
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+  
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            var main = $('.bxslider').bxSlider({
+
+                mode: 'fade',
+
+                auto: true, //자동으로 슬라이드 
+
+                controls: false, //좌우 화살표	
+
+                autoControls: false, //stop,play 
+
+                pager: true, //페이징 
+
+                pause: 3000,
+
+                autoDelay: 0,
+
+                slideWidth: 640, //이미지 박스 크기설정
+
+
+
+                speed: 1000,
+
+                stopAutoOnclick: true
+
+            });
+
+
+
+        });
+    </script>
+
+</head>
+<style>
+    .bx-wrapper {
+        margin: 0 auto;
+
+    }
+
+    .list {
+        padding-top: 20px;
+    }
+
+    .intro {
+        margin: 0 auto;
+        border: 2px solid black;
+        padding: 20px;
+        background-color: white;
+        max-width: 600px;
+    }
+
+    .a {
+        float: left;
+    }
+
+
+    a {
+        text-decoration: none;
+    }
+
+
+    .thumb {
+        padding: 10px 0 0 0;
+    }
+
+    .btn {
+        margin-right: -5px;
+        padding: 0;
+        float: right;
+    }
+
+
+    li {
+        list-style: none;
+    }
+
+   
+</style>
+
+<style> </style>
+
+<body>
+    <!--페이지1 시작-->
+    <div data-role="page" id="page1">
+        <!--헤더영역-->
+        <div data-role="header" data-position="fixed">
+            <!--data-theme=b는 검정색-->
+            <h1>Home</h1>
+        </div>
+        <!--헤더영역 끝-->
+
+        <!--본문 시작-->
+        <div data-role="content" style="max-width: 100%; ">
+
+
+            <div class="bxslider">
+
+                <img src="./img/1.jpg">
+                <img src="./img/2.jpg">
+                <img src="./img/3.jpg">
+                <img src="./img/4.jpg">
+                <img src="./img/5.jpg">
+
+
+            </div>
+
+            <div class="list">
+                <ul data-role="listview" data-inset="true">
+                    <li><a href="#profile">Profile</a></li>
+                    <li><a href="#filmo">Filmography</a></li>
+                    <li><a href="#awards">Awards</a></li>
+                    <li><a href="#interview">Interview</a></li>
+
+                </ul>
+            </div>
+        </div>
+
+
+
+        <!--본문 끝-->
+
+
+
+        <!--푸터 시작-->
+        <div data-role="footer" data-position="fixed">
+            <h1>Sandra Bullock Fansite</h1>
+        </div>
+        <!--푸터 끝-->
+    </div>
+    <!--페이지1 끝-->
+
+
+    <!--프로필 시작-->
+    <div data-role="page" id="profile">
+        <!--헤더영역-->
+
+        <div data-role="header" data-position="fixed">
+            <a href="#page1" data-icon="home" data-direction="reverse">Home</a>
+            <h1>Profile</h1>
+            <a href="#filmo" data-icon="forward" data-direction="reverse">Next</a>
+
+
+
+        </div>
+        <!--헤더영역 끝-->
+
+        <!--본문 시작-->
+
+        <div data-role="content" style="text-align: center;">
+
+            <img src="./img/profile.jpg" style="max-width: 100%; ">
+
+
+            <div class="intro" style="overflow: scroll; max-width: 100%; height: 300px; ">
+
+
+                <div class="a" style="text-align: left;">
+                    <b>Name : </b>Sandra Annette Bullock
+                    <p><b>Date of Birth : </b>July 26, 1964</p>
+                    <p><b>Height : </b>5′ 7″ (1.71 m)</p>
+                    <p><b>Zodiac Sign : </b>Leo</p>
+                </div>
+
+
+                <div class="b" style="text-align: justify;">
+                    <br><br><br><br><br><br><br><br><br>
+                    <h3>Biography</h3>
+                    <p>Sandra Annette Bullock is an American actress. She came to fame in the 1990s, after roles in
+                        successful films such as Speed and While You Were Sleeping. She has since established her career
+                        as a well-known leading Hollywood actress, with films such as Miss Congeniality and 2005’s
+                        Crash, which received critical acclaim. In 2007 she was ranked as the 14th richest female
+                        celebrity with an estimated fortune of $85 million.</p>
+                    <br><br>
+                    <h3>Career</h3>
+                    <p>While in New York, Bullock took acting classes at the Neighborhood Playhouse. She appeared in
+                        several student films and later landed a role in an Off-Broadway play No Time Flat. Director
+                        Alan J. Levi was impressed by Bullock’s performance and offered her a part in the made-for-TV
+                        movie Bionic Showdown: The Six Million Dollar Man and the Bionic Woman (1989). After filming the
+                        TV movie, Bullock stayed in Los Angeles and was cast in a series of small roles in several
+                        independent films as well as in the lead role of the short-lived NBC television version of the
+                        film Working Girl (1990). She later appeared in several films such as Love Potion No. 9 (1992),
+                        The Thing Called Love (1993) and Fire on the Amazon (where she agreed to appear topless if the
+                        camera did not show that much, she covered herself with duct tape which apparently was somewhat
+                        painful to take off).</p><br>
+                    <p>One of Bullock’s first notable movie appearances was in the science-fiction/action movie
+                        Demolition Man (1993), which starred Sylvester Stallone and Wesley Snipes. This role then led to
+                        her break-through performance in Speed the following year. She became a high-level movie star in
+                        the late 1990s, carrying a string of successes, including While You Were Sleeping (replacing
+                        actress Demi Moore, who was originally scheduled to star), and Miss Congeniality. Bullock
+                        received $11 million dollars for Speed 2: Cruise Control and $17.5 million dollars for Miss
+                        Congeniality 2: Armed & Fabulous.</p><br>
+                    <p>
+                        Bullock was selected as one of People magazine’s 50 Most Beautiful People in the World in 1996
+                        and 1999, and was also ranked #58 in Empire magazine’s Top 100 Movie Stars of All Time list. She
+                        was presented with the 2002 Raúl Juliá Award for Excellence for her efforts, as the executive
+                        producer of the sitcom The George Lopez Show, in helping expand career openings for Hispanic
+                        talent in the media and entertainment industry. She also made several appearances on the show as
+                        Accident Amy, an accident-prone employee at the factory Lopez’s character manages. In 2002, she
+                        starred opposite Hugh Grant in the global hit Two Weeks Notice.</p><br>
+                    <p>
+                        In 2005, Bullock had a supporting role in the film Crash. She received positive reviews for her
+                        performance, with some critics suggesting that it was the best performance of her career.
+                        Bullock later appeared in The Lake House, a romantic drama also starring her Speed co-star,
+                        Keanu Reeves; it was released on June 16, 2006. Because their film characters are separated
+                        throughout the film (due to the plot revolving around time travel), Bullock and Reeves were only
+                        on set together for two weeks during filming. The same year, Bullock appeared in Infamous,
+                        playing author Harper Lee. Bullock also stars in Premonition with Julian McMahon, which was
+                        released in March 2007.</p>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+        <!--본문 끝-->
+
+
+
+        <!--푸터 시작-->
+        <div data-role="footer" data-position="fixed">
+            <h1>Sandra Bullock Fansite</h1>
+        </div>
+        <!--푸터 끝-->
+    </div>
+    <!--프로필 끝-->
+
+    <!--필모 시작-->
+    <div data-role="page" id="filmo">
+        <!--헤더영역-->
+
+        <div data-role="header" data-position="fixed">
+            <a href="#page1" data-icon="home" data-direction="reverse">Home</a>
+            <h1>Filmography</h1>
+            <a href="#awards" data-icon="forward" data-direction="reverse">Next</a>
+
+
+
+        </div>
+        <!--헤더영역 끝-->
+
+        <!--본문 시작-->
+
+        <div data-role="content" style="text-align: center;">
+
+
+            <ul data-role="listview">
+
+                <li>
+                    <a href="#popup1" data-rel="popup" class="ui-btn  ui-shadow ui-btn-inline" data-transition="pop">
+                        <img src="img/birdbox.jpg" class="thumb">
+                        <h3>Bird Box (2018)</h3>
+                        <p>Director: Susanne Bier</p>
+                        <p>Cast : Sandra Bullock, Trevante Rhodes, John Malkovich, Sarah Paulson</p>
+                    </a>
+                    <div data-role="popup" id="popup1">
+                        <p><iframe width="100%" src="https://www.youtube.com/embed/o2AsIXSh2xo" frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe></p>
+                    </div>
+
+                </li>
+                <li>
+                    <a href="#popup2" data-rel="popup" class="ui-btn  ui-shadow ui-btn-inline" data-transition="pop">
+                        <img src="img/8.jpg" class="thumb">
+                        <h3>Ocean's 8 (2018)</h3>
+                        <p>Director: Gary Ross</p>
+                        <p>Cast : Sandra Bullock, Griffin Dunne, Deidre Goodwin, Daniella Rabbani</p>
+                    </a>
+                    <div data-role="popup" id="popup2">
+                        <p><iframe width="100%" src="https://www.youtube.com/embed/UReOeuweI94" frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe></p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#popup3" data-rel="popup" class="ui-btn  ui-shadow ui-btn-inline" data-transition="pop">
+                        <img src="img\crisis.jpg" class="thumb">
+                        <h3>Our Brand Is Crisis (2013)</h3>
+                        <p>Director: David Gordon Green</p>
+                        <p>Cast : Sandra Bullock, Billy Bob Thornton, Anthony Mackie, Joaquim de Almeida</p>
+                    </a>
+                    <div data-role="popup" id="popup3">
+                        <p><iframe width="100%" src="https://www.youtube.com/embed/XbkclNp8Ixw" frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe></p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#popup4" data-rel="popup" class="ui-btn  ui-shadow ui-btn-inline" data-transition="pop">
+                        <img src="img\mini.jpg" class="thumb">
+                        <h3>Minions (2015)</h3>
+                        <p>Directors: Kyle Balda, Pierre Coffin</p>
+                        <p>Cast : Sandra Bullock, Jon Hamm, Michael Keaton, Allison Janney</p>
+                    </a>
+                    <div data-role="popup" id="popup4">
+                        <p><iframe width="100%" src="https://www.youtube.com/embed/O8G0MW8u5eU" frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe></p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#popup5" data-rel="popup" class="ui-btn  ui-shadow ui-btn-inline" data-transition="pop">
+                        <img src="img\prime.jpg" class="thumb">
+                        <h3>The Prime Ministers: The Pioneers (2013)</h3>
+                        <p>Director: Richard Trank</p>
+                        <p>Cast : Sandra Bullock, Robert Cait, Michael Douglas, Leonard Nimoy</p>
+                    </a>
+                    <div data-role="popup" id="popup5">
+                        <p><iframe width="100%" src="https://www.youtube.com/embed/U3_STqjp6BY" frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe></p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#popup6" data-rel="popup" class="ui-btn  ui-shadow ui-btn-inline" data-transition="pop">
+                        <img src="img\heat.jpg" class="thumb">
+                        <h3>The Heat (2013)</h3>
+                        <p>Director: Paul Feig</p>
+                        <p>Cast : Sandra Bullock, Melissa McCarthy, Demián Bichir, Marlon Wayans</p>
+                    </a>
+                    <div data-role="popup" id="popup6">
+                        <p><iframe width="100%" src="https://www.youtube.com/embed/zWjLzjVezb8" frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe></p>
+                    </div>
+                </li>
+
+
+            </ul>
+
+        </div>
+
+        <div class="btn">
+            <a href="#filmo2" data-role="button" data-inline="true" data-icon="arrow-r">next</a>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+        <!--본문 끝-->
+
+
+
+        <!--푸터 시작-->
+        <div data-role="footer" data-position="fixed">
+            <h1>Sandra Bullock Fansite</h1>
+        </div>
+        <!--푸터 끝-->
+    </div>
+    <!--필모 끝-->
+
+    <!--필모2 시작-->
+    <div data-role="page" id="filmo2">
+        <!--헤더영역-->
+
+        <div data-role="header" data-position="fixed">
+            <a href="#page1" data-icon="home" data-direction="Home">Prev</a>
+            <h1>Filmography</h1>
+            <a href="#awards" data-icon="forward" data-direction="reverse">next</a>
+
+
+
+        </div>
+        <!--헤더영역 끝-->
+
+        <!--본문 시작-->
+
+        <div data-role="content" style="text-align: center;">
+
+
+            <ul data-role="listview">
+
+                <li>
+                    <a href="#popup7" data-rel="popup" class="ui-btn  ui-shadow ui-btn-inline" data-transition="pop">
+                        <img src="img/gravity.jpg" class="thumb">
+                        <h3>Gravity (2013)</h3>
+                        <p>Director: Alfonso Cuarón</p>
+                        <p>Cast : Sandra Bullock, George Clooney, Ed Harris, Orto Ignatiussen</p>
+                    </a>
+                    <div data-role="popup" id="popup7">
+                        <p><iframe width="100%" src="https://www.youtube.com/embed/46g7OxVdZY0" frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe></p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#popup8" data-rel="popup" class="ui-btn  ui-shadow ui-btn-inline" data-transition="pop">
+                        <img src="img\loud.jpg" class="thumb">
+                        <h3>Extremely Loud & Incredibly Close (2011)</h3>
+                        <p>Director: Stephen Daldry</p>
+                        <p>Cast : Sandra Bullock, Tom Hanks, Thomas Horn, Zoe Caldwell</p>
+                    </a>
+                    <div data-role="popup" id="popup8">
+                        <p><iframe width="100%" src="https://www.youtube.com/embed/rttED3LiKbA" frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe></p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#popup9" data-rel="popup" class="ui-btn  ui-shadow ui-btn-inline" data-transition="pop">
+                        <img src="img\steve.jpg" class="thumb">
+                        <h3>All About Steve (2009)</h3>
+                        <p>Director: Phil Traill</p>
+                        <p>Cast : Sandra Bullock, Thomas Haden Church, Bradley Cooper, Ken Jeong</p>
+                    </a>
+                    <div data-role="popup" id="popup9">
+                        <p><iframe width="100%" src="https://www.youtube.com/embed/FzBb0u1_WSw" frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe></p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#popup10" data-rel="popup" class="ui-btn  ui-shadow ui-btn-inline" data-transition="pop">
+                        <img src="img\blind.jpg" class="thumb">
+                        <h3>The Blind Side (2009)</h3>
+                        <p>Director: John Lee Hancock</p>
+                        <p>Cast : Sandra Bullock, Tim McGraw, Quinton Aaron, Jae Head</p>
+                    </a>
+                    <div data-role="popup" id="popup10">
+                        <p><iframe width="100%" src="https://www.youtube.com/embed/I24d30buecw" frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe></p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#popup11" data-rel="popup" class="ui-btn  ui-shadow ui-btn-inline" data-transition="pop">
+                        <img src="img\proposal.jpg" class="thumb">
+                        <h3>The Proposal (2009)</h3>
+                        <p>Director: Anne Fletcher</p>
+                        <p>Cast : Sandra Bullock, Ryan Reynolds, Mary Steenburgen, Craig T. Nelson</p>
+                    </a>
+                    <div data-role="popup" id="popup11">
+                        <p><iframe width="100%" src="https://www.youtube.com/embed/OhSvswJdvDA" frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe></p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#popup12" data-rel="popup" class="ui-btn  ui-shadow ui-btn-inline" data-transition="pop">
+                        <img src="img\monition.jpg" class="thumb">
+                        <h3>Premonition (2007)</h3>
+                        <p>Director: Mennan Yapo</p>
+                        <p>Cast : Sandra Bullock, Julian McMahon, Shyann McClure, Courtney Taylor Burness</p>
+                    </a>
+                    <div data-role="popup" id="popup12">
+                        <p><iframe width="100%" src="https://www.youtube.com/embed/fMPI54WCPSk" frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe></p>
+                    </div>
+                </li>
+
+
+            </ul>
+
+        </div>
+
+        <div class="btn">
+            <a href="#filmo" data-role="button" data-inline="true" data-icon="arrow-l">prev</a>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+        <!--본문 끝-->
+
+
+
+        <!--푸터 시작-->
+        <div data-role="footer" data-position="fixed">
+            <h1>Sandra Bullock Fansite</h1>
+        </div>
+        <!--푸터 끝-->
+    </div>
+    <!--필모2 끝-->
+
+    <!--어워즈 시작-->
+    <div data-role="page" id="awards">
+        <!--헤더영역-->
+        <div data-role="header" data-position="fixed">
+            <!--data-theme=b는 검정색-->
+            <a href="#page1" data-icon="home" data-direction="reverse">Home</a>
+            <h1>Awards</h1>
+            <a href="#interview" data-icon="forward" data-direction="reverse">Next</a>
+
+        </div>
+        <!--헤더영역 끝-->
+
+        <!--본문 시작-->
+        <div data-role="content">
+            <div data-role="collapsible">
+                <h3>Academy Awards</h3>
+                <p>1 win of 2 nominations
+
+
+                    <table class="ui-responsive table-stripe" data-role="table">
+                        <thead>
+                            <tr>
+                                <!--줄-->
+                                <th>Year</th>
+                                <!--제목칸-->
+                                <th>Nominated Work</th>
+                                <th>Category</th>
+                                <th>Results</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+
+                                <td>2010</td>
+                                <td>The Blind Side</td>
+                                <!--칸-->
+                                <td>Best Actress</td>
+                                <td>Won</td>
+
+                            </tr>
+                            <tr>
+
+                                <td>2014</td>
+                                <td>Gravity</td>
+                                <td>Best Actress</td>
+                                <td>Nominated</td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </p>
+            </div>
+
+            <div data-role="collapsible">
+                <h3>Golden Globe Awards</h3>
+                <p>1 win of 5 nominations
+
+
+                    <table class="ui-responsive table-stripe" data-role="table">
+                        <thead>
+                            <tr>
+                                <!--줄-->
+                                <th>Year</th>
+                                <!--제목칸-->
+                                <th>Nominated Work</th>
+                                <th>Category</th>
+                                <th>Results</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+
+                                <td>2014</td>
+                                <td>Gravity</td>
+                                <!--칸-->
+                                <td>Best Actress – Motion Picture Drama</td>
+                                <td>Nominated</td>
+
+                            </tr>
+                            <tr>
+
+                                <td>2010</td>
+                                <td>The Blind Side</td>
+                                <td>Best Actress – Motion Picture Drama</td>
+                                <td>Won</td>
+
+                            </tr>
+                            <tr>
+
+                                <td>2010</td>
+                                <td>The Proposal</td>
+                                <td>Best Actress – Motion Picture Musical or Comedy</td>
+                                <td>Nominated</td>
+
+                            </tr>
+                            <tr>
+
+                                <td>2001</td>
+                                <td>Miss Congeniality</td>
+                                <td>Best Actress – Motion Picture Musical or Comedy</td>
+                                <td>Nominated</td>
+
+                            </tr>
+                            <tr>
+
+                                <td>1996</td>
+                                <td>While You Were Sleeping</td>
+                                <td>Best Actress – Motion Picture Musical or Comedy</td>
+                                <td>Nominated</td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </p>
+            </div>
+
+            <div data-role="collapsible">
+                <h3>Screen Actors Guild Awards</h3>
+                <p>2 win of 3 nominations
+
+
+                    <table class="ui-responsive table-stripe" data-role="table">
+                        <thead>
+                            <tr>
+                                <!--줄-->
+                                <th>Year</th>
+                                <!--제목칸-->
+                                <th>Nominated Work</th>
+                                <th>Category</th>
+                                <th>Results</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+
+                                <td>2014</td>
+                                <td>gravity</td>
+                                <!--칸-->
+                                <td>Outstanding Performance by a Female Actor in a Leading Role</td>
+                                <td>Nominated</td>
+
+                            </tr>
+                            <tr>
+
+                                <td>2010</td>
+                                <td>The Blind Side</td>
+                                <td>Outstanding Performance by a Female Actor in a Leading Role</td>
+                                <td>Won</td>
+
+                            </tr>
+                            <tr>
+
+                                <td>2006</td>
+                                <td>Crash</td>
+                                <td>Outstanding Performance by a Cast in a Motion Picture</td>
+                                <td>Won</td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </p>
+            </div>
+        </div>
+
+
+        <!--본문 끝-->
+
+
+
+        <!--푸터 시작-->
+        <div data-role="footer" data-position="fixed">
+            <h1>Sandra Bullock Fansite</h1>
+        </div>
+        <!--푸터 끝-->
+    </div>
+    <!--어워즈 끝-->
+
+    <!--인터뷰 시작-->
+    <div data-role="page" id="interview">
+        <!--헤더영역-->
+
+        <div data-role="header" data-position="fixed">
+            <!--data-theme=b는 검정색-->
+
+            <a href="#page1" data-icon="home" data-direction="reverse">Home</a>
+            <h1>Interview</h1>
+
+
+
+
+
+
+        </div>
+        <!--헤더영역 끝-->
+
+        <!--본문 시작-->
+        <div data-role="content">
+
+
+
+            <ul data-role="listview" data-inset="true">
+                <li data-role="listdivider" style="text-align: center;"><b>Sandra Bullock on Taking Ellen's Movie
+                        Roles</b></li>
+                <li><iframe width="100%" height="315" src="https://www.youtube.com/embed/iIY72MTBGUo" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe></li>
+            </ul>
+            <ul data-role="listview" data-inset="true">
+                <li data-role="listdivider" style="text-align: center;"><b>Sandra Bullock Plays 'Bullock Or
+                        Bollocks?'</b></li>
+                <li><iframe width="100%" height="315" src="https://www.youtube.com/embed/ArnR2HXWCjg" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe></li>
+            </ul>
+            <ul data-role="listview" data-inset="true">
+                <li data-role="listdivider" style="text-align: center;"><b>Sandra Bullock's Son Picked Her Out a Slutty
+                        Batgirl Halloween Costume</b></li>
+                <li><iframe width="100%" height="315" src="https://www.youtube.com/embed/_zG41KUFJqk" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe></li>
+
+            </ul>
+            <div class="btn">
+                <a href="#interview2" data-role="button" data-inline="true" data-icon="arrow-r">next</a>
+
+            </div>
+        </div>
+
+
+
+        <!--본문 끝-->
+
+
+
+        <!--푸터 시작-->
+        <div data-role="footer" data-position="fixed">
+            <h1>Sandra Bullock Fansite</h1>
+        </div>
+        <!--푸터 끝-->
+    </div>
+    <!--인터뷰 끝-->
+    <!--인터뷰2 시작-->
+    <div data-role="page" id="interview2">
+        <!--헤더영역-->
+        <div data-role="header" data-position="fixed">
+            <!--data-theme=b는 검정색-->
+            <a href="#page1" data-icon="home" data-direction="reverse">Home</a>
+            <h1>Interview</h1>
+
+
+        </div>
+        <!--헤더영역 끝-->
+
+        <!--본문 시작-->
+        <div data-role="content">
+
+
+
+            <ul data-role="listview" data-inset="true">
+                <li data-role="listdivider" style="text-align: center;"><b>Sandra Bullock Teaches Jimmy Kimmel
+                        German</b></li>
+                <li><iframe width="100%" height="315" src="https://www.youtube.com/embed/Irv_N7Wy2N0" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe></li>
+            </ul>
+
+            <ul data-role="listview" data-inset="true">
+                <li data-role="listdivider" style="text-align: center;"><b>Sandra Bullock on Being a Cheerleader in High
+                        School</b></li>
+                <li><iframe width="100%" height="315" src="https://www.youtube.com/embed/F0ZdMq0n8-Y" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe></li>
+
+            </ul>
+            <ul data-role="listview" data-inset="true">
+                <li data-role="listdivider" style="text-align: center;"><b>Sandra Bullock Had a Crush on ‘Speed’ Co-Star
+                        Keanu Reeves</b></li>
+                <li><iframe width="100%" height="315" src="https://www.youtube.com/embed/qdjzr3QCKF4" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe></li>
+
+            </ul>
+            <div class="btn">
+                <a href="#interview" data-role="button" data-inline="true" data-icon="arrow-l">prev</a>
+
+            </div>
+        </div>
+
+
+
+        <!--본문 끝-->
+
+
+
+        <!--푸터 시작-->
+        <div data-role="footer" data-position="fixed">
+
+            <h1>Sandra Bullock Fansite</h1>
+        </div>
+        <!--푸터 끝-->
+    </div>
+    <!--인터뷰2 끝-->
+
+
+</body>
+
+</html>
