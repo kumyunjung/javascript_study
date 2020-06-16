@@ -15,7 +15,7 @@ var character = {
 
 
 //
-
+//
 // 출력 시 전체 property가 출력 됨
 // { hp: 50,
 //     mp: 100,
