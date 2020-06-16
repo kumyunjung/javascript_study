@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * { margin: 0; padding: 0;}
+    li { list-style: none; }
+    a { text-decoration: none; }
+    img { border: 0; }
+    #mainheader { width: 960px; margin: 0 auto; height: 160px;
+    position: relative; }
+
+    #mainheader > #title { position: absolute; left: 20px; top: 30px; }
+    /* relative 기준으로 정렬*/
+    #mainheader > #main_gnb { position: absolute; right: 0; top: 0; }
+    #mainheader > #main_lnb { position: absolute; right: 0; bottom: 10px;}
+    
+    #main_gnb > ul { overflow: hidden; }
+    #main_gnb > ul > li { float: left; }
+    #main_gnb > ul > li > a { display: block; padding: 2px 10px; border: 1px dotted black; }
+    #main_gnb > ul > li > a:hover { background: black; color: white; }
+    #main_gnb > ul > li:first-child > a { border-radius: 10px 0 0 10px; }
+    #main_gnb > ul > li:last-child > a { border-radius: 0 10px 10px 0; }
+
+    #main_lnb > ul { overflow: hidden; }
+    #main_lnb > ul > li { float: left; }
+    #main_lnb > ul > li > a { display: block; padding: 2px 10px; border: 1px dotted black;}
+    #main_lnb > ul > li > a:hover { background: black; color: white; }
+    #main_lnb > ul > li:first-child > a { border-radius: 10px 0 0 10px; }
+    #main_lnb > ul > li:last-child > a { border-radius: 0 10px 10px 0; }
+
+
+
+
+</style>
+<style>
+    #content { width: 960px; margin: 0 auto; overflow: hidden; }
+    #content > #main_section { width: 750px; float: left; }
+    #content > #main_aside { width: 200px; float: left; }
+    #main_section > article.main_article { margin-bottom: 10px; padding: 20px; border: 1px solid black; }
+</style>
+<style>
+    input:nth-of-type(1) { display: none; }
+    input:nth-of-type(1) ~ div:nth-of-type(1) { display: none; }
+    input:nth-of-type(1):checked ~ div:nth-of-type(1) { display: block; }
+    
+    input:nth-of-type(2) { display: none; }
+    input:nth-of-type(2) ~ div:nth-of-type(2) { display: none; }
+    input:nth-of-type(2):checked ~ div:nth-of-type(2) { display: block; }
+
+    section.buttons { overflow: hidden;  }
+    section.buttons > label { display: block; float: left; width: 100px; height: 30px; border: 1px solid black; line-height: 30px;
+                            text-align: center; box-sizing: border-box; background-color: black; color: white;}   
+
+    input:nth-of-type(1):checked ~ section.buttons > label:nth-of-type(1) { background: white; color: black;} 
+    input:nth-of-type(2):checked ~ section.buttons > label:nth-of-type(2) { background: white; color: black;} 
+</style>
+<body>
+    <header id="mainheader">
+        <div id="title">
+            <h1>홈페이지...</h1>
+            <h2>HTML5 + CSS3 Basic</h2>
+        </div>
+        <!--우측 상단-->
+        <nav id="main_gnb">
+            <ul>
+                <li><a href="#">mobile</a></li>
+                <li><a href="#">mobile</a></li>
+                <li><a href="#">mobile</a></li>
+                <li><a href="#">mobile</a></li>
+                <li><a href="#">mobile</a></li>
+            </ul>
+        </nav>
+        <nav id="main_lnb">
+            <ul>
+                <li><a href="#">qwer</a></li>
+                <li><a href="#">qwer</a></li>
+                <li><a href="#">qwer</a></li>
+                <li><a href="#">qwer</a></li>
+                <li><a href="#">qwer</a></li>
+            </ul>
+        </nav>
+        <!--우측 상단 끝-->
+    </header>
+    <div id="content">
+        <section id="main_section">
+            <article class="main_article">
+                <h1>Occaecat</h1>
+                <p>Aliqua fugiat sunt dolor tempor id labore cillum ea eu cupidatat. Quis ullamco quis labore amet adipisicing ex exercitation consectetur officia reprehenderit enim exercitation aliquip excepteur. Consectetur in sunt pariatur proident tempor culpa mollit qui enim incididunt cillum nisi tempor.
+
+Officia incididunt elit ut esse consectetur est nulla et dolore. Mollit ea ipsum ut enim excepteur consectetur veniam fugiat ipsum. Ad esse aliqua minim ea aliqua ad aliquip. Nisi velit sit ea nisi culpa nulla sit sint eu nisi deserunt veniam. Amet fugiat do ea magna do nulla duis consectetur amet dolore ipsum tempor minim.</p>
+            </article>
+            <article class="main_article">
+                <h1>Occaecat</h1>
+                <p>Aliqua fugiat sunt dolor tempor id labore cillum ea eu cupidatat. Quis ullamco quis labore amet adipisicing ex exercitation consectetur officia reprehenderit enim exercitation aliquip excepteur. Consectetur in sunt pariatur proident tempor culpa mollit qui enim incididunt cillum nisi tempor.
+
+Officia incididunt elit ut esse consectetur est nulla et dolore. Mollit ea ipsum ut enim excepteur consectetur veniam fugiat ipsum. Ad esse aliqua minim ea aliqua ad aliquip. Nisi velit sit ea nisi culpa nulla sit sint eu nisi deserunt veniam. Amet fugiat do ea magna do nulla duis consectetur amet dolore ipsum tempor minim.</p>
+            </article>
+            <article class="main_article">
+                <h1>Occaecat</h1>
+                <p>Aliqua fugiat sunt dolor tempor id labore cillum ea eu cupidatat. Quis ullamco quis labore amet adipisicing ex exercitation consectetur officia reprehenderit enim exercitation aliquip excepteur. Consectetur in sunt pariatur proident tempor culpa mollit qui enim incididunt cillum nisi tempor.
+
+Officia incididunt elit ut esse consectetur est nulla et dolore. Mollit ea ipsum ut enim excepteur consectetur veniam fugiat ipsum. Ad esse aliqua minim ea aliqua ad aliquip. Nisi velit sit ea nisi culpa nulla sit sint eu nisi deserunt veniam. Amet fugiat do ea magna do nulla duis consectetur amet dolore ipsum tempor minim.</p>
+            </article>
+        </section>
+        <aside id="main_aside">
+            <input type="radio" name="tab" id="first" checked="checked">
+            <input type="radio" name="tab" id="second">
+            
+        <section class="buttons">
+            <label for="first">first</label>
+            <label for="second">second</label>
+        </section>
+
+            <div class="tab_item">
+                <ul>
+                    <li><a href="#">html5 canvas</a></li>
+                    <li><a href="#">html5 audio</a></li>
+                    <li><a href="#">html5 video</a></li>
+                    <li><a href="#">html5 simentic wen</a></li>
+                </ul>
+            </div>
+            <div class="tab_item">
+                <ul>
+                    <li><a href="#">css canvas</a></li>
+                    <li><a href="#">css audio</a></li>
+                    <li><a href="#">css video</a></li>
+                    <li><a href="#">css simentic wen</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+</body>
+</html>

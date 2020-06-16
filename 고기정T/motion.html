@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #wrap { margin: 0 auto; width: 800px;}
+    #main_header { width: 800px border: 1px solid black;
+    text-align: center; }
+    #main_section > articl {
+        width: 100%; border: 1px solid black; margin-top: 3px;
+    }
+    .box {
+        width: 30px; height: 30px; background: orange; margin: 3px;
+    }
+    .box:hover { width: 500px; transition-duration: 3s;}
+    .box:active { background: red;}
+    #graph > div.bar { width: 30px height: 30px; background-color: orange; 
+    margin: 3px; transition-duration: 5s;}
+</style>
+<body>
+    <  id="wrap">
+        <header><h1>css 애니메이션</h1></header>
+        <section id="main_section">
+            <article>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </article>
+            <div id="graph">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
