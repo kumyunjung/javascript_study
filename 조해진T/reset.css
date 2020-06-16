@@ -23,6 +23,7 @@ h1, h2, h3, h4, h5, h6 {
 fieldset, img, abbr, acronym { border: 0 none;}
 
 /* 목록 */
+/* 목록 */
 ol, ul { list-style: none; margin: 0; padding: 0;}
 
 /* 테이블 마크업에 'cellspacing="0"' 지정 함께 필요 */
