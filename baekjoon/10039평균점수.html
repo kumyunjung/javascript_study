@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    원섭 : <input type="text" name="" id="ws"><br>
+    세희 : <input type="text" name="" id="sh"><br>
+    상근 : <input type="text" name="" id="sk"><br>
+    숭 : <input type="text" name="" id="sung"><br>
+    강수 : <input type="text" name="" id="ks"><br>
+    <input type="button" value="계산하기" onclick="click1();"><br>
+    결과 : <span id="num"></span>
+ <script>
+ 
+ var sum = 0
+ 
+ 
+
+ for ( i = 0; i < 5; i++) {
+     var num = prompt("점수를 입력해주세요")
+     num = parseInt(num)
+
+ }
+   if (40<=num ) {
+       document.getElementById("num").innerHTML = sum+num
+   }
+   if (40>num ) {
+       document.getElementById("num").innerHTML = sum+40
+   } 
+
+   document.getElementById("num").innerHTML = sum/5
+     
+ </script>
+</body>
+</html>
