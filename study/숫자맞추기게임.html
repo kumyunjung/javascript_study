@@ -11,22 +11,35 @@
         var btn = document.getElementById("btn")
         var random = Math.floor(Math.random()*101)+1
         var hint = document.getElementById("hint")
+        var count_value = 0
 
         btn.onclick = function () {
              var input = document.getElementById("result")
              var input_value = input.value;
+       
+             count_value += 1;
             
+             count.value = "시도한 횟수는 " + count_value + "번입니다.";
+
+            
+         if (count_value > 10) {
+                 alert("최대횟수를 사용하였습니다")
+                 location.reload();
+             } 
+         
+
       if(random>input_value) {
             hint.value="입력한 값이 작습니다."
         }
         else if(random<input_value) {
             hint.value="입력한 값이 큽니다."
-        }
+        } 
+      
         else {
             alert("정답입니다.")
         }   
+    
         }
-
   
     }
 
@@ -36,7 +49,7 @@
     <h1>숫자 맞추기 게임</h1>
     <p><h2>이 게임은 컴퓨터가 생성한 숫자를 맞추는 게임입니다. 숫자는 1부터 100사이에 있습니다.</h2></p><br>
     <h3>숫자 : <input type="form" id="result" ><input type="button" value="확인" id="btn"></h3>
-    <h3>추측횟수 : <input type="form"></h3>
+    <h3>추측횟수 : <input type="form" id="count"></h3>
     <h3>힌트 : <input type="form" id="hint"></h3>
     <p id="result"></p>
     

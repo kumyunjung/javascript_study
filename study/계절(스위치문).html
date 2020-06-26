@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+   window.onload = function () {
+       document.getElementById("btn").onclick = function () {
+       var season1 = document.getElementById("season").value;
+       var blank = document.getElementById("blank")
+
+       switch (season1) {
+           case "12" : 
+           case "1" :
+           case "2" : blank.innerHTML = "겨울";
+           break;
+           case "3" : 
+           case "4" :
+           case "5" : blank.innerHTML = "봄";
+           break;
+           case "6" : 
+           case "7" :
+           case "8" : blank.innerHTML = "여름";
+           break;
+           case "9" : 
+           case "10" :
+           case "11" : blank.innerHTML = "여름";
+           break;
+       }
+       }
+
+    }
+    
+</script>
+<body>
+    <input type="form" id="season">월</input>
+    <input type="button" value="계산하기" id="btn"></input>
+    <h1 id="blank" style="color: red;"></h1>
+</body>
+</html>

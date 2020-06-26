@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모바일</title>
+</head>
+<style>
+    /*초기화*/
+    * { margin: 0; padding: 0; }
+    a { text-decoration: none; }
+    li { list-style: none; }
+
+    /* 헤더 부분 */
+    #main_header { width: 100%; height: 45px; text-align: center; 
+    background-image: url('./img/header_background.png'); position: relative;}
+
+
+    /* 헤더 버튼 */
+    .header_left_button {
+    width: 62px; height: 32px;
+    background: url('./img/css_sprites.png') -1px -1px;  position: absolute; left: 5px; top: 7px;}
+
+    .header_right_button {
+    width: 32px; height: 32px;
+    background: url('./img/css_sprites.png') -1px -35px; position: absolute; right: 5px; top: 7px;} 
+
+    /* 메뉴 구성 */
+    #button_gnb {
+        width: 100%; display: table; border-bottom: 1px dotted black
+    }
+    #button_gnb > div { display : table-cell; text-align: center; }
+    /* #button_gnb > div > a */
+    #button_gnb > div > a { display: block; height: 35px; line-height: 35px; color: black; }
+
+    
+   #button_gnb { width: 100%; border-bottom: 1px dotted black; 
+   background-color: #eeeeee; }
+   #button_gnb > ul { overflow: hidden; }
+   #button_gnb > ul > li > a { float: left; width: 20%;
+   text-align: center; height: 35px; line-height: 35px;}
+   #button_gnb:hover > ul > li > a:hover { float: left; width: 20%;
+   text-align: center; height: 35px; line-height: 35px; background-color: yellow; font-size: 17px;
+   box-shadow: 0px 2px 20px black; transform: rotate(3deg); transition: backgound-color 0.5 ease-in, font-size 2s ease-in,
+   transform 1s ease-in;}
+
+   #toggle { display: none; }
+   #toggle + #wrap > #button_gnb { height: 0; transition-duration: 1s;}
+   #toggle + #wrap > #button_gnb > ul > li > a { height: 0; transition-duration: 1s;}
+   #toggle:checked + #wrap > #button_gnb { height: 35px;  }
+   #toggle:checked + #wrap > #button_gnb > ul > li > a { height: 35px; }
+
+   #top_gnb_nav { display: table; width: 100%; border-bottom: 1px solid black;}
+   #top_gnb_nav > div { display: table-cell; position: relative; width: 20%; }
+   #top_gnb_nav > div > a { display: block; height: 35px; line-height: 35px; text-align: center; }
+   #top_gnb_nav > div > a::before { display: block; position: absolute; top: 9px; left: -1; 
+   width: 1px; height: 15px; border-left: 1px solid black; content: '';}
+   
+   #section_header { padding: 20px;}
+   #section_article { padding: 10px;}
+   #main_footer { padding: 3px; border-top: 1px solid black; position: fixed; left: 0; right: 0; bottom: 0;
+   height: 40px; background: white; text-align: center;}
+   #main_section { margin-bottom: 40px; }
+ 
+
+
+
+    
+
+</style>
+<input type="checkbox" id="toggle" >
+<body>
+    <div id="wrap">
+        <!-- 헤더 --> 
+        <div id="main_header">
+           <i class="header_left_button"></i>
+           <h1>모바일 화면</h1> <label for="toggle">
+           <i class="header_right_button"></i></label>
+        </div>
+       <!-- 메뉴 구성 -->
+  
+       <div id="button_gnb">
+          <ul>
+              <li><a href="#">123</a></li>
+              <li><a href="#">123</a></li>
+              <li><a href="#">123</a></li>
+              <li><a href="#">123</a></li>
+              <li><a href="#">123</a></li>
+          </ul>
+       </div>
+       <nav id="top_gnb_nav">
+            <div><a href="#">main</a></div>
+            <div><a href="#">main</a></div>
+            <div><a href="#">main</a></div>
+            <div><a href="#">main</a></div>
+            <div><a href="#">main</a></div>
+
+       </nav>
+       
+       <section id="main_section">
+            <header id="section_header">
+                <h1>iPhone X</h1>
+                <time>2020-00-00 - New...</time>
+            </header>
+            <article id="section_article">
+                <p>Do elit qui commodo tempor non nisi sit excepteur.</p>
+                <br>
+                <p>Do elit qui commodo tempor non nisi sit excepteur.</p>
+                <br>
+                <p>Do elit qui commodo tempor non nisi sit excepteur.</p>
+                <br>
+                <p>Nostrud est officia reprehenderit labore. Ullamco ex labore duis nulla cillum irure ex do duis occaecat veniam dolore esse. Ad dolor proident consequat officia qui laboris laborum occaecat enim. Incididunt et pariatur sit exercitation est ullamco irure elit aliquip veniam ad adipisicing.
+
+Dolor nostrud nisi proident nostrud fugiat proident. Culpa do ut laboris culpa est laboris eu. Mollit labore aliqua dolor irure ut minim irure ullamco tempor id labore fugiat enim amet. Eiusmod esse velit adipisicing nostrud ipsum id veniam sint dolor mollit cillum reprehenderit esse. Consequat esse sunt fugiat exercitation sint commodo anim incididunt quis cupidatat. Eiusmod velit excepteur magna cupidatat minim laborum do ex labore pariatur proident minim mollit pariatur. Non occaecat incididunt enim dolore ad ipsum incididunt est fugiat duis pariatur ut sint.
+
+Consectetur duis non pariatur excepteur pariatur do commodo duis. Deserunt cupidatat cupidatat nulla in anim enim incididunt excepteur commodo ullamco aliqua adipisicing esse nulla. Exercitation in enim non non.</p>
+            </article>
+       </section>
+
+       <footer id="main_footer">
+           <h3>html5 + css3</h3>
+           <address>webside....layout</address>
+       </footer>
+    
+    </div>   
+</body>
+</html>

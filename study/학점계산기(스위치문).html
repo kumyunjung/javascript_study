@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        window.onload = function () {
+            document.getElementById("btn").onclick = function () {
+                var sc = document.getElementById("score").value;
+                // var sc = sc / 10; 이미 sc라는 변수가 지역변수로 선언되어 있기 때문에 다시 선언할 필요는 없습니다.
+                sc = Math.floor(sc/10);
+
+                var blank = document.getElementById("blank")
+
+                // console.log(sc);
+
+                switch (sc) {
+                    case 9:
+                        blank.innerHTML = "A"
+                        break;
+                    case 8:
+                        blank.innerHTML = "B"
+                        break;
+                    case 7:
+                        blank.innerHTML = "C"
+                        break;
+                    case 6:
+                        blank.innerHTML = "D"
+                        break;
+                    default:
+                        blank.innerHTML = "F"
+                        break;
+                }
+
+            }
+        }
+    </script>
+
+    <input id="score" type="form" placeholder="점수를 입력하세요"></input>
+    <input id="btn" type="button" value="계산하기"></button>
+    <h1 id="blank" style="color: red;"></h1>
+
+</body>
+
+</html>
