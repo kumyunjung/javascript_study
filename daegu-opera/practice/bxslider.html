@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BxSlider</title>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.bxslider.min.js"></script>
+    <link rel="stylesheet" href="js/jquery.bxslider.min.css">
+    <style>
+        .bxslider {
+            width: 700px;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap-all">
+        <ul class="bxslider">
+            <li><img src="images/img_carmen01.jpg" alt="카메론"></li>
+            <li><img src="images/img_festival03.jpg" alt="페스티벌"></li>
+            <li><img src="images/img_matine01.jpg" alt="마티네"></li>
+        </ul>
+    </div>
+    <script>
+        $('.bxslider').bxSlider({
+            // auto: true,
+            // pager: true,            
+            // speed: 500,
+            // slideWidth: 600,
+            // controls: false
+            minSlides : 3,
+            maxSlides : 3,
+            slideWidth: 180, 
+            slideMargin: 10,
+            moveSlides: 1,
+            
+        });
+    </script>
+</body>
+</html>
