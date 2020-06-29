@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var int = prompt("숫자를 입력하세요")
+        var arr = int.split(" ")
+        arr0 = parseInt(arr[0])
+        arr1 = parseInt(arr[1])
+        arr2 = parseInt(arr[2])
+        
+
+        if (arr0 < arr1 && arr1> arr2 ) {
+            document.write(arr0)
+        } 
+        else if (arr0==arr1 ) {
+            document.write(arr0)
+        }
+        else if (arr0==arr1 && arr1 ==arr2) {
+            document.write(arr0)
+        }
+        else if (arr0>arr1 && arr1==arr2) {
+            document.write(arr0)
+        }
+        else if (arr0 < arr1 && arr1 < arr2) {
+            document.write(arr1)
+        }
+        else if (arr0 > arr1 && arr1 < arr2) {
+            document.write(arr1)
+        }
+        else if (arr0 == arr1 && arr1 < arr2) {
+            document.write(arr2)
+        }
+        else if (arr0 > arr1 && arr1 < arr2) {
+            document.write(arr2)
+        }
+     
+       
+    </script>
+</body>
+</html>
