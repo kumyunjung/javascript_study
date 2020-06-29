@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+            margin-right: 10px;
+            width: 100px;
+
+        }
+        .slide-wrap {
+            width: 550px;
+            overflow: hidden;
+            
+        }
+        .slide {
+            display: flex;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-wrap">
+        <ul class="slide">
+            <li>
+                1<img src="https://placeimg.com/100/100/1" alt="이미지1">
+            </li>
+            <li>
+                2<img src="https://placeimg.com/100/100/2" alt="이미지2">
+            </li>
+            <li>
+                3<img src="https://placeimg.com/100/100/3" alt="이미지3">
+            </li>
+            <li>
+                4<img src="https://placeimg.com/100/100/4" alt="이미지4">
+            </li>
+            <li>
+                5<img src="https://placeimg.com/100/100/5" alt="이미지5">
+            </li>
+            <li>
+                6<img src="https://placeimg.com/100/100/6" alt="이미지6">
+            </li>
+            <li>
+                7<img src="https://placeimg.com/100/100/7" alt="이미지7">
+            </li>
+            <li>
+                8<img src="https://placeimg.com/100/100/8" alt="이미지8">
+            </li>
+               
+               
+        </ul>
+    </div>
+    <script>
+        function moveSlide() {
+            const margin = 10;
+            // const liWidth = $(".slide > li ").width();
+            $(".slide").animate({
+                'margin-left': -100
+            }, 1000, replace)
+        }
+
+        function replace() {
+            const li = $(".slide > li:eq(0)")
+            li.remove()
+            $(".slide").css("margin-left", "0px")
+            $(".slide").append(li) //append 추가해주는 메서드
+        }
+        // moveSlide();
+        let slide = setInterval(function(){
+            moveSlide();
+
+        }, 1000 );
+       //when mouse is over 
+        $(".slide > li").mouseover(function(){
+            clearInterval(slide);
+        }).mouseleave(function(){
+            slide = setInterval(function(){
+            moveSlide();
+
+        }, 1000 );
+        })
+    </script>
+</body>
+</html>

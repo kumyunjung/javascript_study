@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body, html {
+            height: 100%;
+        }
+        .main-header {
+            width: 100%;
+            border: 1px solid red;
+            height: 80px;
+            display: flex;
+        }
+        .logo {
+            background-color: pink;
+            min-width: 200px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .nav-container {
+            background-color: plum;
+            width: 100%;
+            height: 100%;
+           
+        }    
+        
+        .main-navi {
+            background: #ccc;
+            height: 50%;
+        }
+
+        .sub-navi {
+            background: red;
+            height: 50%;
+            display: flex;
+            justify-content: flex-end
+          
+        }
+
+        .sub-navi > ul  {
+            display: flex;
+            align-items: center;
+           
+        }
+
+        .sub-navi > ul > li {
+            list-style: none; 
+            margin-right: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px; 
+        }
+
+        .sub-navi > ul > li:hover {
+            transform: rotate(45deg);
+            transition-duration: 1s;
+        }
+
+        .side-bar {
+            width: 70px;
+            height: 100%;
+            position: absolute;
+            background-color: rebeccapurple;
+            top: 80px;
+            left: 0px;
+            text-align: center;
+        }
+        .side-bar2 {
+            width: 70px;
+            height: 100%;
+            position: absolute;
+            background-color: yellow;
+            top: 80px;
+            right: 0px;
+            text-align: center;
+        }
+
+        li {list-style: none;}
+    </style>
+</head>
+<body>
+    <div class="wrap-all">
+        <header class="main-header">
+            <div class="logo">
+                <img src="https://placeimg.com/150/40/any" alt="랜덤이미지">
+            </div>
+            <div class="nav-container">
+                <div class="sub-navi">
+                    <ul>
+                        <li>Home</li>
+                        <li>Cocoa</li>
+                        <li>Login</li>
+                        <li>Join</li>
+                    </ul>
+                    <select name="" id="" class="language">
+                        <option value="" selected>kor</option>
+                        <option value="">Eng</option>
+                    </select>
+                </div>
+                <nav class="main-navi">
+
+                </nav>
+            </div>
+        </header>
+        <aside class="side-bar">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ul>
+        </aside> 
+        <aside class="side-bar2">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ul>
+        </aside> 
+    </div>
+    
+</body>
+</html>
