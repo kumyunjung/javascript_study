@@ -5,6 +5,10 @@
     text-decoration: none;
 }
 
+a {
+    color: inherit;
+}
+
 #wrap { 
     height: 100%;
 }
@@ -67,6 +71,9 @@
     color: #333;
 }
 
+.sub-menu > ul > li:nth-child(1) > a {
+    color: rgb(51, 51, 190);
+}
 .sub-menu > ul > li:nth-child(1) > a:visited {
     color: rgb(51, 51, 190);
 }
