@@ -43,49 +43,49 @@
     </div>
     <script>
 
-        const name = "keum";
-        const age = 27
-        const major = "piano"
-        console.log(`my name is ${name}, and ${age}, and my major was ${major}`)
+        // const name = "keum";
+        // const age = 27
+        // const major = "piano"
+        // console.log(`my name is ${name}, and ${age}, and my major was ${major}`)
+        
 
 
+         let index = 0;
+        $(".btn1").click(function(){
+            // const index = $(this).attr("data-type")
+            // console.log(parseInt(index)+1);
+            // let nextIndex = parseInt(index) + 1;
+            let nextIndex = index + 1;
 
-    //      let index = 0;
-    //     $(".btn1").click(function(){
-    //         // const index = $(this).attr("data-type")
-    //         // console.log(parseInt(index)+1);
-    //         // let nextIndex = parseInt(index) + 1;
-    //         let nextIndex = index + 1;
+            // 무제한
+            // const max = $("img").last().index();
+            // if(nextIndex === max+1) {
+            //     nextIndex = 0;
+            // }
 
-    //         // 무제한
-    //         // const max = $("img").last().index();
-    //         // if(nextIndex === max+1) {
-    //         //     nextIndex = 0;
-    //         // }
-
-    //         if(nextIndex === 3) {
-    //             nextIndex = 0;
-    //         }
-    //         // 이미지 숨김처리
-    //         $("img").hide()
-    //         // 다음 인덱스 이미지 나타남
-    //         $(`img:eq(${nextIndex})`).fadeIn(500)
-    //         // 다음 인덱스 데이터 타입에 업데이트
-    //         // $(this).attr("data-type", nextIndex)
-    //         index = nextIndex;      
-    //     });
+            if(nextIndex === 3) {
+                nextIndex = 0;
+            }
+            // 이미지 숨김처리
+            $("img").hide()
+            // 다음 인덱스 이미지 나타남
+            $(`img:eq(${nextIndex})`).fadeIn(500)
+            // 다음 인덱스 데이터 타입에 업데이트
+            // $(this).attr("data-type", nextIndex)
+            index = nextIndex;      
+        });
 
     
-    //     $(".btn2").click(function(){
+        $(".btn2").click(function(){
         
-    //     let nextIndex = index - 1;
-    //     if(nextIndex === -1) {
-    //         nextIndex = 2;
-    //     }
-    //     $("img").hide()
-    //     $(`img:eq(${nextIndex})`).fadeIn(500)
-    //     index = nextIndex;      
-    //    });
+        let nextIndex = index - 1;
+        if(nextIndex === -1) {
+            nextIndex = 2;
+        }
+        $("img").hide()
+        $(`img:eq(${nextIndex})`).fadeIn(500)
+        index = nextIndex;      
+       });
     
 
     </script>
