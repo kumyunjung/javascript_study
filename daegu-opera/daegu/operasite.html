@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대구오페라하우스</title>
+    <!-- script -->
+    <script src="js/all.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.bxslider.min.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="css/operasite.css">
+    <link rel="stylesheet" href="css/jquery.bxslider.min.css">
+</head>
+<body>
+    <div id="wrap" >
+        <!-- 헤더 시작 -->
+        <header class="main-header">
+            <div class="logo">
+                <img src="images/logo.png" alt="logo">
+                <img src="images/logo_un.png" alt="logo">
+            </div>
+            <div class="menu">
+                <div class="sub-menu">
+                    <ul>
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#">COCOA</a></li>
+                        <li><a href="#">LOGIN</a></li>
+                        <li><a href="#">JOIN</a></li>
+                    </ul>
+                    <select name="" id="">
+                        <option value="" selected>KOR</option>
+                        <option value="">ENG</option>
+                    </select>
+                </div>
+                <div class="main-menu">
+                    <ul>
+                        <li><a href="#">공연안내</a></li>
+                        <li><a href="#">티켓예매</a></li>
+                        <li><a href="#">아카데미</a></li>
+                        <li><a href="#">대관안내</a></li>
+                        <li><a href="#">이용안내</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#"><i class="far fa-calendar-alt"></i></a></i></li>
+                        <li><a href="#"><i class="fas fa-search"></i></a></li>
+                        <li><a href="#"><i class="fas fa-bars"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="box">
+                <a href="#">기관소개</a>
+            </div>
+        </header>
+        <!-- 헤더 끝 -->
+
+        <!-- 사이드바 시작 -->
+        <aside class="side-bar">
+            <ul>                
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="far fa-comment"></i></a></li>
+                <li><a href="#"><i class="fas fa-play"></i></a></li>
+                <li><a href="#"><i class="far fa-image"></i></a></li>
+            </ul>
+        </aside>
+        
+        <aside class="side-bar2">
+            <ul>
+                <li>
+                    <a href="#">Guide<br>open</a>
+                </li>
+            </ul>
+        </aside>
+        <!-- 사이드바 끝 -->
+
+        <!-- 메인 시작 -->
+        <main class="content">
+            <div class="slider">
+                <div><img src="images/img_carmen01.jpg" alt="carmen"></div>
+                <div><img src="images/img_festival03.jpg" alt="festival"></div>
+                <div><img src="images/img_matine01.jpg" alt="matine"></div>
+            </div>
+
+            <div class="slider2">
+                <ul class="mini-slider">
+                    <li><img src="images/mini-slide/mini-slide0.png" alt="이미지"></li>
+                    <li><img src="images/mini-slide/mini-slide1.png" alt="이미지"></li>
+                    <li><img src="images/mini-slide/mini-slide2.png" alt="이미지"></li>
+                    <li><img src="images/mini-slide/mini-slide3.png" alt="이미지"></li>
+                    <li><img src="images/mini-slide/mini-slide4.png" alt="이미지"></li>
+                    <li><img src="images/mini-slide/mini-slide5.png" alt="이미지"></li>
+                    <li><img src="images/mini-slide/mini-slide6.png" alt="이미지"></li>
+                </ul>
+            </div>
+        </main>
+        <!-- 메인 끝 -->
+    </div>
+
+<script>
+
+//bxslider
+    $('.slider').bxSlider({
+        auto: true,
+        autoControls: true,
+        stopAutoOnClick: true,
+        pager: true,
+        slideWidth: 1265,
+        speed: 2000
+    });
+
+//scroll
+    $(window).scroll(function(){
+        const scroll = $(document).scrollTop();
+        if ( l0 < scroll) {
+            $(".side-bar", ".side-bar2").css("top", "0px")  
+        } else {
+            $(".side-bar", ".side-bar2").css("top", "200px")
+        }
+    })
+
+//minislider
+    function moveSlide() {
+    const margin = 10;
+    const imgSize = $(".mini-slider > li > img").width();
+    
+    $(".mini-slider").animate({
+        'margin-left': -imgSize
+    }, 2000, replace)}
+
+    function replace() {
+        const li = $(".mini-slider > li:eq(0)")
+        li.remove()
+        $(".mini-slider").css("margin-left", "0px")
+        $(".mini-slider").append(li)}
+
+    let slide = setInterval(function(){
+        moveSlide();
+    }, 1000 );
+
+    $(".mini-slider > li").mouseover(function(){
+        clearInterval(slide);
+    }).mouseleave(function(){
+        slide = setInterval(function(){
+        moveSlide();
+    }, 2000 );
+    })
+
+ </script>
+
+</body>
+</html>
