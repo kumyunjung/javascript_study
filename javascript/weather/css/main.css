@@ -27,9 +27,13 @@ body {
     margin-top: 10px;
 }
 
+.humidity {
+    font-size: 1.2rem;
+}
+
 .weather-icon {
     display: block;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 #select {

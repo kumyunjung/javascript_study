@@ -10,19 +10,21 @@ axios.get(`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&
         w_type.innerHTML = response.data.weather[0].main
         const temp = document.querySelector(".temperature")
         temp.innerHTML = response.data.main.temp
-        console.log(response.data);
+        const humidity = document.querySelector(".humidity")
+        humidity.innerHTML = response.data.main.humidity
 
-        const img = document.querySelector(".weather-icon")
-        img.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
 
-        //폰트어썸 쓰려다 망한거
-        // const i = document.querySelector(".icon")
-        // const desc = response.data.weather[0].description
+        // const img = document.querySelector(".weather-icon")
+        // img.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
 
-        // if (desc === 'clear sky') {
-        //     i.setAttribute("class", "fas fa-cloud")
-        // }
-        // console.log(i);
+        // 폰트어썸 쓰려다 망한거
+        const i = document.querySelector(".icon")
+        const desc = response.data.weather[0].description
+
+        if (desc === 'clear sky') {
+            i.setAttribute("class", "fas fa-cloud")
+        }
+        console.log(i);
 
 
     })
