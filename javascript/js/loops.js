@@ -16,7 +16,23 @@ const todos = [{
 
 ];
 
+// 비교연산자
+// == / === / < / > / <= / >=
+
 //forEach, map filter, reduce
+
+//filter 조건을 준 배열만 리턴해주는 역할 ex실시간 검색
+// const notDone = todos.filter(function (todo) {
+//     return todo.isCompleted === false;
+// })
+// console.log(notDone);
+
+//filter 1보다 큰 애들만 리턴
+const big = todos.filter(function (ids) {
+    return 1 < ids.id
+})
+console.log(big);
+
 
 // for (let i = 0; i < todos.length; i++) {
 //     console.log(todos[i]);
@@ -29,10 +45,10 @@ const todos = [{
 
 //map foreach처럼 사용가능하지만 그렇게 쓰는게 아님 프로퍼티 모아서 배열로 만들때
 
-const ids = todos.map(function (todo) {
-    return todo.id
-})
-console.log(ids);
+// const ids = todos.map(function (todo) {
+//     return todo.id
+// })
+// console.log(ids);
 
 
 //while문

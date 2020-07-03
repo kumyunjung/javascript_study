@@ -1,33 +1,80 @@
-const animals = [{
-        name: "monkey",
-        size: "small"
+const fruits = [{
+        name: "apple",
+        color: "red"
     },
     {
-        name: "gorilla",
-        size: "big"
+        name: "banana",
+        color: "yellow"
     },
     {
-        name: "lion",
-        size: "big"
+        name: "tomato",
+        color: "red"
     },
     {
-        name: "tiger",
-        size: "big"
+        name: "cherry",
+        color: "cherry"
     },
     {
-        name: "hippo",
-        size: "big"
-    },
-    {
-        name: "cat",
-        size: "small"
+        name: "mango",
+        color: "mango"
     }
 ]
-const info = animals.map(function (animal) {
-    return `${animal.name}은 ${animal.size}입니다`
-})
 
-console.log(info);
+const names = fruits.map(function (item) {
+    return item.name
+})
+console.log(names);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const animals = [{
+//         name: "monkey",
+//         size: "small"
+//     },
+//     {
+//         name: "gorilla",
+//         size: "big"
+//     },
+//     {
+//         name: "lion",
+//         size: "big"
+//     },
+//     {
+//         name: "tiger",
+//         size: "big"
+//     },
+//     {
+//         name: "hippo",
+//         size: "big"
+//     },
+//     {
+//         name: "cat",
+//         size: "small"
+//     }
+// ]
+// const info = animals.map(function (animal) {
+//     return `${animal.name}은 ${animal.size}입니다`
+// })
+
+// console.log(info);
 
 // const fruits = [{
 //         name: "apple",
