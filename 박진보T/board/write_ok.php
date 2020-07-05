@@ -18,4 +18,5 @@ values('".$title."','".$name."','".$content."','".$pw."','".$date."',0)");
 echo "<script>
 alert('글쓰기가 완료되었습니다.');
 location.href='list.php';</script>";
+//주석
 ?>
