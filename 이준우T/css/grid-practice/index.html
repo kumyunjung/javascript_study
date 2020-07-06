@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        .wrapper {
+            display: grid;
+            /* grid-template-columns: 40% 60%; */
+            /* grid-template-columns: 40% 30% 30%; */
+            grid-template-columns: 1fr 2fr 1fr 1fr;
+            grid-gap: 1rem;
+            /* 1rem = 16px */
+            /* grid-column-gap: 1rem; */
+        }
+
+        .wrapper>div {
+            background: #eee;
+            padding: 1rem;
+        }
+
+        .wrapper>div:nth-child(odd) {
+            background: #ddd;
+        }
+
+        /* odd 홀수번 선택*/
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit itaque consequuntur possimus dolores porro
+            delectus in officia autem accusantium nam tempora deserunt, est illo similique molestias omnis, sed unde
+            inventore ut fuga? Dignissimos accusamus, atque deserunt sit dolor unde beatae quia deleniti eveniet
+            perspiciatis aperiam dolorum repellendus omnis ullam cupiditate.</div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. A illo quod doloremque voluptatibus dolorum maxime
+            atque laudantium adipisci earum iste!</div>
+        <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit itaque consequuntur possimus dolores porro
+            delectus in officia autem accusantium nam tempora deserunt, est illo similique molestias omnis, sed unde
+            inventore ut fuga? Dignissimos accusamus, atque deserunt sit dolor unde beatae quia deleniti eveniet
+            perspiciatis aperiam dolorum repellendus omnis ullam cupiditate.</div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. A illo quod doloremque voluptatibus dolorum maxime
+            atque laudantium adipisci earum iste!</div>
+    </div>
+</body>
+
+</html>
