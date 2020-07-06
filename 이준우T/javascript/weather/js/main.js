@@ -14,17 +14,17 @@ axios.get(`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&
         humidity.innerHTML = response.data.main.humidity
 
 
-        // const img = document.querySelector(".weather-icon")
-        // img.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
+        const img = document.querySelector(".weather-icon")
+        img.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
 
         // 폰트어썸 쓰려다 망한거
-        const i = document.querySelector(".icon")
-        const desc = response.data.weather[0].description
+        // const i = document.querySelector(".icon")
+        // const desc = response.data.weather[0].description
 
-        if (desc === 'clear sky') {
-            i.setAttribute("class", "fas fa-cloud")
-        }
-        console.log(i);
+        // if (desc === 'clear sky') {
+        //     i.setAttribute("class", "fas fa-cloud")
+        // }
+        // console.log(i);
 
 
     })
