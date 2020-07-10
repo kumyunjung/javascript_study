@@ -1,0 +1,38 @@
+/* footer */
+
+#footer {
+    height: 100px;
+    background-color: bisque;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+}
+
+
+#owner-info>dl {
+    display: flex;
+    justify-content: center;
+}
+
+#owner-info>dl>dt {
+    padding: 0px 10px 0px 0px;
+    text-align: center;
+}
+
+#owner-info>dl>dd {
+    padding-right: 20px;
+
+}
+
+#copyright-info {
+    margin-top: 5px;
+    color: darkgray;
+    text-align: center;
+}
+
+dt {
+    font-weight: 600;
+    color: #333;
+
+
+}

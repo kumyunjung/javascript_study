@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <link rel="stylesheet" href="css/card.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="card">
+            <div class="close"><i class="fas fa-times close-btn"></i></div>
+            <div class="title">
+                <h2>Share this icon</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati, ea?
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati, ea?
+                </p>
+            </div>
+            <div class="btns">
+                <button class="btn" id="facebook"><i class="fab fa-facebook-f"></i> facebook</button>
+                <button class="btn" id="twitter"><i class="fab fa-twitter"></i> twitter</button>
+                <button class="btn" id="reddit"><i class="fab fa-reddit"></i> reddit</button>
+            </div>
+
+            <p><span>4.5 K</span> shares</p>
+
+            <small>close window</small>
+
+        </div>
+    </div>
+
+    <script>
+        const closee = document.querySelector(".close-btn")
+        const card = document.querySelector(".card")
+        closee.addEventListener('click', (e) => {
+            card.style.display = "none"
+        })
+    </script>
+
+</body>
+
+</html>

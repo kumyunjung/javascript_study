@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ads manager</title>
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>이름</th>
+                    <th>조회수</th>
+                    <th>선호도</th>
+                    <th>평점</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="priority-200">
+                    <td>Lorem ipsum dolor sit amet.</td>
+                    <td>1123</td>
+                    <td><i class="fas fa-circle"></i>200</td>
+                    <td>99</td>
+                    <td>
+                        <button class="deleted">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+                <tr class="priority-300">
+                    <td>Lorem ipsum dolor sit amet.</td>
+                    <td>1123</td>
+                    <td><i class="fas fa-circle"></i>300</td>
+                    <td>99</td>
+                    <td>
+                        <button class="deleted">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+                <tr class="priority-200">
+                    <td>Lorem ipsum dolor sit amet.</td>
+                    <td>1123</td>
+                    <td><i class="fas fa-circle"></i>200</td>
+                    <td>99</td>
+                    <td>
+                        <button class="deleted">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+                <tr class="priority-600">
+                    <td>Lorem ipsum dolor sit amet.</td>
+                    <td>1123</td>
+                    <td><i class="fas fa-circle"></i>600</td>
+                    <td>99</td>
+                    <td>
+                        <button class="deleted">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+                <tr class="priority-200">
+                    <td>Lorem ipsum dolor sit amet.</td>
+                    <td>1123</td>
+                    <td><i class="fas fa-circle"></i>200</td>
+                    <td>99</td>
+                    <td>
+                        <button class="deleted">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+                <tr class="priority-300">
+                    <td>Lorem ipsum dolor sit amet.</td>
+                    <td>1123</td>
+                    <td><i class="fas fa-circle"></i>300</td>
+                    <td>99</td>
+                    <td>
+                        <button class="deleted">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        const btn = document.querySelector(".deleted")
+        btn.addEventListener('click', (e) => {
+            alert("ba");
+        })
+    </script>
+</body>
+
+</html>

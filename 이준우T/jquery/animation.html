@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous"></script>
+
+    <style>
+        header {
+            margin-bottom: 20px;
+        }
+
+        #item {
+            background: pink;
+            border: 5px solid lightgrey;
+            opacity: 0.7;
+            width: 50px;
+            height: 50px;
+            position: relative;
+            border-radius: 100px
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <input type="button" value="fadeOut" id="fadeOut">
+        <input type="button" value="fadeIn" id="fadeIn">
+        <input type="button" value="slideUp" id="slideUp">
+        <input type="button" value="slideDown" id="slideDown">
+        <hr>
+        <input type="button" value="moveRight" id="moveRight">
+        <input type="button" value="moveLeft" id="moveLeft">
+        <input type="button" value="moveReturn" id="moveReturn">
+
+        <hr>
+        <input type="button" value="animation" id="animation">
+    </header>
+    <div class="box">
+        <div id="item"></div>
+    </div>
+    <script src="js/animation.js"></script>
+</body>
+
+</html>

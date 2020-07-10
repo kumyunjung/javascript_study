@@ -1,0 +1,62 @@
+@font-face {
+    font-family: "font";
+    src: url('/font/NanumGothic.ttf');
+}
+
+html {
+    font-family: "font";
+}
+
+.wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.quote {
+    position: relative;
+    top: 200px;
+    left: 50px;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+
+}
+
+.quote-icon {
+    color: peru;
+}
+
+.article-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.article {
+    width: 1000px;
+    text-align: justify;
+    /* position: relative;
+    left: 100px; */
+
+    margin-bottom: 30px;
+
+
+}
+
+.name {
+    position: relative;
+    top: 490px;
+    left: 100px;
+}
+
+.chairman>img {
+    width: 450px;
+}
+
+main {
+    background: white;
+}
+
+.footer {
+    background: #eeeeee;
+    padding: 20px
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <form>
+
+            <h2>Log in with</h2>
+            <div class="sns-btn">
+                <button><img src="images/google.png" alt="구글">Google</button>
+                <button><i class="fab fa-facebook-f"></i>Facebook</button>
+            </div>
+            <small class="or">or</small>
+            <div class="login-form">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email">
+                <div class="form-control">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password">
+                </div>
+                <button class="btn" id="login">Log in</button>
+
+            </div>
+        </form>
+
+    </div>
+    <div class="signup">
+        <small>Don't have an account?</small>
+        <a href="#">Sign up</a>
+    </div>
+    <script src="js/login.js"></script>
+</body>
+
+</html>

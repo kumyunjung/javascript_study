@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spinner</title>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        .container {
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .content-wrap {
+            margin-top: 5rem;
+
+        }
+
+        #spinner {
+            display: none;
+        }
+
+        #list {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="button-wrap">
+            <button type="button" class="btn btn-warning">Warning</button>
+            <button type="button" class="btn btn-info">Info</button>
+            <button type="button" class="btn btn-light">Light</button>
+            <button type="button" class="btn btn-dark">Dark</button>
+        </div>
+        <div class="content-wrap">
+            <ul id="list">
+
+            </ul>
+            <div id="spinner" class="spinner-border text-primary" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+    </div>
+    <script>
+        // $(".btn-warning").click(function () {
+        //     $("#spinner").show();
+
+        //     // //데이터를 불러오고
+        //     // //불러오는동안
+        //     // //데이터가 불러와지면
+        //     // //스피너를 안보이게
+        //     // setTimeout(function () {
+        //     // }, 3000)
+        //     //axios
+        //     axios.get('http://2cf56f10b46a.ngrok.io/api/schedule')
+        //         .then(function (response) {
+        //             console.log(response);
+        //             const schedules = response.data.schedules
+        //             schedules.forEach((schedule) => {
+        //                 $("#list").show().append(
+        //                     `<li>할일 ${schedule.name}, 일시 ${schedule.date}</li>`
+        //                 )
+        //             })
+
+        //             $("#spinner").hide(); //axios데이터가 들어오면 숨김
+
+        //         })
+        //         .catch(function (error) {
+        //             // handle error
+        //             console.log(error);
+        //         })
+
+        // })
+
+        // 자바스크립트
+        const btn = document.querySelector(".btn-warning")
+        btn.addEventListener('click', function () {
+            const spinner = document.querySelector("#spinner")
+            spinner.style.display = 'block'
+            axios.get('http://2cf56f10b46a.ngrok.io/api/schedule')
+                .then(function (response) {
+                    const ul = document.querySelector("#list")
+                    const schedules = response.data.schedules
+                    schedules.forEach((item) => {
+                        const li = document.createElement('li')
+                        const txt = document.createTextNode(`할일 ${item.name}, 날짜 ${item.date}`)
+                        li.appendChild(txt)
+                        ul.appendChild(li)
+                    })
+                    ul.style.display = 'block'
+                    spinner.style.display = 'block'
+
+
+                    $("#spinner").hide(); //axios데이터가 들어오면 숨김
+
+                })
+                .catch(function (error) {
+                    // handle error
+                    console.log(error);
+                })
+
+        })
+    </script>
+</body>
+
+
+</html>

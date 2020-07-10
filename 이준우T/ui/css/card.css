@@ -1,0 +1,70 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #636364;
+}
+
+.card {
+    max-width: 600px;
+    height: 300px;
+    background: #EBEBEB;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+}
+
+.title {
+    text-align: center;
+    padding: 0px 50px;
+}
+
+
+.btn {
+    width: 120px;
+    height: 35px;
+    font-size: 15px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+#facebook {
+    background: #1FA3F2;
+}
+
+#twitter {
+    background: #70BCEA;
+}
+
+#reddit {
+    background: #0B0D0D;
+}
+
+i {
+    font-size: 18px;
+}
+
+p span {
+    font-weight: bold;
+}
+
+small {
+    color: rgb(255, 166, 0)
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous"></script>
+
+    <style>
+        header {
+            background: #333;
+            color: #fff;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        #button {
+            width: 200px;
+            height: 40px;
+            background: pink;
+            color: #fff;
+            border: none;
+        }
+
+        #button2 {
+            width: 200px;
+            height: 40px;
+            background: grey;
+            color: #fff;
+            border: none;
+        }
+
+        #dot {
+            background: red;
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            position: absolute;
+            opacity: 0.5;
+            text-align: center;
+            line-height: 100px;
+            color: #fff;
+        }
+
+        li {
+            padding: 1rem;
+            font-size: 1.5rem;
+
+        }
+
+        .active {
+            color: red;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h1>Jquery</h1>
+    </header>
+    <div class="container">
+        <h2 id="heading1">Heading1</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur provident, necessitatibus accusamus est
+            corporis corrupti quo sequi natus modi nisi libero aliquid eius autem nam nihil quisquam vitae saepe
+            voluptatem.</p>
+        <h2 id="heading2">Heading2</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur provident, necessitatibus accusamus est
+            corporis corrupti quo sequi natus modi nisi libero aliquid eius autem nam nihil quisquam vitae saepe
+            voluptatem.</p>
+        <ul id="list">
+            <li>list item1</li>
+            <li>list item2</li>
+            <li>list item3</li>
+            <li>list item4</li>
+            <li>list item5</li>
+            <li>list item6</li>
+
+        </ul>
+        <input type="button" value="button" id="button">
+        <input type="button" value="button2" id="button2">
+
+        <input type="text">
+
+    </div>
+    <div id="dot">
+
+    </div>
+    <script src="js/selector.js"></script>
+    <script src="js/event.js"></script>
+
+</body>
+
+</html>
