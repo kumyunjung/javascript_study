@@ -5,10 +5,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chatting</title>
+    <link rel="shorcut icon" href="#">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"
+        integrity="sha512-v8ng/uGxkge3d1IJuEo6dJP8JViyvms0cly9pnbfRxT6/31c3dRWxIiwGnMSWwZjHKOuY3EVmijs7k1jz/9bLA=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <h1>My Chatting App</h1>
+    <div class="wrap">
+        <div class="header">
+            <div class="profile">
+                <i class="icon profile-left fas fa-chevron-left"></i>
+                <img src="img/profile.jpg" alt="프로필사진" class="profile-left">
+                <p class="profile-left">KUMYUNJUNG</p>
+            </div>
+            <div class="profile-icon">
+                <i class="icon fas fa-video"></i>
+                <i class="icon fas fa-phone-alt"></i>
+                <i class="icon fas fa-ellipsis-v"></i>
+            </div>
+        </div>
+        <div class="body">
+            <div class="chatbox">
+
+            </div>
+        </div>
+        <div class="bottom">
+            <button> <i class="fas fa-plus-circle"></i></button>
+            <input type="text" class="write" placeholder="메세지를 입력해주세요">
+            <button class="btn"><i class="fas fa-paper-plane"></i></button>
+        </div>
+
+
+    </div>
+    <script>
+        //socket.io 연결
+        const socket = io();
+        const sendButton = document.querySelector('.btn')
+
+        const message = document.querySelector('.write')
+
+        sendButton.addEventListener('click', () => {
+            console.log(message.value);
+            //서버로 보내는 역할
+            socket.emit('chatting', message.value);
+
+        })
+        //keyup
+        message.addEventListener('keypress', (e) => {
+
+            if (e.key === 'Enter')
+                // const message = document.querySelector('.write')
+                // console.log(message.value);
+                //서버로 보내는 역할
+                socket.emit('chatting', message.value);
+        })
+
+
+        //서버에서 받는 역할
+        socket.on('chatting', (msg) => {
+            $(".body").append(`<li>${msg}</li>`)
+            $(".write").val("")
+            // const chat = document.querySelector(".body")
+            // const li = document.createElement("li")
+            // const txt = document.createTextNode(msg)
+            // li.appendChild(txt);
+            // li.classList.add('')
+            // chat.appendChild(li);
+            // console.log(msg, 'from server');
+        })
+    </script>
 </body>
 
 </html>
