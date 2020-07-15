@@ -94,3 +94,5 @@ const closeBtn = document.querySelector(".close-btn")
 closeBtn.addEventListener('click', function () {
     layer.style.display = "none"
 })
+
+//주석
