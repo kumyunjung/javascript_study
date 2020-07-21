@@ -10,3 +10,10 @@ function change(color) {
     circle.style.background = color
 }
 change('red')
+
+
+function write(value) {
+    circle.innerHTML = value
+}
+
+write('hello')
