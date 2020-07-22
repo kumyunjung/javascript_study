@@ -9,7 +9,7 @@ const circle = document.querySelector('.circle')
 function change(color) {
     circle.style.background = color
 }
-change('red')
+change('yellow')
 
 
 function write(value) {
