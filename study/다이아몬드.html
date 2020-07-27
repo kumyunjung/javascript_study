@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm</title>
+</head>
+
+<body>
+    <div id="content">
+    </div>
+
+    <script>
+        // 문제
+        // star함수를 실행하면 매개변수에 따라 아래 실행결과와 같이
+        // Content 요소에 출력해주세요
+        // console.log로 하셔도 상관 없습니다.
+
+        const content = document.getElementById('content');
+        const space = '<span style="color:white">*</span>'
+
+        // function star(number) {
+
+        //     for (let i = 1; i <= number; i++) {
+
+        //         for (let l = 1; l < i; l++) {
+        //             content.innerHTML += space
+        //         }
+
+        //         for (let j = number; j >= i; j--) {
+
+        //             content.innerHTML += '*'
+        //         }
+
+        //         content.innerHTML += '<br>'
+
+        //     }
+
+        // }
+
+        function star(number) {
+            const space = '<span style="color:white">*</span>'
+
+            for (let i = 1; i <= number - 2; i++) {
+                for (let l = i; l <= number; l++) {
+                    content.innerHTML += space
+                }
+                for (let j = 1; j <= i; j++) {
+
+                    content.innerHTML += '*'
+                }
+
+                for (let k = 1; k < i; k++) {
+
+                    content.innerHTML += '*'
+                }
+
+
+
+                content.innerHTML += '<br>'
+
+            }
+
+            for (let i = 1; i < number - 2; i++) {
+
+                for (let l = 1; l <= i + 3; l++) {
+                    content.innerHTML += space
+                }
+
+
+                for (let j = number - 1; j > i; j--) {
+
+                    content.innerHTML += '*'
+                }
+
+
+                content.innerHTML += '<br>'
+
+            }
+
+
+
+
+        }
+
+
+
+        star(5);
+
+        // star(5); 실행 결과 
+        // *
+        // **
+        // ***
+        // ****
+        // *****
+
+        // star(7);
+
+        //star(7); 실행 결과
+        // *
+        // **
+        // ***
+        // ****
+        // *****
+        // ******
+        // *******
+    </script>
+</body>
+
+</html>
