@@ -1,8 +1,7 @@
 <template>
   <div>
     <div v-for="todo in todos" v-bind:key="todo.id">
-      @
-      <Todoitem v-bind:todo="todo" />
+      <Todoitem v-bind:todo="todo" v-on:delete-todo="deleteItem" />
     </div>
   </div>
 </template>
@@ -14,6 +13,11 @@ export default {
     Todoitem,
   },
   props: { todos: Array },
+  methods: {
+    deleteItem(id) {
+      console.log("emit requested", id);
+    },
+  },
 };
 </script>
 

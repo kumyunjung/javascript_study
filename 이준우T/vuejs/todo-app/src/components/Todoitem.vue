@@ -13,7 +13,7 @@ export default {
   },
   methods: {
     delItem() {
-      console.log(this.todo.id);
+      this.$emit("delete-todo", this.todo.id);
     },
   },
 };

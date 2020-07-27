@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <h1>{{title}}</h1>
+    <h1>{{title}} {{time}}</h1>
   </header>
 </template>
 
@@ -9,6 +9,11 @@ export default {
   name: "Header",
   props: {
     title: String,
+  },
+  data() {
+    return {
+      time: new Date(),
+    };
   },
 };
 </script>

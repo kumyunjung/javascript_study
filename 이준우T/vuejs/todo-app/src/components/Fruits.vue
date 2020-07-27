@@ -62,11 +62,10 @@ export default {
   },
   methods: {
     getSearch() {
-        const newFruits = this.list.filter((fruit)=>{
-            return fruit.name ==='search'
-
-        });
-        this.fruits = newFruits;
+      const newFruits = this.list.filter((fruit) => {
+        return fruit.name === "search";
+      });
+      this.fruits = newFruits;
     },
     getLike() {
       //map, filter, reduce
@@ -75,12 +74,12 @@ export default {
       //     fruit.id = fruit.id * 10;
       //     return fruit;
       //   });
-    //   const newFruits = this.fruits.filter((fruit) => {
-    //     return fruit.like === true;
-    //   });
-    //   this.fruits = newFruits;
-    //   console.log(newFruits);
-    // },
+      //   const newFruits = this.fruits.filter((fruit) => {
+      //     return fruit.like === true;
+      //   });
+      //   this.fruits = newFruits;
+      //   console.log(newFruits);
+    },
     getHate() {
       const hateFruits = this.fruits.filter((fruit) => {
         return fruit.like === false;
