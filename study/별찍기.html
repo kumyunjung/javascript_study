@@ -31,19 +31,40 @@
         //     }
         // }
 
+        // function star(number) {
+        //     const space = '<span style="color:white">*</span>'
+
+        //     for (let i = 1; i <= number; i++) {
+
+        //         for (let l = number; l > i; l--) {
+        //             content.innerHTML += space
+        //         }
+
+        //         for (let j = 1; j <= i; j++) {
+
+        //             content.innerHTML += '*'
+        //         }
+
+        //         content.innerHTML += '<br>'
+
+        //     }
+
+        // }
+
         function star(number) {
             const space = '<span style="color:white">*</span>'
 
             for (let i = 1; i <= number; i++) {
 
-                for (let l = number; l > i; l--) {
-                    content.innerHTML += space
+                for (let l = 1; l <= i; l++) {
+                    content.innerHTML += 1
                 }
 
-                for (let j = 1; j <= i; j++) {
+                for (let j = number; j >= i; j--) {
 
                     content.innerHTML += '*'
                 }
+
 
                 content.innerHTML += '<br>'
 
@@ -52,7 +73,7 @@
         }
 
 
-        star(50);
+        star(5);
 
         // star(5); 실행 결과 
         // *
