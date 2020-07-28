@@ -42,7 +42,7 @@
         function star(number) {
             const space = '<span style="color:white">*</span>'
 
-            for (let i = 1; i <= number - 2; i++) {
+            for (let i = 1; i <= number-3; i++) {
                 for (let l = i; l <= number; l++) {
                     content.innerHTML += space
                 }
@@ -62,18 +62,22 @@
 
             }
 
-            for (let i = 1; i < number - 2; i++) {
+            for (let i = 1; i <= number-2; i++) {
 
-                for (let l = 1; l <= i + 3; l++) {
+                for (let l = 1; l <= i+2 ; l++) {
                     content.innerHTML += space
                 }
 
-
-                for (let j = number - 1; j > i; j--) {
+                    
+                for (let j = number-2; j >= i; j--) {
 
                     content.innerHTML += '*'
                 }
 
+                for (let k = number-2; k > i; k--) {
+
+                    content.innerHTML += '*'
+                }
 
                 content.innerHTML += '<br>'
 
@@ -95,7 +99,7 @@
         // ****
         // *****
 
-        // star(7);
+        star(7);
 
         //star(7); 실행 결과
         // *
