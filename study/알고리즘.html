@@ -19,61 +19,10 @@
     const result = document.querySelector("#result")
     const space = '<span style="color:white">*</span>'
     const btn = document.querySelector("#btn")
-    const inputBox = document.querySelector("#box")
+    const inputBox = document.querySelector("#box").value
 
     btn.addEventListener('click', () => {
-        if (inputBox.value == 1) {
-            result.innerHTML = star1(1)
-            result.innerHTML = star2(1)
-            result.innerHTML = star3(1)
-            result.innerHTML = star4(1)
-        } else if (inputBox.value == 2) {
-            result.innerHTML = star1(2)
-            result.innerHTML = star2(2)
-            result.innerHTML = star3(2)
-            result.innerHTML = star4(2)
-        } else if (inputBox.value == 3) {
-            result.innerHTML = star1(3)
-            result.innerHTML = star2(3)
-            result.innerHTML = star3(3)
-            result.innerHTML = star4(3)
-            result.innerHTML = diamond3(3)
-        } else if (inputBox.value == 4) {
-            result.innerHTML = star1(4)
-            result.innerHTML = star2(4)
-            result.innerHTML = star3(4)
-            result.innerHTML = star4(4)
-        } else if (inputBox.value == 5) {
-            result.innerHTML = star1(5)
-            result.innerHTML = star2(5)
-            result.innerHTML = star3(5)
-            result.innerHTML = star4(5)
-            result.innerHTML = diamond5(5)
-        } else if (inputBox.value == 6) {
-            result.innerHTML = star1(6)
-            result.innerHTML = star2(6)
-            result.innerHTML = star3(6)
-            result.innerHTML = star4(6)
-        } else if (inputBox.value == 7) {
-            result.innerHTML = star1(7)
-            result.innerHTML = star2(7)
-            result.innerHTML = star3(7)
-            result.innerHTML = star4(7)
-            result.innerHTML = diamond7(7)
-        } else if (inputBox.value == 8) {
-            result.innerHTML = star1(8)
-            result.innerHTML = star2(8)
-            result.innerHTML = star3(8)
-            result.innerHTML = star4(8)
-        } else if (inputBox.value == 9) {
-            result.innerHTML = star1(9)
-            result.innerHTML = star2(9)
-            result.innerHTML = star3(9)
-            result.innerHTML = star4(9)
-            result.innerHTML = diamond9(9)
-        } else {
-            location.reload()
-        }
+
     })
 
     function star1(number) {
