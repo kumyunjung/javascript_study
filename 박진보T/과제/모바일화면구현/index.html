@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTERIOR</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <span class="open-slide" onclick="openSideMenu();">
+            <a href="#">
+                <svg width="30" height="30">
+                    <path d="M0,5 30,5" stroke="#000" stroke-width="5"></path>
+                    <path d="M0,14 30,14" stroke="#000" stroke-width="5"></path>
+                    <path d="M0,23 30,23" stroke="#000" stroke-width="5"></path>
+                </svg>
+            </a>
+        </span>
+        <span class="interior">INTERIOR</span>
+    </nav>
+    <div id="side-menu" class="side-nav">
+        <a href="#" class="btn-close" onclick="closeSideMenu();">&times;</a>
+        <div class="login-tab">
+            <div class="profile-tab">
+                <img class="profile" src="img/icon.png" alt="profile">
+                <p>INTERIOR</p>
+                <a href="#">로그인을 하시겠습니까?</a>
+            </div>
+        </div>
+        <div class="side-nav-item">
+            <ul>
+                <li><i class="fas fa-external-link-alt icons"></i><a href="#">MAIN</a></li>
+                <li><i class="fas fa-external-link-alt icons"></i><a href="#">SHOP</a></li>
+                <li><i class="fas fa-external-link-alt icons"></i><a href="#">LOOKBOOK</a></li>
+                <li><i class="fas fa-external-link-alt icons"></i><a href="#">PROJECT</a></li>
+                <li><i class="fas fa-external-link-alt icons"></i><a href="#">SERVICE</a></li>
+                <li><i class="fas fa-external-link-alt icons"></i><a href="#">COMMUNITY</a></li>
+                <li><i class="fas fa-external-link-alt icons"></i><a href="#">회사소개</a></li>
+                <li><i class="fas fa-phone-alt icons"></i><a href="#">CALL</a></li>
+                <p></p>
+                <li><i class="fas fa-cog icons"></i></i><a href="#">설정</a></li>
+
+            </ul>
+        </div>
+    </div>
+    <div id="main">
+        <div class="shop">
+            <a href="#">SHOP</a>
+        </div>
+
+        <div class="lookbook">
+            <a href="#">LOOKBOOK</a>
+        </div>
+
+        <div class="project">
+            <a href="#">PROJECT</a>
+        </div>
+
+        <div class="service">
+            <a href="#">SERVICE</a>
+        </div>
+
+        <div class="community">
+            <a href="#">COMMUNITY</a>
+        </div>
+    </div>
+
+
+    <script>
+        function openSideMenu() {
+            document.getElementById("side-menu").style.width = "80%"
+            document.getElementById("main").style.marginLeft = "250px"
+        }
+
+        function closeSideMenu() {
+            document.getElementById("side-menu").style.width = "0px"
+            document.getElementById("main").style.marginLeft = "0px"
+        }
+    </script>
+</body>
+
+</html>
